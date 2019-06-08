@@ -14,18 +14,14 @@
     "value": "Magic glasses. While wearing this, you perceive every creature as looking like you"
   },
   {
-    "value": "Invisible ink marker, but the ink can't be made visible"
+    "value": "Invisible ink marker. The ink can only be made visible with the use of a Wish spell."
   },
   {
-    "value": "Invisible ink marker, but the ink can't be made visible"
+    "value": "A cell phone with a dead battery"
   },
   {
-    "value": "Invisible ink marker, but the ink can't be made visible"
-  },
-  {
-    "value": "Invisible ink marker, but the ink can't be made visible"
-  },
-  {
-    "value": "Invisible ink marker, but the ink can't be made visible"
+    "value": "Infinite ammo machine gun",
+    "enabled": false,
+    "weighting": 10000
   }
 ]

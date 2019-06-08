@@ -14,18 +14,20 @@ class LootType(IntEnum):
     jewellery = 5
     single_enchant_item = 6
     crafting_item = 7
-    high_gold = 8
-    double_enchant_item = 9
+    double_enchant_item = 8
+    high_gold = 9
     prayer_stone = 10
+    artifact = 11
+    
 
 
 LOOT_TYPES = dict()
 for loot_type in LootType:
-    LOOT_TYPES[loot_type.value] = loot_type.name
+    LOOT_TYPES[loot_type.value] = loot_type
 
 
 class LootOptionItem:
-    def __init__(self, value, weighting=10, enabled=True):
+    def __init__(self, value, weighting, enabled):
         self.weighting = weighting
         self.value = value
         self.enabled = enabled
@@ -35,25 +37,52 @@ class LootOptionItem:
 
 
 class LootOption:
-    def __init__(self, max_weighting, name):
-        self.max_weighting = max_weighting
+    def __init__(self, name):
         self.name = name
         self.loot_options = []
 
-    @staticmethod
-    def load_loot_options():
-        pass  # TODO: load from file with matching name and population loot options list
+    def add_item(self, loot_option_item):
+        item_weighting = loot_option_item.get_weighting_value()
+        for i in range(item_weighting):
+            self.loot_options.append(loot_option_item.value)
+
+    def get_random_item(self):
+        return self.loot_options[random.randint(0, len(self.loot_options) - 1)]
 
 
 class LootController:
     def __init__(self):
-        pass  # TODO: load loot
+        self.junk = LootController.create_loot_option("junk")
+        self.jewellery = LootController.create_loot_option("jewellery")
+        self.crafting_item = LootController.create_loot_option("crafting_item")
 
     def get_junk(self):
-        pass
+        return self.junk.get_random_item()
 
     def get_jewellery(self):
-        pass
+        return self.jewellery.get_random_item()
+
+    @staticmethod
+    def create_loot_option(name):
+        with open(DATA_DIR + name + ".json") as file:
+            item_dicts = json.loads(file.read())
+        loot_option_items = []
+        for item_dict in item_dicts:
+            loot_option_items.append(LootOptionItem(item_dict.get("value"),
+                                                    item_dict.get("weighting", 10),
+                                                    item_dict.get("enabled", True)))
+        loot_option = LootOption(name)
+        for loot_option_item in loot_option_items:
+            loot_option.add_item(loot_option_item)
+
+        return loot_option
+
+
+def get_int_from_str(string, integer=None):
+    try:
+        return int(string)
+    except ValueError:
+        return integer
 
 
 if __name__ == "__main__":
@@ -62,15 +91,17 @@ if __name__ == "__main__":
         LootType.junk: loot_controller.get_junk,
         LootType.mundane: None,
         LootType.consumable: None,
-        LootType.low_gold: (lambda: random.randint(30, 80)),
-        LootType.jewellery: loot_controller.get_jewellery,
+        LootType.low_gol: lambda: random.randint(30, 80),
+        LootType.jewellery: None,
         LootType.single_enchant_item: None,
         LootType.crafting_item: None,
-        LootType.prayer_stone: None
+        LootType.double_enchant_item: None,
+        LootType.high_gold: None,
+        LootType.prayer_stone: None,
     }
     while True:
-        roll = input("\nLoot roll: ")
-        if roll == "" or roll == "0":
-            roll = random.randint(1, 8)
-        loot_type = LOOT_TYPES[int(roll)]
-        print(loot_action_map[loot_type]())
+        roll = get_int_from_str(input("\nLoot roll: "), random.randint(1, 8))
+        if roll < 0:
+            exit(0)
+        loot_type = LOOT_TYPES.get(roll)
+        print(loot_action_map.get(loot_type, lambda: str(roll) + " is not a valid option")())

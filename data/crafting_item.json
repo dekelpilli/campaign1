@@ -1,0 +1,31 @@
+[
+  {
+    "value": "Chaos Orb - reroll all mods on a magic item"
+  },
+  {
+    "value": "Orb of Destruction - Remove a random mod from a magic item or artifact"
+  },
+  {
+    "value": "Annulment Orb - Remove a mod of your choice from a magic item or artifact"
+  },
+  {
+    "value": "Orb of Creation - Convert a mundane item into a magical item with 1d4 mods",
+    "weighting": 5
+  },
+  {
+    "value": "Orb of Flux - swap magical properties between compatible items, including simply moving enchantments to mundane items",
+    "weighting": 15
+  },
+  {
+    "value": "Exalted Orb - add a mod to a magical item, to a maximum of 4",
+    "weighting": 8
+  },
+  {
+    "value": "Orb of Rare Candy - level up an artifact",
+    "weighting": 1
+  },
+  {
+    "value": "Orb of Empowerment - level up one mod on a magic item or artifact",
+    "weighting": 7
+  }
+]
