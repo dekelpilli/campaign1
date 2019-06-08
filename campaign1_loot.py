@@ -117,7 +117,7 @@ class LootController:
                    + "\n\t" + self.get_armour_enchant() \
                    + "\n\t" + self.get_armour_enchant()
 
-        print("This item is not armour or weapon")
+        print("This item is not an armour or a weapon")
         return base_type.value \
                + "\n\t" + self.get_enchant() \
                + "\n\t" + self.get_enchant()
