@@ -1,7 +1,7 @@
 import random
 import json
 from enum import IntEnum
-
+import pprint
 
 DATA_DIR = "data/"
 
@@ -45,7 +45,7 @@ class LootOption:
     def add_item(self, loot_option_item):
         item_weighting = loot_option_item.get_weighting_value()
         for i in range(item_weighting):
-            self.loot_options.append(loot_option_item.value)
+            self.loot_options.append(loot_option_item)
 
     def get_random_item(self):
         return self.loot_options[random.randint(0, len(self.loot_options) - 1)]
@@ -54,7 +54,6 @@ class LootOption:
 class LootController:
     def __init__(self):
         self.junk = LootController.create_loot_option("junk")
-        # self.jewellery = LootController.create_loot_option("jewellery")
         self.crafting_item = LootController.create_loot_option("crafting_item")
         self.mundane = LootController.create_loot_option("mundane")
         self.enchant = LootController.create_loot_option("enchant")
@@ -63,26 +62,54 @@ class LootController:
         return self.mundane.get_random_item()
 
     def get_enchant(self):
-        return self.enchant.get_random_item()
+        return self.enchant.get_random_item().value
+
+    def get_weapon_enchant(self):
+        enchantment = self.enchant.get_random_item()
+        if "armour" in enchantment.metadata:
+            return self.get_weapon_enchant()
+        return enchantment.value
+
+    def get_armour_enchant(self):
+        enchantment = self.enchant.get_random_item()
+        if "weapon" in enchantment.metadata:
+            return self.get_weapon_enchant()
+        return enchantment.value
 
     def get_crafting_item(self):
-        return self.crafting_item.get_random_item()
+        return self.crafting_item.get_random_item().value
 
     def get_double_enchanted_item(self):
-        return self.get_mundane()\
-               + "\n\t" + self.get_enchant()\
+        base_type = self.mundane.get_random_item()
+        if "weapon" in base_type.metadata:
+            return base_type.value \
+                   + "\n\t" + self.get_weapon_enchant() \
+                   + "\n\t" + self.get_weapon_enchant()
+
+        if "armour" in base_type.metadata:
+            return base_type.value \
+                   + "\n\t" + self.get_armour_enchant() \
+                   + "\n\t" + self.get_armour_enchant()
+
+        return base_type \
+               + "\n\t" + self.get_enchant() \
                + "\n\t" + self.get_enchant()
 
     def get_single_enchanted_item(self):
-        return self.get_mundane()\
+        base_type = self.mundane.get_random_item()
+        if "weapon" in base_type.metadata:
+            return base_type.value \
+                   + "\n\t" + self.get_weapon_enchant()
+
+        if "armour" in base_type.metadata:
+            return base_type.value \
+                   + "\n\t" + self.get_armour_enchant()
+
+        return base_type \
                + "\n\t" + self.get_enchant()
 
     def get_junk(self):
-        return self.junk.get_random_item()
-
-    def get_jewellery(self):
-        pass
-        # return self.jewellery.get_random_item()
+        return self.junk.get_random_item().value
 
     @staticmethod
     def create_loot_option(name):
@@ -118,15 +145,21 @@ if __name__ == "__main__":
         LootType.ring: None,
         LootType.amulet: None,
         LootType.single_enchant_item: loot_controller.get_single_enchanted_item,
-        LootType.crafting_item: loot_controller.get_crafting_item(),
+        LootType.crafting_item: loot_controller.get_crafting_item,
         LootType.double_enchant_item: loot_controller.get_double_enchanted_item,
         LootType.high_gold: lambda: min(random.randint(100, 800), random.randint(100, 800)),
         LootType.prayer_stone: None,
         LootType.artifact: None
     }
+    pp = pprint.PrettyPrinter(indent=4)
+    count = 0
     while True:
+        if count % 8 == 0:
+            print("\n")
+            pp.pprint(LOOT_TYPES)
         roll = get_int_from_str(input("\nLoot roll: "), random.randint(1, 8))
         if roll < 0:
             exit(0)
         loot_type = LOOT_TYPES.get(roll)
         print(loot_action_map.get(loot_type, lambda: str(roll) + " is not a valid option")())
+        count += 1

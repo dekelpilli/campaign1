@@ -1,55 +1,68 @@
 [
   {
     "value": "+1d4 acid damage",
-    "weighting": 4
+    "weighting": 4,
+    "metadata": ["weapon"]
   },
   {
     "value": "+1d4 bludgeoning damage",
-    "weighting": 6
+    "weighting": 6,
+    "metadata": ["weapon"]
   },
   {
     "value": "+1d4 cold damage",
-    "weighting": 4
+    "weighting": 4,
+    "metadata": ["weapon"]
   },
   {
     "value": "+1d4 fire damage",
-    "weighting": 4
+    "weighting": 4,
+    "metadata": ["weapon"]
   },
   {
     "value": "+1d4 force damage",
-    "weighting": 4
+    "weighting": 4,
+    "metadata": ["weapon"]
   },
   {
     "value": "+1d4 lightning damage",
-    "weighting": 4
+    "weighting": 4,
+    "metadata": ["weapon"]
   },
   {
     "value": "+1d4 necrotic damage",
-    "weighting": 4
+    "weighting": 4,
+    "metadata": ["weapon"]
   },
   {
     "value": "+1d4 piercing damage",
-    "weighting": 6
+    "weighting": 6,
+    "metadata": ["weapon"]
   },
   {
     "value": "+1d4 poison damage",
-    "weighting": 4
+    "weighting": 4,
+    "metadata": ["weapon"]
   },
   {
     "value": "+1d4 psychic damage",
-    "weighting": 4
+    "weighting": 4,
+    "metadata": ["weapon"]
   },
   {
     "value": "+1d4 radiant damage",
-    "weighting": 4
+    "weighting": 4,
+    "metadata": ["weapon"]
   },
   {
     "value": "+1d4 slashing damage",
-    "weighting": 6
+    "weighting": 6,
+    "metadata": ["weapon"]
   },
   {
     "value": "+1d4 thunder damage",
-    "weighting": 4
+    "weighting": 4,
+    "metadata": ["weapon"]
   },
   {
     "value": "+2 acid damage",
@@ -202,5 +215,145 @@
   {
     "value": "+2 to loot rolls result, -1 loot roll die size",
     "weighting": 5
+  },
+  {
+    "value": "+1 resistance to all damage",
+    "weighting": 2,
+    "metadata": ["armour"]
+  },
+  {
+    "value": "+1 resistance to acid damage",
+    "metadata": ["armour"]
+  },
+  {
+    "value": "+1 resistance to bludgeoning damage",
+    "weighting": 8,
+    "metadata": ["armour"]
+  },
+  {
+    "value": "+1 resistance to cold damage",
+    "metadata": ["armour"]
+  },
+  {
+    "value": "+1 resistance to fire damage",
+    "metadata": ["armour"]
+  },
+  {
+    "value": "+1 resistance to force damage",
+    "metadata": ["armour"]
+  },
+  {
+    "value": "+1 resistance to lightning damage",
+    "metadata": ["armour"]
+  },
+  {
+    "value": "+1 resistance to necrotic damage",
+    "metadata": ["armour"]
+  },
+  {
+    "value": "+1 resistance to piercing damage",
+    "weighting": 8,
+    "metadata": ["armour"]
+  },
+  {
+    "value": "+1 resistance to poison damage",
+    "metadata": ["armour"]
+  },
+  {
+    "value": "+1 resistance to psychic damage",
+    "metadata": ["armour"]
+  },
+  {
+    "value": "+1 resistance to radiant damage",
+    "metadata": ["armour"]
+  },
+  {
+    "value": "+1 resistance to slashing damage",
+    "weighting": 8,
+    "metadata": ["armour"]
+  },
+  {
+    "value": "+1 resistance to thunder damage",
+    "metadata": ["armour"]
+  },
+  {
+    "value": "+1 resistance to all damage",
+    "weighting": 2,
+    "metadata": ["armour"]
+  },
+  {
+    "value": "When you score a critical hit on a death saving throw, you gain 1 hit point and immediately end your turn",
+    "metadata": ["armour"]
+  },
+  {
+    "value": "You have an additional first level spell slot"
+  },
+  {
+    "value": "You have an additional second level spell slot",
+    "weighting": 5
+  },
+  {
+    "value": "You have an additional spell slot of your second highest spell slot where you have at least one spell slot available",
+    "weighting": 2
+  },
+  {
+    "value": "+5ft attack reach with melee attacks on your turn",
+    "weighting": 2
+  },
+  {
+    "value": "+10ft darkvision"
+  },
+  {
+    "value": "+5ft blindsight"
+  },
+  {
+    "value": "+5ft tremorsense"
+  },
+  {
+    "value": "You cannot be deafened"
+  },
+  {
+    "value": "When you score a critical strike with an attack of opportunity, the target is paralyzed until the end of their turn"
+  },
+  {
+    "value": "+1 proficiency bonus if this mod is empowered or appears twice on the same item",
+    "weighting": 5
+  },
+  {
+    "value": "When you hit a creature with an attack, they are silenced until the end of their next turn"
+  },
+  {
+    "value": "-1 critical strike requirement with attacks (including spell attacks)",
+    "weighting": 5
+  },
+  {
+    "value": "Targets have +1 critical strike avoidance minimum when saving against your spells",
+    "weighting": 5
+  },
+  {
+    "value": "You're acclimated to high altitude, including elevations above 20,000 feet"
+  },
+  {
+    "value": "Stone's Endurance (if you already have it, you get another use oer long/short rest)",
+    "weighting": 2
+  },
+  {
+    "value": "First wearer chooses a language in which that this item grants perfect knowledge"
+  },
+  {
+    "value": "+2 passive perception"
+  },
+  {
+    "value": "+10 feet speed in all of your available speed types"
+  },
+  {
+    "value": "+1 to hit die size"
+  },
+  {
+    "value": "+1 weapon attack AB with attacks that deal non-physical damage",
+    "weighting": 5
+  },
+  {
+    "value": "+1 to initiative rolls"
   }
 ]
