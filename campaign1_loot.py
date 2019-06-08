@@ -183,7 +183,7 @@ def define_action_map(new_loot_parameter):
     return {
         LootType.junk: new_loot_parameter.get_junk,
         LootType.mundane: new_loot_parameter.get_mundane,
-        LootType.consumable: new_loot_parameter.get_consumable,
+        LootType.consumable: new_loot_parameter.get_consumable,  # TODO: Need more
         LootType.low_gold: lambda: random.randint(30, 99),
         LootType.ring: None,
         LootType.amulet: None,
