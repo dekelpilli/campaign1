@@ -1,31 +1,38 @@
 [
   {
-    "value": "Chaos Orb - reroll all mods on a magic item"
+    "value": "Chaos Orb(s) - reroll all mods on a magic item"
   },
   {
-    "value": "Orb of Destruction - Remove a random mod from a magic item or artifact"
+    "value": "Orb of Destruction(s) - Remove a random mod from a magic item or artifact",
+    "metadata": ["advantage"]
   },
   {
-    "value": "Annulment Orb - Remove a mod of your choice from a magic item or artifact"
+    "value": "Annulment Orb(s) - Remove a mod of your choice from a magic item or artifact",
+    "metadata": ["disadvantage"]
   },
   {
-    "value": "Orb of Creation - Convert a mundane item into a magical item with 1d4 mods",
-    "weighting": 5
+    "value": "Orb of Creation(s) - Convert a mundane item into a magical item with 1d4 mods",
+    "weighting": 5,
+    "metadata": ["disadvantage"]
   },
   {
-    "value": "Orb of Flux - swap magical properties between compatible items, including simply moving enchantments to mundane items",
+    "value": "Orb of Flux(s) - swap magical properties between compatible items, including simply moving enchantments to mundane items",
+    "metadata": ["advantage"],
     "weighting": 15
   },
   {
     "value": "Exalted Orb - add a mod to a magical item, to a maximum of 4",
-    "weighting": 8
+    "weighting": 8,
+    "metadata": ["1"]
   },
   {
     "value": "Orb of Rare Candy - level up an artifact",
-    "weighting": 1
+    "weighting": 1,
+    "metadata": ["1"]
   },
   {
     "value": "Orb of Empowerment - double a mod on a magic item or artifact (can't be a unique mod). An item cannot have more than one doubled mod",
-    "weighting": 1
+    "weighting": 1,
+    "metadata": ["1"]
   }
 ]

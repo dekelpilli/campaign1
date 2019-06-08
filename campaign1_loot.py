@@ -58,12 +58,17 @@ class LootController:
         self.crafting_item = LootController.create_loot_option("crafting_item", do_flush)
         self.mundane = LootController.create_loot_option("mundane", do_flush)
         self.enchant = LootController.create_loot_option("enchant", do_flush)
+        self.consumable = LootController.create_loot_option("consumable", do_flush)
 
     def get_mundane(self):
-        return self.mundane.get_random_item()
+        return self.mundane.get_random_item().value
 
     def get_enchant(self):
         return self.enchant.get_random_item().value
+
+    def get_consumable(self):
+        item = self.consumable.get_random_item()
+        return LootController.get_potentially_multiple_items(item, lambda: random.randint(1, 4))
 
     def get_weapon_enchant(self):
         enchantment = self.enchant.get_random_item()
@@ -78,7 +83,23 @@ class LootController:
         return enchantment.value
 
     def get_crafting_item(self):
-        return self.crafting_item.get_random_item().value
+        crafting_item = self.crafting_item.get_random_item()
+        return LootController.get_potentially_multiple_items(crafting_item, lambda: random.randint(1, 3))
+
+    @staticmethod
+    def get_potentially_multiple_items(item, randomisation_function):
+        if "disadvantage" in item.metadata:
+            amount = min(randomisation_function(), randomisation_function())
+        elif "advantage" in item.metadata:
+            amount = max(randomisation_function(), randomisation_function())
+        elif "1" in item.metadata:
+            amount = 1
+        else:
+            amount = randomisation_function()
+        for metadata_tag in item.metadata:
+            if metadata_tag[0] == "x":
+                amount = amount * get_int_from_str(metadata_tag[1:], 1)
+        return str(amount) + " " + item.value
 
     def get_double_enchanted_item(self):
         base_type = self.mundane.get_random_item()
@@ -155,7 +176,7 @@ def define_action_map(loot_controller):
     return {
         LootType.junk: loot_controller.get_junk,
         LootType.mundane: loot_controller.get_mundane,
-        LootType.consumable: None,
+        LootType.consumable: loot_controller.get_consumable,
         LootType.low_gold: lambda: random.randint(30, 99),
         LootType.ring: None,
         LootType.amulet: None,

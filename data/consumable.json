@@ -1,0 +1,40 @@
+[
+  {
+    "value": "Level 1 health potion(s)",
+    "metadata": ["advantage"]
+  },
+  {
+    "value": "Level 2 health potion(s)"
+  },
+  {
+    "value": "Level 3 health potion(s)",
+    "metadata": ["disadvantage"]
+  },
+  {
+    "value": "Poison vial(s) (+1d6 poison damage to weapon for 1 minute), 10d6 poison damage if ingested in full"
+  },
+  {
+    "value": "Greater poison vial(s) (+1d8 poison damage to weapon for 1 minute), 10d8 poison damage if ingested in full, enemies poisoned for 2 rounds on critical strike",
+    "metadata": ["disadvantage"]
+  },
+  {
+    "value": "Ration(s)",
+    "metadata": ["x2"]
+  },
+  {
+    "value": "Invulnerability potion(s) - next damage you take is nullified",
+    "weighting": 5
+  },
+  {
+    "value": "Short rest potions - drink to reduce 10 minutes from your current short rest",
+    "metadata": ["advantage"]
+  },
+  {
+    "value": "Long rest potion(s) - drink to reduce 1 hour from your next long rest",
+    "metadata": ["advantage"]
+  },
+  {
+    "value": "Experience potions - Gain 10 XP when drinking this potion",
+    "weighting": 5
+  }
+]

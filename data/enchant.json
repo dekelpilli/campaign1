@@ -477,5 +477,14 @@
   },
   {
     "value": "+4 Strength while restrained"
+  },
+  {
+    "value": "Modifiers to your damage apply to your minions at 50% effectiveness (stacks, max 100%)"
+  },
+  {
+    "value": "Whenever you deal damage, you may choose to instead not deal damage, and the enemy will provide you with an additional loot roll on death, with die size equal to one fifth of the damage nullified. \n\t\t\tIf the number is odd, your minimum result increases by 1. A creature cannot provide more than one such loot roll."
+  },
+  {
+    "value": "When you are hit by a melee attack, you may use a reaction to disengage and take a normal movement action"
   }
 ]
