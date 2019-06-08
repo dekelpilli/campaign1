@@ -117,10 +117,10 @@ class LootController:
                    + "\n\t" + self.get_armour_enchant() \
                    + "\n\t" + self.get_armour_enchant()
 
-        print("This item is not an armour or a weapon")
+        print("This item is not an armour or a weapon - " + base_type.value)
         return base_type.value \
-               + "\n\t" + self.get_enchant() \
-               + "\n\t" + self.get_enchant()
+            + "\n\t" + self.get_enchant() \
+            + "\n\t" + self.get_enchant()
 
     def get_single_enchanted_item(self):
         base_type = self.mundane.get_random_item()
@@ -132,8 +132,9 @@ class LootController:
             return base_type.value \
                    + "\n\t" + self.get_armour_enchant()
 
+        print("This item is not an armour or a weapon - " + base_type.value)
         return base_type \
-               + "\n\t" + self.get_enchant()
+            + "\n\t" + self.get_enchant()
 
     def get_junk(self):
         return self.junk.get_random_item().value
@@ -168,6 +169,7 @@ def get_int_from_str(string, default_integer=None):
 
 
 def print_options():
+    pp = pprint.PrettyPrinter(indent=4)
     print("\n")
     pp.pprint(LOOT_TYPES)
     print("\t13: Random weapon enchant")
@@ -177,19 +179,19 @@ def print_options():
     print("\t>16: Show this")
 
 
-def define_action_map(loot_controller):
+def define_action_map(new_loot_parameter):
     return {
-        LootType.junk: loot_controller.get_junk,
-        LootType.mundane: loot_controller.get_mundane,
-        LootType.consumable: loot_controller.get_consumable,
+        LootType.junk: new_loot_parameter.get_junk,
+        LootType.mundane: new_loot_parameter.get_mundane,
+        LootType.consumable: new_loot_parameter.get_consumable,
         LootType.low_gold: lambda: random.randint(30, 99),
         LootType.ring: None,
         LootType.amulet: None,
-        LootType.single_enchant_item: loot_controller.get_single_enchanted_item,
-        LootType.crafting_item: loot_controller.get_crafting_item,
-        LootType.double_enchant_item: loot_controller.get_double_enchanted_item,
+        LootType.single_enchant_item: new_loot_parameter.get_single_enchanted_item,
+        LootType.crafting_item: new_loot_parameter.get_crafting_item,
+        LootType.double_enchant_item: new_loot_parameter.get_double_enchanted_item,
         LootType.high_gold: lambda: min(random.randint(100, 800), random.randint(100, 800)),
-        LootType.prayer_stone: loot_controller.get_prayer_stone,
+        LootType.prayer_stone: new_loot_parameter.get_prayer_stone,
         LootType.artifact: None
     }
 
@@ -197,7 +199,6 @@ def define_action_map(loot_controller):
 if __name__ == "__main__":
     loot_controller = LootController()
     loot_action_map = define_action_map(loot_controller)
-    pp = pprint.PrettyPrinter(indent=4)
     count = 0
     print_options()
     while True:
