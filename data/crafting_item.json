@@ -25,7 +25,7 @@
     "weighting": 1
   },
   {
-    "value": "Orb of Empowerment - level up one mod on a magic item or artifact",
-    "weighting": 7
+    "value": "Orb of Empowerment - double a mod on a magic item or artifact (can't be a unique mod). An item cannot have more than one doubled mod",
+    "weighting": 1
   }
 ]

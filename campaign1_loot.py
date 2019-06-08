@@ -11,14 +11,14 @@ class LootType(IntEnum):
     mundane = 2
     consumable = 3
     low_gold = 4
-    jewellery = 5
-    single_enchant_item = 6
-    crafting_item = 7
-    double_enchant_item = 8
-    high_gold = 9
-    prayer_stone = 10
-    artifact = 11
-    
+    ring = 5
+    amulet = 6
+    single_enchant_item = 7
+    crafting_item = 8
+    double_enchant_item = 9
+    high_gold = 10
+    prayer_stone = 11
+    artifact = 12
 
 
 LOOT_TYPES = dict()
@@ -27,10 +27,11 @@ for loot_type in LootType:
 
 
 class LootOptionItem:
-    def __init__(self, value, weighting, enabled):
+    def __init__(self, value, weighting, enabled, metadata):
         self.weighting = weighting
         self.value = value
         self.enabled = enabled
+        self.metadata = metadata
 
     def get_weighting_value(self):
         return self.enabled * self.weighting
@@ -68,9 +69,10 @@ class LootController:
             item_dicts = json.loads(file.read())
         loot_option_items = []
         for item_dict in item_dicts:
-            loot_option_items.append(LootOptionItem(item_dict.get("value"),
+            loot_option_items.append(LootOptionItem(item_dict["value"],
                                                     item_dict.get("weighting", 10),
-                                                    item_dict.get("enabled", True)))
+                                                    item_dict.get("enabled", True),
+                                                    item_dict.get("metadata", None)))
         loot_option = LootOption(name)
         for loot_option_item in loot_option_items:
             loot_option.add_item(loot_option_item)
@@ -78,11 +80,11 @@ class LootController:
         return loot_option
 
 
-def get_int_from_str(string, integer=None):
+def get_int_from_str(string, default_integer=None):
     try:
         return int(string)
     except ValueError:
-        return integer
+        return default_integer
 
 
 if __name__ == "__main__":
