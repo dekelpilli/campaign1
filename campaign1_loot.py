@@ -8,7 +8,7 @@ DATA_DIR = "data/"
 
 class LootType(IntEnum):
     junk = 1
-    mundane = 2
+    mundane = 2  # TODO: minor armours
     consumable = 3
     low_gold = 4
     ring = 5
@@ -54,14 +54,35 @@ class LootOption:
 class LootController:
     def __init__(self):
         self.junk = LootController.create_loot_option("junk")
-        self.jewellery = LootController.create_loot_option("jewellery")
+        # self.jewellery = LootController.create_loot_option("jewellery")
         self.crafting_item = LootController.create_loot_option("crafting_item")
+        self.mundane = LootController.create_loot_option("mundane")
+        self.enchant = LootController.create_loot_option("enchant")
+
+    def get_mundane(self):
+        return self.mundane.get_random_item()
+
+    def get_enchant(self):
+        return self.enchant.get_random_item()
+
+    def get_crafting_item(self):
+        return self.crafting_item.get_random_item()
+
+    def get_double_enchanted_item(self):
+        return self.get_mundane()\
+               + "\n\t" + self.get_enchant()\
+               + "\n\t" + self.get_enchant()
+
+    def get_single_enchanted_item(self):
+        return self.get_mundane()\
+               + "\n\t" + self.get_enchant()
 
     def get_junk(self):
         return self.junk.get_random_item()
 
     def get_jewellery(self):
-        return self.jewellery.get_random_item()
+        pass
+        # return self.jewellery.get_random_item()
 
     @staticmethod
     def create_loot_option(name):
@@ -91,15 +112,17 @@ if __name__ == "__main__":
     loot_controller = LootController()
     loot_action_map = {
         LootType.junk: loot_controller.get_junk,
-        LootType.mundane: None,
+        LootType.mundane: loot_controller.get_mundane,
         LootType.consumable: None,
-        LootType.low_gol: lambda: random.randint(30, 80),
-        LootType.jewellery: None,
-        LootType.single_enchant_item: None,
-        LootType.crafting_item: None,
-        LootType.double_enchant_item: None,
-        LootType.high_gold: None,
+        LootType.low_gold: lambda: random.randint(30, 80),
+        LootType.ring: None,
+        LootType.amulet: None,
+        LootType.single_enchant_item: loot_controller.get_single_enchanted_item,
+        LootType.crafting_item: loot_controller.get_crafting_item(),
+        LootType.double_enchant_item: loot_controller.get_double_enchanted_item,
+        LootType.high_gold: lambda: min(random.randint(100, 800), random.randint(100, 800)),
         LootType.prayer_stone: None,
+        LootType.artifact: None
     }
     while True:
         roll = get_int_from_str(input("\nLoot roll: "), random.randint(1, 8))

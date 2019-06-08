@@ -200,7 +200,7 @@
     "value": "+2 AC while under the effect of a condition"
   },
   {
-    "value": "+1 to minimum loot roll result",
+    "value": "+2 to loot rolls result, -1 loot roll die size",
     "weighting": 5
   }
 ]
