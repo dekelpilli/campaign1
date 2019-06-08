@@ -8,7 +8,7 @@ DATA_DIR = "data/"
 
 class LootType(IntEnum):
     junk = 1
-    mundane = 2  # TODO: minor armours
+    mundane = 2
     consumable = 3
     low_gold = 4
     ring = 5
@@ -157,9 +157,21 @@ if __name__ == "__main__":
         if count % 8 == 0:
             print("\n")
             pp.pprint(LOOT_TYPES)
+            print("\t13: Random weapon enchant")
+            print("\t14: Random armour enchant")
+            print("\t15: Random enchant")
+            print("\t16: Reload mods")
         roll = get_int_from_str(input("\nLoot roll: "), random.randint(1, 8))
         if roll < 0:
             exit(0)
         loot_type = LOOT_TYPES.get(roll)
         print(loot_action_map.get(loot_type, lambda: str(roll) + " is not a valid option")())
         count += 1
+        if roll == 13:
+            loot_controller.get_weapon_enchant()
+        if roll == 14:
+            loot_controller.get_armour_enchant()
+        if roll == 15:
+            loot_controller.get_enchant()
+        if roll == 16:
+            loot_controller = LootController()

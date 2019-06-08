@@ -1,66 +1,66 @@
 [
   {
-    "value": "+1d4 acid damage",
+    "value": "+1d4 acid damage with weapon attacks",
     "weighting": 4,
     "metadata": ["weapon"]
   },
   {
-    "value": "+1d4 bludgeoning damage",
+    "value": "+1d4 bludgeoning damage with weapon attacks",
     "weighting": 6,
     "metadata": ["weapon"]
   },
   {
-    "value": "+1d4 cold damage",
+    "value": "+1d4 cold damage with weapon attacks",
     "weighting": 4,
     "metadata": ["weapon"]
   },
   {
-    "value": "+1d4 fire damage",
+    "value": "+1d4 fire damage with weapon attacks",
     "weighting": 4,
     "metadata": ["weapon"]
   },
   {
-    "value": "+1d4 force damage",
+    "value": "+1d4 force damage with weapon attacks",
     "weighting": 4,
     "metadata": ["weapon"]
   },
   {
-    "value": "+1d4 lightning damage",
+    "value": "+1d4 lightning damage with weapon attacks",
     "weighting": 4,
     "metadata": ["weapon"]
   },
   {
-    "value": "+1d4 necrotic damage",
+    "value": "+1d4 necrotic damage with weapon attacks",
     "weighting": 4,
     "metadata": ["weapon"]
   },
   {
-    "value": "+1d4 piercing damage",
+    "value": "+1d4 piercing damage with weapon attacks",
     "weighting": 6,
     "metadata": ["weapon"]
   },
   {
-    "value": "+1d4 poison damage",
+    "value": "+1d4 poison damage with weapon attacks",
     "weighting": 4,
     "metadata": ["weapon"]
   },
   {
-    "value": "+1d4 psychic damage",
+    "value": "+1d4 psychic damage with weapon attacks",
     "weighting": 4,
     "metadata": ["weapon"]
   },
   {
-    "value": "+1d4 radiant damage",
+    "value": "+1d4 radiant damage with weapon attacks",
     "weighting": 4,
     "metadata": ["weapon"]
   },
   {
-    "value": "+1d4 slashing damage",
+    "value": "+1d4 slashing damage with weapon attacks",
     "weighting": 6,
     "metadata": ["weapon"]
   },
   {
-    "value": "+1d4 thunder damage",
+    "value": "+1d4 thunder damage with weapon attacks",
     "weighting": 4,
     "metadata": ["weapon"]
   },
@@ -169,22 +169,27 @@
     "weighting": 4
   },
   {
-    "value": "+1 to Strength saves"
+    "value": "+1 to Strength saves",
+    "metadata": ["armour"]
   },
   {
     "value": "+1 to Dexterity saves",
-    "weighting": 8
+    "weighting": 8,
+    "metadata": ["armour"]
   },
   {
     "value": "+1 to Constitution saves",
-    "weighting": 8
+    "weighting": 8,
+    "metadata": ["armour"]
   },
   {
-    "value": "+1 to Intelligence saves"
+    "value": "+1 to Intelligence saves",
+    "metadata": ["armour"]
   },
   {
     "value": "+1 to Wisdom saves",
-    "weighting": 8
+    "weighting": 8,
+    "metadata": ["armour"]
   },
   {
     "value": "+1 to Charisma saves"
@@ -210,7 +215,8 @@
     "value": "Gain temporary hit points equal to your lowest ability score (not bonus) at the beginning of each combat. This mod can stack."
   },
   {
-    "value": "+2 AC while under the effect of a condition"
+    "value": "+2 AC while under the effect of a condition",
+    "metadata": ["armour"]
   },
   {
     "value": "+2 to loot rolls result, -1 loot roll die size",
@@ -320,7 +326,8 @@
     "weighting": 5
   },
   {
-    "value": "When you hit a creature with an attack, they are silenced until the end of their next turn"
+    "value": "When you hit a creature with an attack, they are silenced until the end of their next turn",
+    "metadata": ["weapon"]
   },
   {
     "value": "-1 critical strike requirement with attacks (including spell attacks)",
@@ -355,5 +362,46 @@
   },
   {
     "value": "+1 to initiative rolls"
+  },
+  {
+    "value": "You have advantage on initiative rolls",
+    "weighting": 5
+  },
+  {
+    "value": "+2 damage with spells"
+  },
+  {
+    "value": "+5ft fly speed"
+  },
+  {
+    "value": "+10ft climb speed"
+  },
+  {
+    "value": "+10ft swimming speed, and you are amphibious"
+  },
+  {
+    "value": "+2 insight"
+  },
+  {
+    "value": "+2 investigation"
+  },
+  {
+    "value": "You can jump without a run-up as if you had taken a run-up"
+  },
+  {
+    "value": "+5 points of Lay on Hands per long rest"
+  },
+  {
+    "value": "+4 damage against creatures of a certain type \n\t\t(random, 1-14, [1 Abberation, 2 Beast, 3 Celestial, 4 Construct, 5 Dragon, 6 Elemental, 7 Fey, 8 Fiend, 9 Giant, 10 Humanoid, 11 Monstrosity, 12 Ooze, 13 Plant, 14 Undead]"
+  },
+  {
+    "value": "When you go down to 0 hit points, creatures of your choice within 5 feet of you must succeed a Constitution save against a DC of (8 + prof + attribute mod of your choice) or be stunned until the end of your next turn"
+  },
+  {
+    "value": "Your short rests can be 10 minutes shorter, to a minimum of 20 minutes",
+    "metadata": ["armour"]
+  },
+  {
+    "value": "Your long rests can be 1 hour shorter, to a minimum of 3 hours"
   }
 ]

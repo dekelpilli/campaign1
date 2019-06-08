@@ -198,5 +198,44 @@
   {
     "value": "Shield (+2 AC)",
     "metadata": ["armour"]
+  },
+  {
+    "value": "Unarmoured boots"
+  },
+  {
+    "value": "Unarmoured gloves"
+  },
+  {
+    "value": "Unarmoured helmet"
+  },
+  {
+    "value": "Unarmoured body armour (shirt)"
+  },
+  {
+    "value": "Light boots"
+  },
+  {
+    "value": "Light gloves"
+  },
+  {
+    "value": "Light helmet"
+  },
+  {
+    "value": "Medium boots"
+  },
+  {
+    "value": "Medium gloves"
+  },
+  {
+    "value": "Medium helmet"
+  },
+  {
+    "value": "Heavy boots"
+  },
+  {
+    "value": "Heavy gloves"
+  },
+  {
+    "value": "Heavy helmet"
   }
 ]
