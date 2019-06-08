@@ -1,6 +1,7 @@
 [
   {
-    "value": "Chaos Orb(s) - reroll all mods on a magic item"
+    "value": "Chaos Orb(s) - reroll all mods on a magic item",
+    "metadata": ["disadvantage"]
   },
   {
     "value": "Orb of Destruction(s) - Remove a random mod from a magic item or artifact",

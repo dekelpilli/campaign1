@@ -59,16 +59,19 @@ class LootController:
         self.mundane = LootController.create_loot_option("mundane", do_flush)
         self.enchant = LootController.create_loot_option("enchant", do_flush)
         self.consumable = LootController.create_loot_option("consumable", do_flush)
+        self.prayer_stone = LootController.create_loot_option("prayer_stone", do_flush)
 
     def get_mundane(self):
         return self.mundane.get_random_item().value
+
+    def get_prayer_stone(self):
+        return self.prayer_stone.get_random_item().value
 
     def get_enchant(self):
         return self.enchant.get_random_item().value
 
     def get_consumable(self):
-        item = self.consumable.get_random_item()
-        return LootController.get_potentially_multiple_items(item, lambda: random.randint(1, 4))
+        return LootController.get_multiple_items(self.consumable.get_random_item(), lambda: random.randint(1, 4))
 
     def get_weapon_enchant(self):
         enchantment = self.enchant.get_random_item()
@@ -83,22 +86,23 @@ class LootController:
         return enchantment.value
 
     def get_crafting_item(self):
-        crafting_item = self.crafting_item.get_random_item()
-        return LootController.get_potentially_multiple_items(crafting_item, lambda: random.randint(1, 3))
+        return LootController.get_multiple_items(self.crafting_item.get_random_item(), lambda: random.randint(1, 3))
 
     @staticmethod
-    def get_potentially_multiple_items(item, randomisation_function):
+    def get_multiple_items(item, randomisation_function):
         if "disadvantage" in item.metadata:
             amount = min(randomisation_function(), randomisation_function())
         elif "advantage" in item.metadata:
             amount = max(randomisation_function(), randomisation_function())
-        elif "1" in item.metadata:
-            amount = 1
         else:
             amount = randomisation_function()
         for metadata_tag in item.metadata:
             if metadata_tag[0] == "x":
                 amount = amount * get_int_from_str(metadata_tag[1:], 1)
+            potentially_static_value = get_int_from_str(metadata_tag)
+            if potentially_static_value is not None:
+                amount = potentially_static_value
+
         return str(amount) + " " + item.value
 
     def get_double_enchanted_item(self):
@@ -170,6 +174,7 @@ def print_options():
     print("\t14: Random armour enchant")
     print("\t15: Random enchant")
     print("\t16: Reload mods")
+    print("\t>16: Show this")
 
 
 def define_action_map(loot_controller):
@@ -184,7 +189,7 @@ def define_action_map(loot_controller):
         LootType.crafting_item: loot_controller.get_crafting_item,
         LootType.double_enchant_item: loot_controller.get_double_enchanted_item,
         LootType.high_gold: lambda: min(random.randint(100, 800), random.randint(100, 800)),
-        LootType.prayer_stone: None,
+        LootType.prayer_stone: loot_controller.get_prayer_stone,
         LootType.artifact: None
     }
 
@@ -213,6 +218,5 @@ if __name__ == "__main__":
             loot_controller = LootController(True)
             loot_action_map = define_action_map(loot_controller)
             print("Reloaded loot from files")
-
-        if count % 8 == 0:
+        if roll > 16:
             print_options()
