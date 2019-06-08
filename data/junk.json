@@ -4,29 +4,29 @@
   },
   {
     "value": "Reroll with 8",
-    "weighting": 5
+    "weighting": 2
   },
   {
     "value": "Reroll with 12",
-    "weighting": 3
+    "weighting": 1
   },
   {
     "value": "Magic glasses. While wearing this, you perceive every creature as looking like you"
   },
   {
-    "value": "Invisible ink marker. The ink can only be made visible with the use of a Wish spell. Good for 1d100 characters."
+    "value": "Invisible ink marker. The ink can only be made visible with the use of a Wish spell. Good for 1d20 words."
   },
   {
     "value": "A cell phone"
   },
   {
-    "value": "A recipe for a random food. https://www.fantasynamegenerators.com/food-names.php"
+    "value": "A recipe for https://www.fantasynamegenerators.com/food-names.php"
   },
   {
     "value": "The autobiography of a horse named https://appzaza.com/random-interjection-generator"
   },
   {
-    "value": "A CD ROM"
+    "value": "A CD-ROM"
   },
   {
     "value": "Mitts that give +1 hand warmth"

@@ -1,66 +1,66 @@
 [
   {
-    "value": "+1d4 acid damage with weapon attacks",
+    "value": "+1d4 acid damage with attacks with this weapon",
     "weighting": 4,
     "metadata": ["weapon"]
   },
   {
-    "value": "+1d4 bludgeoning damage with weapon attacks",
+    "value": "+1d4 bludgeoning damage with attacks with this weapon",
     "weighting": 6,
     "metadata": ["weapon"]
   },
   {
-    "value": "+1d4 cold damage with weapon attacks",
+    "value": "+1d4 cold damage with attacks with this weapon",
     "weighting": 4,
     "metadata": ["weapon"]
   },
   {
-    "value": "+1d4 fire damage with weapon attacks",
+    "value": "+1d4 fire damage with attacks with this weapon",
     "weighting": 4,
     "metadata": ["weapon"]
   },
   {
-    "value": "+1d4 force damage with weapon attacks",
+    "value": "+1d4 force damage with attacks with this weapon",
     "weighting": 4,
     "metadata": ["weapon"]
   },
   {
-    "value": "+1d4 lightning damage with weapon attacks",
+    "value": "+1d4 lightning damage with attacks with this weapon",
     "weighting": 4,
     "metadata": ["weapon"]
   },
   {
-    "value": "+1d4 necrotic damage with weapon attacks",
+    "value": "+1d4 necrotic damage with attacks with this weapon",
     "weighting": 4,
     "metadata": ["weapon"]
   },
   {
-    "value": "+1d4 piercing damage with weapon attacks",
+    "value": "+1d4 piercing damage with attacks with this weapon",
     "weighting": 6,
     "metadata": ["weapon"]
   },
   {
-    "value": "+1d4 poison damage with weapon attacks",
+    "value": "+1d4 poison damage with attacks with this weapon",
     "weighting": 4,
     "metadata": ["weapon"]
   },
   {
-    "value": "+1d4 psychic damage with weapon attacks",
+    "value": "+1d4 psychic damage with attacks with this weapon",
     "weighting": 4,
     "metadata": ["weapon"]
   },
   {
-    "value": "+1d4 radiant damage with weapon attacks",
+    "value": "+1d4 radiant damage with attacks with this weapon",
     "weighting": 4,
     "metadata": ["weapon"]
   },
   {
-    "value": "+1d4 slashing damage with weapon attacks",
+    "value": "+1d4 slashing damage with attacks with this weapon",
     "weighting": 6,
     "metadata": ["weapon"]
   },
   {
-    "value": "+1d4 thunder damage with weapon attacks",
+    "value": "+1d4 thunder damage with attacks with this weapon",
     "weighting": 4,
     "metadata": ["weapon"]
   },
@@ -403,5 +403,79 @@
   },
   {
     "value": "Your long rests can be 1 hour shorter, to a minimum of 3 hours"
+  },
+  {
+    "value": "You need four failed death save points to die, instead of 3"
+  },
+  {
+    "value": "+1 perception"
+  },
+  {
+    "value": "+2 arcana"
+  },
+  {
+    "value": "+2 athletics"
+  },
+  {
+    "value": "+2 acrobatics"
+  },
+  {
+    "value": "+2 sleight of hand"
+  },
+  {
+    "value": "+2 stealth"
+  },
+  {
+    "value": "+2 history"
+  },
+  {
+    "value": "+2 nature"
+  },
+  {
+    "value": "+2 religion"
+  },
+  {
+    "value": "+2 animal handling"
+  },
+  {
+    "value": "+2 medicine"
+  },
+  {
+    "value": "+2 survival"
+  },
+  {
+    "value": "+1 deception"
+  },
+  {
+    "value": "+2 intimidation"
+  },
+  {
+    "value": "+2 performance"
+  },
+  {
+    "value": "+1 persuasion"
+  },
+  {
+    "value": "+20 feet to both range options on ranged weapons. This does nothing on weapons without range",
+    "metadata": ["weapon"]
+  },
+  {
+    "value": "Randomise a cantrip. While wearing this item, you may cast that cantrip once per long rest. Spellcasting modifier can be a mental attribute of your choice."
+  },
+  {
+    "value": "+2 to deception in languages other than Common"
+  },
+  {
+    "value": "You gain telepathy with a range of 10 feet",
+    "weighting": 6
+  },
+  {
+    "value": "While wearing this item, you gain sustenance every 24 hours"
+  },
+  {
+    "value": "This item sells for an extra 1d100 gold. You only roll after the item is sold"
+  },
+  {
+    "value": "+4 Strength while restrained"
   }
 ]

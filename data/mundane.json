@@ -200,42 +200,55 @@
     "metadata": ["armour"]
   },
   {
-    "value": "Unarmoured boots"
+    "value": "Unarmoured boots",
+    "metadata": ["armour"]
   },
   {
-    "value": "Unarmoured gloves"
+    "value": "Unarmoured gloves",
+    "metadata": ["armour"]
   },
   {
-    "value": "Unarmoured helmet"
+    "value": "Unarmoured helmet",
+    "metadata": ["armour"]
   },
   {
-    "value": "Unarmoured body armour (shirt)"
+    "value": "Unarmoured body armour (shirt)",
+    "metadata": ["armour"]
   },
   {
-    "value": "Light boots"
+    "value": "Light boots",
+    "metadata": ["armour"]
   },
   {
-    "value": "Light gloves"
+    "value": "Light gloves",
+    "metadata": ["armour"]
   },
   {
-    "value": "Light helmet"
+    "value": "Light helmet",
+    "metadata": ["armour"]
   },
   {
-    "value": "Medium boots"
+    "value": "Medium boots",
+    "metadata": ["armour"]
   },
   {
-    "value": "Medium gloves"
+    "value": "Medium gloves",
+    "metadata": ["armour"]
   },
   {
-    "value": "Medium helmet"
+    "value": "Medium helmet",
+    "metadata": ["armour"]
   },
   {
-    "value": "Heavy boots"
+    "value": "Heavy boots",
+    "metadata": ["armour"]
   },
   {
-    "value": "Heavy gloves"
+    "value": "Heavy gloves",
+    "metadata": ["armour"]
   },
   {
-    "value": "Heavy helmet"
+    "value": "Heavy helmet",
+    "metadata": ["armour"]
   }
 ]
