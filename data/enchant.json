@@ -488,7 +488,13 @@
     "value": "When you are hit by a melee attack, you may use a reaction to disengage and take a normal movement action"
   },
   {
-    "value": "This item's maximum number of mods is increased by 2. This mod cannot appear twice  or be empowered.",
+    "value": "This item's maximum number of mods is increased by 2. This mod cannot appear twice or be empowered.",
     "weighting": 5
+  },
+  {
+    "value": "+1 incoming healing (not including from potions)"
+  },
+  {
+    "value": "+2 outgoing healing"
   }
 ]
