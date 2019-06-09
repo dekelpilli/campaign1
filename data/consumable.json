@@ -43,5 +43,8 @@
   },
   {
     "value": "Stoneskin potion(s) - When you drink this potion, if you go down within the next day, you become petrified for a minute. While petrified in this way, you do not need to make death saves, and you are immune to damage. 1 month decay."
+  },
+  {
+    "value": "Rejuvenation potion(s) - Gain 20 temporary hit points when drunk, but lose all temporary hit points 1 minute later. 2 week decay."
   }
 ]

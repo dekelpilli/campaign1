@@ -228,7 +228,7 @@ def define_action_map(mapped_loot_controller):
     return {
         LootType.junk: mapped_loot_controller.get_junk,
         LootType.mundane: mapped_loot_controller.get_mundane,
-        LootType.consumable: mapped_loot_controller.get_consumable,  # TODO: Need more
+        LootType.consumable: mapped_loot_controller.get_consumable,
         LootType.low_gold: lambda: random.randint(30, 100),
         LootType.ring: mapped_loot_controller.get_ring,
         LootType.single_enchant_item: mapped_loot_controller.get_single_enchanted_item,
