@@ -33,7 +33,7 @@ class ChallengeRating:
         self.name = name
 
     def get_random_creature(self):
-        return self.monsters[random.randint(0, len(self.monsters) - 1)]
+        return self.monsters[random.randint(0, len(self.monsters) - 1)] if len(self.monsters) > 0 else None
 
 
 class LootOptionItem:
@@ -73,6 +73,19 @@ class LootController:
         self.challenge_rating = LootController.create_challenge_ratings(do_flush)
         self.all_crs = list(self.challenge_rating.keys())
         print()
+
+    def get_random_creature(self, cr):
+        creature = None
+        while creature is None:
+            creature = self.all_crs[cr].get_random_creature()
+            cr = str(int(cr) - 1)
+        return creature
+
+    def get_amulet(self):
+        max_allowed_cr = str(random.randint(1, 6))
+        amulet_cr_capacity_idx = random.randint(1, self.all_crs.index(max_allowed_cr))
+        amulet_max_cr = self.all_crs[amulet_cr_capacity_idx]
+        return "CR: " + amulet_max_cr + "\n\tCreature: " + self.get_random_creature(amulet_max_cr)
 
     def get_mundane(self):
         return self.mundane.get_random_item().value
@@ -213,7 +226,7 @@ def define_action_map(new_loot_parameter):
         LootType.consumable: new_loot_parameter.get_consumable,  # TODO: Need more
         LootType.low_gold: lambda: random.randint(30, 99),
         LootType.ring: None,
-        LootType.amulet: None,
+        LootType.amulet: LootController.get_amulet,
         LootType.single_enchant_item: new_loot_parameter.get_single_enchanted_item,
         LootType.crafting_item: new_loot_parameter.get_crafting_item,
         LootType.double_enchant_item: new_loot_parameter.get_double_enchanted_item,
@@ -246,5 +259,7 @@ if __name__ == "__main__":
             loot_controller = LootController(True)
             loot_action_map = define_action_map(loot_controller)
             print("Reloaded loot from files")
+        if roll == 17:
+            pass  # TODO: random creature of given CR
         if roll > 16:
             print_options()
