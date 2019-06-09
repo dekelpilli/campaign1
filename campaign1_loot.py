@@ -14,9 +14,9 @@ class LootType(IntEnum):
     ring = 5
     amulet = 6
     single_enchant_item = 7
-    crafting_item = 8
+    high_gold = 8
     double_enchant_item = 9
-    high_gold = 10
+    crafting_item = 10
     prayer_stone = 11
     artifact = 12
 
@@ -72,14 +72,14 @@ class LootController:
         self.prayer_stone = LootController.create_loot_option("prayer_stone", do_flush)
         self.challenge_rating = LootController.create_challenge_ratings(do_flush)
         self.all_crs = list(self.challenge_rating.keys())
-        print()
 
     def get_random_creature(self, cr):
-        creature = None
-        while creature is None:
-            creature = self.all_crs[cr].get_random_creature()
-            cr = str(int(cr) - 1)
-        return creature
+        while True:
+            creature = self.challenge_rating[cr].get_random_creature()
+            if creature is None:
+                cr = str(int(cr) - 1)
+            else:
+                return creature
 
     def get_amulet(self):
         max_allowed_cr = str(random.randint(1, 6))
@@ -216,22 +216,23 @@ def print_options():
     print("\t14: Random armour enchant")
     print("\t15: Random enchant")
     print("\t16: Reload mods")
-    print("\t>16: Show this")
+    print("\t17: Creature of a given CR")
+    print("\t>17: Show this")
 
 
-def define_action_map(new_loot_parameter):
+def define_action_map(mapped_loot_controller):
     return {
-        LootType.junk: new_loot_parameter.get_junk,
-        LootType.mundane: new_loot_parameter.get_mundane,
-        LootType.consumable: new_loot_parameter.get_consumable,  # TODO: Need more
+        LootType.junk: mapped_loot_controller.get_junk,
+        LootType.mundane: mapped_loot_controller.get_mundane,
+        LootType.consumable: mapped_loot_controller.get_consumable,  # TODO: Need more
         LootType.low_gold: lambda: random.randint(30, 99),
         LootType.ring: None,
-        LootType.amulet: LootController.get_amulet,
-        LootType.single_enchant_item: new_loot_parameter.get_single_enchanted_item,
-        LootType.crafting_item: new_loot_parameter.get_crafting_item,
-        LootType.double_enchant_item: new_loot_parameter.get_double_enchanted_item,
-        LootType.high_gold: lambda: min(random.randint(100, 800), random.randint(100, 800)),
-        LootType.prayer_stone: new_loot_parameter.get_prayer_stone,
+        LootType.amulet: mapped_loot_controller.get_amulet,
+        LootType.single_enchant_item: mapped_loot_controller.get_single_enchanted_item,
+        LootType.high_gold: lambda: min(random.randint(100, 600), random.randint(100, 600)),
+        LootType.double_enchant_item: mapped_loot_controller.get_double_enchanted_item,
+        LootType.crafting_item: mapped_loot_controller.get_crafting_item,
+        LootType.prayer_stone: mapped_loot_controller.get_prayer_stone,
         LootType.artifact: None
     }
 
@@ -260,6 +261,6 @@ if __name__ == "__main__":
             loot_action_map = define_action_map(loot_controller)
             print("Reloaded loot from files")
         if roll == 17:
-            pass  # TODO: random creature of given CR
-        if roll > 16:
+            print(loot_controller.get_random_creature(input("\nMonster CR: ")))
+        if roll > 17:
             print_options()
