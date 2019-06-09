@@ -26,6 +26,16 @@ for loot_type in LootType:
     LOOT_TYPES[loot_type.value] = loot_type
 
 
+class ChallengeRating:
+    def __init__(self, name, monsters, xp):
+        self.xp = xp
+        self.monsters = monsters
+        self.name = name
+
+    def get_random_creature(self):
+        return self.monsters[random.randint(0, len(self.monsters) - 1)]
+
+
 class LootOptionItem:
     def __init__(self, value, weighting, enabled, metadata):
         self.weighting = weighting
@@ -60,6 +70,9 @@ class LootController:
         self.enchant = LootController.create_loot_option("enchant", do_flush)
         self.consumable = LootController.create_loot_option("consumable", do_flush)
         self.prayer_stone = LootController.create_loot_option("prayer_stone", do_flush)
+        self.challenge_rating = LootController.create_challenge_ratings(do_flush)
+        self.all_crs = list(self.challenge_rating.keys())
+        print()
 
     def get_mundane(self):
         return self.mundane.get_random_item().value
@@ -138,6 +151,20 @@ class LootController:
 
     def get_junk(self):
         return self.junk.get_random_item().value
+
+    @staticmethod
+    def create_challenge_ratings(do_flush=False):
+        with open(DATA_DIR + "monster.json") as file:
+            if do_flush:
+                file.flush()
+                file.close()
+                return LootController.create_challenge_ratings()
+            file_contents = file.read()
+        cr_dicts = json.loads(file_contents)
+        crs = dict()
+        for cr in cr_dicts:
+            crs[cr] = ChallengeRating(cr, cr_dicts[cr]["monsters"], cr_dicts[cr]["XP"])
+        return crs
 
     @staticmethod
     def create_loot_option(name, do_flush=False):

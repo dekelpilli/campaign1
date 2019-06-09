@@ -1,0 +1,5 @@
+Amulets:
+    As a bonus action, you can transform into the creature contained in the amulet, but with a fifth of the hit points. You can stay in this form for up to a minute, or until you lose all of the creature's hit points. You may also exit the form at will.
+    If your transformation ended due to losing hit points, you cannot transform again until you complete a long rest. Otherwise, you cannot transform again until you complete a short rest.
+    While in this form, you retain all magical bonuses from your gear.
+    Amulets are created with a certain CR capacity. You can combine multiple amulets to create an amulet with a higher CR capacity (resulting amulet's CR is the highest CR whose XP is lower than the sum of the given amulet CR XPs)
