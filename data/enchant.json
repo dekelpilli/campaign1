@@ -496,5 +496,16 @@
   },
   {
     "value": "+2 outgoing healing"
+  },
+  {
+    "value": "+1 AC while unarmoured (does not work while using a shield)",
+    "weighting": 4
+  },
+  {
+    "value": "+1 AC while using a shield",
+    "weighting": 4
+  },
+  {
+    "value": "Once per long rest, when rolling a natural 1 on a d20, you may reroll."
   }
 ]

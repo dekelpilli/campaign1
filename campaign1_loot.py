@@ -12,8 +12,8 @@ class LootType(IntEnum):
     consumable = 3
     low_gold = 4
     ring = 5
-    amulet = 6
-    single_enchant_item = 7
+    single_enchant_item = 6
+    amulet = 7
     high_gold = 8
     double_enchant_item = 9
     crafting_item = 10
@@ -77,13 +77,13 @@ class LootController:
         while True:
             creature = self.challenge_rating[cr].get_random_creature()
             if creature is None:
-                cr = str(int(cr) - 1)
+                cr = str(int(cr) - 1)  # Not protecting against 0.125/0.5 because those have creatures
             else:
                 return creature
 
     def get_amulet(self):
-        max_allowed_cr = str(random.randint(1, 6))
-        amulet_cr_capacity_idx = random.randint(1, self.all_crs.index(max_allowed_cr))
+        max_allowed_cr_index = self.all_crs.index(str(random.randint(1, 6)))
+        amulet_cr_capacity_idx = random.randint(0, max_allowed_cr_index)
         amulet_max_cr = self.all_crs[amulet_cr_capacity_idx]
         return "CR: " + amulet_max_cr + "\n\tCreature: " + self.get_random_creature(amulet_max_cr)
 
@@ -227,9 +227,9 @@ def define_action_map(mapped_loot_controller):
         LootType.consumable: mapped_loot_controller.get_consumable,  # TODO: Need more
         LootType.low_gold: lambda: random.randint(30, 99),
         LootType.ring: None,
-        LootType.amulet: mapped_loot_controller.get_amulet,
         LootType.single_enchant_item: mapped_loot_controller.get_single_enchanted_item,
-        LootType.high_gold: lambda: min(random.randint(100, 600), random.randint(100, 600)),
+        LootType.amulet: mapped_loot_controller.get_amulet,
+        LootType.high_gold: lambda: min(random.randint(200, 600), random.randint(200, 600)),
         LootType.double_enchant_item: mapped_loot_controller.get_double_enchanted_item,
         LootType.crafting_item: mapped_loot_controller.get_crafting_item,
         LootType.prayer_stone: mapped_loot_controller.get_prayer_stone,
