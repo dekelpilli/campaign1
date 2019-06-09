@@ -67,6 +67,7 @@ class LootController:
         self.junk = LootController.create_loot_option("junk", do_flush)
         self.crafting_item = LootController.create_loot_option("crafting_item", do_flush)
         self.mundane = LootController.create_loot_option("mundane", do_flush)
+        self.ring = LootController.create_loot_option("ring", do_flush)
         self.enchant = LootController.create_loot_option("enchant", do_flush)
         self.consumable = LootController.create_loot_option("consumable", do_flush)
         self.prayer_stone = LootController.create_loot_option("prayer_stone", do_flush)
@@ -89,6 +90,9 @@ class LootController:
 
     def get_mundane(self):
         return self.mundane.get_random_item().value
+
+    def get_ring(self):
+        return self.ring.get_random_item().value
 
     def get_prayer_stone(self):
         return self.prayer_stone.get_random_item().value
@@ -225,8 +229,8 @@ def define_action_map(mapped_loot_controller):
         LootType.junk: mapped_loot_controller.get_junk,
         LootType.mundane: mapped_loot_controller.get_mundane,
         LootType.consumable: mapped_loot_controller.get_consumable,  # TODO: Need more
-        LootType.low_gold: lambda: random.randint(30, 99),
-        LootType.ring: None,
+        LootType.low_gold: lambda: random.randint(30, 100),
+        LootType.ring: mapped_loot_controller.get_ring,
         LootType.single_enchant_item: mapped_loot_controller.get_single_enchanted_item,
         LootType.amulet: mapped_loot_controller.get_amulet,
         LootType.high_gold: lambda: min(random.randint(200, 600), random.randint(200, 600)),
@@ -240,7 +244,6 @@ def define_action_map(mapped_loot_controller):
 if __name__ == "__main__":
     loot_controller = LootController()
     loot_action_map = define_action_map(loot_controller)
-    count = 0
     print_options()
     while True:
         roll = get_int_from_str(input("\nLoot roll: "), random.randint(1, 8))
@@ -249,7 +252,6 @@ if __name__ == "__main__":
         loot_type = LOOT_TYPES.get(roll)
         print(loot_action_map.get(loot_type, lambda: str(roll) + " is not a valid loot option, "
                                                                  "checking extra options")())
-        count += 1
         if roll == 13:
             print(loot_controller.get_weapon_enchant())
         if roll == 14:
