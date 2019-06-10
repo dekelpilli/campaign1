@@ -1,6 +1,6 @@
 import random
 import json
-import pprint
+from pprint import PrettyPrinter
 import completer
 import loot_types
 import readline
@@ -26,12 +26,18 @@ class LootController:
     # TODO: level up artifact method
 
     def get_new_artifact(self):
-        return str(random.choice(self.unfound_artifacts))
+        keys = list(self.unfound_artifacts.keys())
+        randomly_chosen_key = keys[random.randint(0, len(keys) - 1)]
+        artifact = self.unfound_artifacts[randomly_chosen_key]
+        return str(artifact)
 
     def get_found_artifacts(self):
         return list(self.found_artifacts.keys())
 
-    def get_random_creature(self, max_cr):
+    def get_random_creature(self):
+        return self.get_random_creature_of_cr(input("\nMonster CR: "))
+
+    def get_random_creature_of_cr(self, max_cr):
         cr = max_cr
         while True:
             creature = self.challenge_rating[cr].get_random_creature()
@@ -46,7 +52,7 @@ class LootController:
         max_allowed_cr_index = self.all_crs.index(str(random.randint(1, 6)))
         amulet_cr_capacity_idx = random.randint(0, max_allowed_cr_index)
         amulet_max_cr = self.all_crs[amulet_cr_capacity_idx]
-        return "CR: " + amulet_max_cr + "\n\tCreature: " + self.get_random_creature(amulet_max_cr)
+        return "CR: " + amulet_max_cr + "\n\tCreature: " + self.get_random_creature_of_cr(amulet_max_cr)
 
     def get_mundane(self):
         return self.mundane.get_random_item().value
@@ -204,7 +210,7 @@ def get_int_from_str(string, default_integer=None):
 
 
 def print_options():
-    pp = pprint.PrettyPrinter(indent=4)
+    pp = PrettyPrinter(indent=4)
     print("\n")
     pp.pprint(loot_types.LOOT_TYPES)
     print("\t13: Random weapon enchant")
@@ -218,18 +224,23 @@ def print_options():
 
 def define_action_map(mapped_loot_controller):
     return {
-        loot_types.LootType.junk: mapped_loot_controller.get_junk,
-        loot_types.LootType.mundane: mapped_loot_controller.get_mundane,
-        loot_types.LootType.consumable: mapped_loot_controller.get_consumable,
-        loot_types.LootType.low_gold: lambda: random.randint(30, 100),
-        loot_types.LootType.ring: mapped_loot_controller.get_ring,
-        loot_types.LootType.single_enchant_item: mapped_loot_controller.get_single_enchanted_item,
-        loot_types.LootType.amulet: mapped_loot_controller.get_amulet,
-        loot_types.LootType.high_gold: lambda: min(random.randint(200, 600), random.randint(200, 600)),
-        loot_types.LootType.double_enchant_item: mapped_loot_controller.get_double_enchanted_item,
-        loot_types.LootType.crafting_item: mapped_loot_controller.get_crafting_item,
-        loot_types.LootType.prayer_stone: mapped_loot_controller.get_prayer_stone,
-        loot_types.LootType.artifact: mapped_loot_controller.get_new_artifact
+        loot_types.LootType.junk.value: mapped_loot_controller.get_junk,
+        loot_types.LootType.mundane.value: mapped_loot_controller.get_mundane,
+        loot_types.LootType.consumable.value: mapped_loot_controller.get_consumable,
+        loot_types.LootType.low_gold.value: lambda: random.randint(30, 100),
+        loot_types.LootType.ring.value: mapped_loot_controller.get_ring,
+        loot_types.LootType.single_enchant_item.value: mapped_loot_controller.get_single_enchanted_item,
+        loot_types.LootType.amulet.value: mapped_loot_controller.get_amulet,
+        loot_types.LootType.high_gold.value: lambda: min(random.randint(200, 600), random.randint(200, 600)),
+        loot_types.LootType.double_enchant_item.value: mapped_loot_controller.get_double_enchanted_item,
+        loot_types.LootType.crafting_item.value: mapped_loot_controller.get_crafting_item,
+        loot_types.LootType.prayer_stone.value: mapped_loot_controller.get_prayer_stone,
+        loot_types.LootType.artifact.value: mapped_loot_controller.get_new_artifact,
+        13: mapped_loot_controller.get_weapon_enchant,
+        14: mapped_loot_controller.get_armour_enchant,
+        15: mapped_loot_controller.get_enchant,
+        # 16: reload loot
+        17: mapped_loot_controller.get_random_creature
     }
 
 
@@ -241,20 +252,13 @@ if __name__ == "__main__":
         roll = get_int_from_str(input("\nLoot roll: "), random.randint(1, 12))
         if roll < 0:
             exit(0)
-        print(loot_action_map.get(loot_types.LOOT_TYPES.get(roll),
+        print(loot_action_map.get(roll,
                                   lambda: str(roll) + " is not a valid loot option, checking extra options")())
-        if roll == 13:
-            print(loot_controller.get_weapon_enchant())
-        if roll == 14:
-            print(loot_controller.get_armour_enchant())
-        if roll == 15:
-            print(loot_controller.get_enchant())
+
         if roll == 16:
             loot_controller = LootController(True)
             loot_action_map = define_action_map(loot_controller)
             print("Reloaded loot from files")
-        if roll == 17:
-            print(loot_controller.get_random_creature(input("\nMonster CR: ")))
         if roll == 18:
             found_artifacts = loot_controller.get_found_artifacts()
             if len(found_artifacts) == 0:

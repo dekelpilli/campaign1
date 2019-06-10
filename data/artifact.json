@@ -4,17 +4,16 @@
     "type": "armour",
     "existing": [
       {
-        "value": "Whenever you make an investigation check, you may spend a minute to also make a religion check and use the higher of the two results."
+        "value": "Whenever you make an investigation check, you may spend a minute to also make a religion check and use the higher of the two results.",
+        "upgradeable": false
       }
     ],
     "available": [
       {
-        "value": "+1 intelligence",
-        "upgradeable": true
+        "value": "+1 intelligence"
       },
       {
-        "value": "+1 to all saving throws if you have made an investigation check in the last minute",
-        "upgradeable": true
+        "value": "+1 to all saving throws if you have made an investigation check in the last minute"
       },
       {
         "value": "You can spend an action making an investigation or perception check to ensure your next two attacks in this encounter are guaranteed to be critical hits.",
@@ -25,21 +24,22 @@
         "upgradeable": false
       },
       {
-        "value": "When learning creature stats, you can sacrifice a question. If you do this, you and your allies deal +1 damage with all spells and attacks against that creature. This does not stack.",
-        "upgradeable": true
+        "value": "When learning creature stats, you can sacrifice a question. If you do this, you and your allies deal +1 damage with all spells and attacks against that creature. This does not stack."
       },
       {
         "value": "You can make a disadvantaged check (of any appropriate type) to learn creature stats at the start of an encounter as a free action",
-        "upgradeable": true,
         "comment": "-> No disadvantage -> advantage"
       },
       {
         "value": "You have +1 AC when a creature targets you with an attack it has already used against you.",
-        "upgradeable": true,
         "comment": "+1 AC, max 2 AC"
       },
       {
         "value": "Whenever a creature succeeds a save against one of your spells, you learn its spell save bonus for all attributes",
+        "upgradeable": false
+      },
+      {
+        "value": "Once you have seen a creature cast a spell, you can spend an action to force it to make an Intelligence save against a DC of 8 + your prof + your INT Mod. On a failed save, the creature can't use that spell again for a minute, and you become able to use it once with Intelligence as the casting modifier.",
         "upgradeable": false
       }
     ],
@@ -51,18 +51,17 @@
     "type": "weapon",
     "existing": [
       {
-        "value": "You have advantage on attacks that would deal necrotic damage"
+        "value": "You have advantage on attacks that would deal necrotic damage",
+        "upgradeable": false
       }
     ],
     "available": [
       {
         "value": "When you kill a humanoid with an attack or spell, it rises at the start of your next turn as a zombie that is permanently under your command, following your verbal orders to the best of its ability. You may only have 1 such zombie at any given time.",
-        "upgradeable": true,
         "comment": "Ogre zombies instead"
       },
       {
         "value": "+1d4 necrotic damage with attacks with this weapon",
-        "upgradeable": true,
         "comment": "-> 1d6 -> 1d8 -> etc"
       },
       {
@@ -71,11 +70,26 @@
       },
       {
         "value": "+3 resistance to damage from undead creatures",
-        "upgradeable": false
+        "comment": "+1"
       },
       {
         "value": "You learn the Finger of Death spell and may cast it once per long rest. Casting mod is a mental attribute of your choice.",
         "upgradeable": false
+      },
+      {
+        "value": "Once per long rest, when you kill a creature, you can choose to reanimate it for 1 round. While reanimated in this way, the creature cannot die, and it is completely under your control.",
+        "comment": "+1 round"
+      },
+      {
+        "value": "Once per long rest, you may cast 1 spell slot worth of Necromany spells for without consuming a spell slot (you must still know the spell).",
+        "comment": "When upgraded, can be used to cast 2x level 1 or 1x level 2, etc."
+      },
+      {
+        "value": "For every effect that would target you, you may choose to be considered undead instead of humanoid",
+        "upgradeable": false
+      },
+      {
+        "value": ""
       }
     ],
     "found": false,
@@ -86,22 +100,20 @@
     "type": "weapon",
     "existing": [
       {
-        "value": "Attacks with this weapon cannot be disadvantaged"
+        "value": "Attacks with this weapon cannot be disadvantaged",
+        "upgradeable": false
       },
       {
-        "value": "+1 weapon die size",
-        "upgradeable": true
+        "value": "+1 weapon die size"
       }
     ],
     "available": [
       {
         "value": "You may cast Wrathful Smite as a free action once per short rest",
-        "upgradeable": true,
         "comment": "+1 uses per short rest"
       },
       {
         "value": "You and allies within 20 feet cannot be frightened if you have hit an enemy with this weapon in the last 2 rounds",
-        "upgradeable": true,
         "comment": "+5 feet, +1 round"
       },
       {
@@ -123,11 +135,11 @@
     "existing": [
       {
         "value": "+2 damage resistance while in sunlight",
-        "upgradeable": true,
         "comment": "+1"
       },
       {
-        "value": "You are permanently under the effect of the Speak with Animals spell"
+        "value": "You are permanently under the effect of the Speak with Animals spell",
+        "upgradeable": false
       }
     ],
     "available": [
@@ -141,16 +153,15 @@
       },
       {
         "value": "You have proficiency in the Nature skill. If you already have proficiency, you have expertise.",
-        "upgradeable": true,
         "comment": "prof -> expert -> advantage"
       },
       {
         "value": "You have proficiency in the Animal Handling skill. If you already have proficiency, you have expertise.",
-        "upgradeable": true,
         "comment": "prof -> expert -> advantage"
       },
       {
-        "value": "Beast and Plant creatures have disadvantage when attacking you"
+        "value": "Beast and Plant creatures have disadvantage when attacking you",
+        "upgradeable": false
       }
     ],
     "found": false,
