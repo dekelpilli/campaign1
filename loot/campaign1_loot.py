@@ -1,67 +1,10 @@
 import random
 import json
-from enum import IntEnum
 import pprint
-import completer
+from loot import completer, loot_types
 import readline
 
-DATA_DIR = "data/"
-
-
-class LootType(IntEnum):
-    junk = 1
-    mundane = 2
-    consumable = 3
-    low_gold = 4
-    ring = 5
-    single_enchant_item = 6
-    amulet = 7
-    high_gold = 8
-    double_enchant_item = 9
-    crafting_item = 10
-    prayer_stone = 11
-    artifact = 12
-
-
-LOOT_TYPES = dict()
-for loot_type in LootType:
-    LOOT_TYPES[loot_type.value] = loot_type
-
-
-class ChallengeRating:
-    def __init__(self, name, monsters, xp):
-        self.xp = xp
-        self.monsters = monsters
-        self.name = name
-
-    def get_random_creature(self):
-        return self.monsters[random.randint(0, len(self.monsters) - 1)] if len(self.monsters) > 0 else None
-
-
-class LootOptionItem:
-    def __init__(self, value, weighting, enabled, metadata):
-        self.weighting = weighting
-        self.value = value
-        self.enabled = enabled
-        self.metadata = metadata
-
-    def get_weighting_value(self):
-        return self.enabled * self.weighting
-
-
-class LootOption:
-    def __init__(self, name):
-        self.name = name
-        self.loot_options = []
-
-    def add_item(self, loot_option_item):
-        item_weighting = loot_option_item.get_weighting_value()
-        for i in range(item_weighting):
-            self.loot_options.append(loot_option_item)
-        random.shuffle(self.loot_options)
-
-    def get_random_item(self):
-        return self.loot_options[random.randint(0, len(self.loot_options) - 1)]
+DATA_DIR = "../data/"
 
 
 class LootController:
@@ -156,8 +99,8 @@ class LootController:
 
         print("This item is not an armour or a weapon - " + base_type.value)
         return base_type.value \
-            + "\n\t" + self.get_enchant() \
-            + "\n\t" + self.get_enchant()
+               + "\n\t" + self.get_enchant() \
+               + "\n\t" + self.get_enchant()
 
     def get_single_enchanted_item(self):
         base_type = self.mundane.get_random_item()
@@ -171,7 +114,7 @@ class LootController:
 
         print("This item is not an armour or a weapon - " + base_type.value)
         return base_type \
-            + "\n\t" + self.get_enchant()
+               + "\n\t" + self.get_enchant()
 
     def get_junk(self):
         return self.junk.get_random_item().value
@@ -187,7 +130,7 @@ class LootController:
         cr_dicts = json.loads(file_contents)
         crs = dict()
         for cr in cr_dicts:
-            crs[cr] = ChallengeRating(cr, cr_dicts[cr]["monsters"], cr_dicts[cr]["XP"])
+            crs[cr] = loot_types.ChallengeRating(cr, cr_dicts[cr]["monsters"], cr_dicts[cr]["XP"])
         return crs
 
     @staticmethod
@@ -201,11 +144,11 @@ class LootController:
         item_dicts = json.loads(file_contents)
         loot_option_items = []
         for item_dict in item_dicts:
-            loot_option_items.append(LootOptionItem(item_dict["value"],
-                                                    item_dict.get("weighting", 10),
-                                                    item_dict.get("enabled", True),
-                                                    item_dict.get("metadata", [])))
-        loot_option = LootOption(name)
+            loot_option_items.append(loot_types.LootOptionItem(item_dict["value"],
+                                                               item_dict.get("weighting", 10),
+                                                               item_dict.get("enabled", True),
+                                                               item_dict.get("metadata", [])))
+        loot_option = loot_types.LootOption(name)
         for loot_option_item in loot_option_items:
             loot_option.add_item(loot_option_item)
 
@@ -222,7 +165,7 @@ def get_int_from_str(string, default_integer=None):
 def print_options():
     pp = pprint.PrettyPrinter(indent=4)
     print("\n")
-    pp.pprint(LOOT_TYPES)
+    pp.pprint(loot_types.LOOT_TYPES)
     print("\t13: Random weapon enchant")
     print("\t14: Random armour enchant")
     print("\t15: Random enchant")
@@ -233,18 +176,18 @@ def print_options():
 
 def define_action_map(mapped_loot_controller):
     return {
-        LootType.junk: mapped_loot_controller.get_junk,
-        LootType.mundane: mapped_loot_controller.get_mundane,
-        LootType.consumable: mapped_loot_controller.get_consumable,
-        LootType.low_gold: lambda: random.randint(30, 100),
-        LootType.ring: mapped_loot_controller.get_ring,
-        LootType.single_enchant_item: mapped_loot_controller.get_single_enchanted_item,
-        LootType.amulet: mapped_loot_controller.get_amulet,
-        LootType.high_gold: lambda: min(random.randint(200, 600), random.randint(200, 600)),
-        LootType.double_enchant_item: mapped_loot_controller.get_double_enchanted_item,
-        LootType.crafting_item: mapped_loot_controller.get_crafting_item,
-        LootType.prayer_stone: mapped_loot_controller.get_prayer_stone,
-        LootType.artifact: None
+        loot_types.LootType.junk: mapped_loot_controller.get_junk,
+        loot_types.LootType.mundane: mapped_loot_controller.get_mundane,
+        loot_types.LootType.consumable: mapped_loot_controller.get_consumable,
+        loot_types.LootType.low_gold: lambda: random.randint(30, 100),
+        loot_types.LootType.ring: mapped_loot_controller.get_ring,
+        loot_types.LootType.single_enchant_item: mapped_loot_controller.get_single_enchanted_item,
+        loot_types.LootType.amulet: mapped_loot_controller.get_amulet,
+        loot_types.LootType.high_gold: lambda: min(random.randint(200, 600), random.randint(200, 600)),
+        loot_types.LootType.double_enchant_item: mapped_loot_controller.get_double_enchanted_item,
+        loot_types.LootType.crafting_item: mapped_loot_controller.get_crafting_item,
+        loot_types.LootType.prayer_stone: mapped_loot_controller.get_prayer_stone,
+        loot_types.LootType.artifact: None
     }
 
 
@@ -253,12 +196,11 @@ if __name__ == "__main__":
     loot_action_map = define_action_map(loot_controller)
     print_options()
     while True:
-        roll = get_int_from_str(input("\nLoot roll: "), random.randint(1, 8))
+        roll = get_int_from_str(input("\nLoot roll: "), random.randint(1, 12))
         if roll < 0:
             exit(0)
-        loot_type = LOOT_TYPES.get(roll)
-        print(loot_action_map.get(loot_type, lambda: str(roll) + " is not a valid loot option, "
-                                                                 "checking extra options")())
+        print(loot_action_map.get(loot_types.LOOT_TYPES.get(roll),
+                                  lambda: str(roll) + " is not a valid loot option, checking extra options")())
         if roll == 13:
             print(loot_controller.get_weapon_enchant())
         if roll == 14:
