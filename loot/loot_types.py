@@ -22,7 +22,7 @@ for loot_type in LootType:
     LOOT_TYPES[loot_type.value] = loot_type
 
 
-class Artifact:
+class Relic:
     def __init__(self, name, artifact_type, existing, available, found, enabled, level):
         self.level = level
         self.enabled = enabled
@@ -40,7 +40,7 @@ class Artifact:
         return base_description + existing_mod_description
 
 
-class ArtifactMod:
+class RelicMod:
     def __init__(self, value, upgradeable):
         self.upgradeable = upgradeable
         self.value = value

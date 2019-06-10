@@ -21,18 +21,18 @@ class LootController:
         self.prayer_stone = LootController._create_loot_option("prayer_stone", do_flush)
         self.challenge_rating = LootController._create_challenge_ratings(do_flush)
         self.all_crs = list(self.challenge_rating.keys())
-        self.found_artifacts, self.unfound_artifacts = LootController._create_artifacts(do_flush)
+        self.found_relics, self.unfound_relics = LootController._create_relics(do_flush)
 
-    # TODO: level up artifact method
+    # TODO: level up relic method
 
-    def get_new_artifact(self):
-        keys = list(self.unfound_artifacts.keys())
+    def get_new_relic(self):
+        keys = list(self.unfound_relics.keys())
         randomly_chosen_key = keys[random.randint(0, len(keys) - 1)]
-        artifact = self.unfound_artifacts[randomly_chosen_key]
-        return str(artifact)
+        relic = self.unfound_relics[randomly_chosen_key]
+        return str(relic)
 
-    def get_found_artifacts(self):
-        return list(self.found_artifacts.keys())
+    def get_found_relics(self):
+        return list(self.found_relics.keys())
 
     def get_random_creature(self):
         return self.get_random_creature_of_cr(input("\nMonster CR: "))
@@ -167,39 +167,39 @@ class LootController:
             return file.read()
 
     @staticmethod
-    def _create_artifacts(do_flush=False):
-        file_contents = LootController._get_file_contents("artifact", do_flush)
-        artifact_dicts = json.loads(file_contents)
+    def _create_relics(do_flush=False):
+        file_contents = LootController._get_file_contents("relic", do_flush)
+        relic_dicts = json.loads(file_contents)
         found = dict()
         unfound = dict()
-        for artifact_dict in artifact_dicts:
-            artifact = LootController._create_artifact(artifact_dict)
-            if not artifact.enabled:
+        for relic_dict in relic_dicts:
+            relic = LootController._create_relic(relic_dict)
+            if not relic.enabled:
                 continue
-            target_dict = found if artifact.found else unfound
-            target_dict[artifact.name] = artifact
+            target_dict = found if relic.found else unfound
+            target_dict[relic.name] = relic
         return found, unfound
 
     @staticmethod
-    def _create_artifact(artifact_dict):
+    def _create_relic(relic_dict):
         existing = []
         available = []
-        for mod in artifact_dict["existing"]:
-            existing.append(LootController._create_artifact_mod(mod))
-        for mod in artifact_dict["available"]:
-            available.append(LootController._create_artifact_mod(mod))
-        return loot_types.Artifact(artifact_dict["name"],
-                                   artifact_dict["type"],
-                                   existing,
-                                   available,
-                                   artifact_dict.get("found", False),
-                                   artifact_dict.get("enabled", True),
-                                   artifact_dict.get("level", 1))
+        for mod in relic_dict["existing"]:
+            existing.append(LootController._create_relic_mod(mod))
+        for mod in relic_dict["available"]:
+            available.append(LootController._create_relic_mod(mod))
+        return loot_types.Relic(relic_dict["name"],
+                                relic_dict["type"],
+                                existing,
+                                available,
+                                relic_dict.get("found", False),
+                                relic_dict.get("enabled", True),
+                                relic_dict.get("level", 1))
 
     @staticmethod
-    def _create_artifact_mod(artifact_mod_dict: dict) -> loot_types.ArtifactMod:
-        return loot_types.ArtifactMod(artifact_mod_dict["value"],
-                                      artifact_mod_dict.get("upgradeable", True))
+    def _create_relic_mod(relic_mod_dict: dict) -> loot_types.RelicMod:
+        return loot_types.RelicMod(relic_mod_dict["value"],
+                                   relic_mod_dict.get("upgradeable", True))
 
 
 def get_int_from_str(string, default_integer=None):
@@ -218,7 +218,7 @@ def print_options():
     print("\t15: Random enchant")
     print("\t16: Reload loot")
     print("\t17: Creature of a given CR")
-    print("\t18: Level an artifact")
+    print("\t18: Level an relic")
     print("\t>18: Show this")
 
 
@@ -235,7 +235,7 @@ def define_action_map(mapped_loot_controller):
         loot_types.LootType.double_enchant_item.value: mapped_loot_controller.get_double_enchanted_item,
         loot_types.LootType.crafting_item.value: mapped_loot_controller.get_crafting_item,
         loot_types.LootType.prayer_stone.value: mapped_loot_controller.get_prayer_stone,
-        loot_types.LootType.artifact.value: mapped_loot_controller.get_new_artifact,
+        loot_types.LootType.relic.value: mapped_loot_controller.get_new_relic,
         13: mapped_loot_controller.get_weapon_enchant,
         14: mapped_loot_controller.get_armour_enchant,
         15: mapped_loot_controller.get_enchant,
@@ -260,15 +260,15 @@ if __name__ == "__main__":
             loot_action_map = define_action_map(loot_controller)
             print("Reloaded loot from files")
         if roll == 18:
-            found_artifacts = loot_controller.get_found_artifacts()
-            if len(found_artifacts) == 0:
-                print("No artifacts to level")
+            found_relics = loot_controller.get_found_relics()
+            if len(found_relics) == 0:
+                print("No relics to level")
                 continue
-            comp = completer.Completer(found_artifacts)
+            comp = completer.Completer(found_relics)
             readline.set_completer_delims(' \t\n;')
             readline.parse_and_bind("tab: complete")
             readline.set_completer(comp.complete)
-            print(found_artifacts)
-            input("\nWhich artifact do you want to level? ")
+            print(found_relics)
+            input("\nWhich relic do you want to level? ")
         if roll > 18:
             print_options()
