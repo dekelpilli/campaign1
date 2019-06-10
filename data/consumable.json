@@ -46,5 +46,12 @@
   },
   {
     "value": "Rejuvenation potion(s) - Gain 20 temporary hit points when drunk, but lose all temporary hit points 1 minute later. 2 week decay."
+  },
+  {
+    "value": "Potion(s) of invisibility - You and everything you're wearing become invisible for up to a minute. This effect ends if you attack or cast a spell. 3 week decay."
+  },
+  {
+    "value": "Potion(s) of greater invisibility - You and everything you're wearing become invisible for up to a minute. You may end the invisibility at will. 3 week decay.",
+    "metadata": ["disadvantage"]
   }
 ]

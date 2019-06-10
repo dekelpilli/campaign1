@@ -74,12 +74,15 @@ class LootController:
         self.challenge_rating = LootController.create_challenge_ratings(do_flush)
         self.all_crs = list(self.challenge_rating.keys())
 
-    def get_random_creature(self, cr):
+    def get_random_creature(self, max_cr):
+        cr = max_cr
         while True:
             creature = self.challenge_rating[cr].get_random_creature()
             if creature is None:
-                cr = str(int(cr) - 1)  # Not protecting against 0.125/0.5 because those have creatures
+                cr = str(int(cr) - 1)  # Not protecting against 0.125/0.25/0.5 because those have creatures
             else:
+                if cr != max_cr:
+                    print("Creature is of CR " + cr + " instead of " + max_cr)
                 return creature
 
     def get_amulet(self):
@@ -120,19 +123,21 @@ class LootController:
 
     @staticmethod
     def get_multiple_items(item, randomisation_function):
-        if "disadvantage" in item.metadata:
-            amount = min(randomisation_function(), randomisation_function())
-        elif "advantage" in item.metadata:
-            amount = max(randomisation_function(), randomisation_function())
-        else:
-            amount = randomisation_function()
+        amount = None
         for metadata_tag in item.metadata:
-            if metadata_tag[0] == "x":
+            if metadata_tag == "disadvantage":
+                amount = min(randomisation_function(), randomisation_function())
+            elif "advantage" in item.metadata:
+                amount = max(randomisation_function(), randomisation_function())
+            elif metadata_tag[0] == "x":
                 amount = amount * get_int_from_str(metadata_tag[1:], 1)
-            potentially_static_value = get_int_from_str(metadata_tag)
-            if potentially_static_value is not None:
-                amount = potentially_static_value
+            else:
+                potentially_static_value = get_int_from_str(metadata_tag)
+                if potentially_static_value is not None:
+                    amount = potentially_static_value
 
+        if amount is None:
+            amount = randomisation_function()
         return str(amount) + " " + item.value
 
     def get_double_enchanted_item(self):

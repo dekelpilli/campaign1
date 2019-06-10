@@ -1,45 +1,45 @@
 [
   {
-    "value": "As a reaction, you may gain advantage on saves against becoming paralysed.",
+    "value": "As a reaction, you may gain advantage on a save against becoming paralysed.",
     "weighting": 5
   },
   {
-    "value": "As a reaction, you may gain advantage on saves against becoming unconscious (does not work when going down).",
+    "value": "As a reaction, you may gain advantage on a save against becoming unconscious (does not work when going down)."
+  },
+  {
+    "value": "As a reaction, you may gain advantage on a save against becoming blinded."
+  },
+  {
+    "value": "As a reaction, you may gain advantage on a save against becoming charmed."
+  },
+  {
+    "value": "As a reaction, you may gain advantage on a save against becoming deafened.",
+    "weighting": 20
+  },
+  {
+    "value": "As a reaction, you may gain advantage on a save against becoming frightened."
+  },
+  {
+    "value": "As a reaction, you may gain advantage on a save against becoming grappled."
+  },
+  {
+    "value": "As a reaction, you may gain advantage on a save against becoming petrified.",
     "weighting": 5
   },
   {
-    "value": "As a reaction, you may gain advantage on saves against becoming blinded."
+    "value": "As a reaction, you may gain advantage on a save against becoming poisoned."
   },
   {
-    "value": "As a reaction, you may gain advantage on saves against becoming charmed."
+    "value": "As a reaction, you may gain advantage on a save against being knocked prone."
   },
   {
-    "value": "As a reaction, you may gain advantage on saves against becoming deafened."
+    "value": "As a reaction, you may gain advantage on a save against becoming restrained."
   },
   {
-    "value": "As a reaction, you may gain advantage on saves against becoming frightened."
+    "value": "As a reaction, you may gain advantage on a save against becoming stunned."
   },
   {
-    "value": "As a reaction, you may gain advantage on saves against becoming grappled."
-  },
-  {
-    "value": "As a reaction, you may gain advantage on saves against becoming petrified.",
-    "weighting": 5
-  },
-  {
-    "value": "As a reaction, you may gain advantage on saves against becoming poisoned."
-  },
-  {
-    "value": "As a reaction, you may gain advantage on saves against being knocked prone."
-  },
-  {
-    "value": "As a reaction, you may gain advantage on saves against becoming restrained."
-  },
-  {
-    "value": "As a reaction, you may gain advantage on saves against becoming stunned."
-  },
-  {
-    "value": "As a reaction, you may gain advantage on saves against becoming incapacitated (does not include conditions where incapacitated is a side-effect)."
+    "value": "As a reaction, you may gain advantage on a save against becoming incapacitated (does not include conditions where incapacitated is a side-effect)."
   },
   {
     "value": "You may spend an action to cause targets of your next effect that can cause the 'paralysed' condition to make that save with disadvantage. This does not work if a minute has past since you sacrificed your action.",
