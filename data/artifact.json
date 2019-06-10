@@ -17,19 +17,30 @@
         "upgradeable": true
       },
       {
-        "value": "You can spend an action making an investigation or perception check to ensure your next two attacks in this encounter are guaranteed to be critical hits."
+        "value": "You can spend an action making an investigation or perception check to ensure your next two attacks in this encounter are guaranteed to be critical hits.",
+        "upgradeable": false
       },
       {
-        "value": "You have advantage on checks to learn creature stats"
+        "value": "You have advantage on checks to learn creature stats",
+        "upgradeable": false
       },
       {
-        "value": "When learning creature stats, you can sacrifice a question. If you do this, you and your allies deal +1 damage with all spells and attacks against that creature",
+        "value": "When learning creature stats, you can sacrifice a question. If you do this, you and your allies deal +1 damage with all spells and attacks against that creature. This does not stack.",
         "upgradeable": true
       },
       {
         "value": "You can make a disadvantaged check (of any appropriate type) to learn creature stats at the start of an encounter as a free action",
         "upgradeable": true,
-        "__comment": "-> No advantage/disadvantage -> advantage"
+        "comment": "-> No disadvantage -> advantage"
+      },
+      {
+        "value": "You have +1 AC when a creature targets you with an attack it has already used against you.",
+        "upgradeable": true,
+        "comment": "+1 AC, max 2 AC"
+      },
+      {
+        "value": "Whenever a creature succeeds a save against one of your spells, you learn its spell save bonus for all attributes",
+        "upgradeable": false
       }
     ],
     "found": false,
@@ -47,21 +58,24 @@
       {
         "value": "When you kill a humanoid with an attack or spell, it rises at the start of your next turn as a zombie that is permanently under your command, following your verbal orders to the best of its ability. You may only have 1 such zombie at any given time.",
         "upgradeable": true,
-        "__comment": "More zombies"
+        "comment": "Ogre zombies instead"
       },
       {
         "value": "+1d4 necrotic damage with attacks with this weapon",
         "upgradeable": true,
-        "__comment": "-> 1d6 -> 1d8 -> etc"
+        "comment": "-> 1d6 -> 1d8 -> etc"
       },
       {
-        "value": "You are resistant to necrotic damage"
+        "value": "You are resistant to necrotic damage",
+        "upgradeable": false
       },
       {
-        "value": "+3 resistance to damage from undead creatures"
+        "value": "+3 resistance to damage from undead creatures",
+        "upgradeable": false
       },
       {
-        "value": "You learn the Finger of Death spell and may cast it once per long rest. Casting mod is a mental attribute of your choice."
+        "value": "You learn the Finger of Death spell and may cast it once per long rest. Casting mod is a mental attribute of your choice.",
+        "upgradeable": false
       }
     ],
     "found": false,
@@ -83,16 +97,20 @@
       {
         "value": "You may cast Wrathful Smite as a free action once per short rest",
         "upgradeable": true,
-        "__comment": "+1 uses per short rest"
+        "comment": "+1 uses per short rest"
       },
       {
-        "value": "You and allies within 20 feet cannot be frightened if you have hit an enemy with this weapon in the last 12 seconds"
+        "value": "You and allies within 20 feet cannot be frightened if you have hit an enemy with this weapon in the last 2 rounds",
+        "upgradeable": true,
+        "comment": "+5 feet, +1 round"
       },
       {
-        "value": "If you are wielding a shield and have taken the attack action on your turn, you may make a bonus action to hit your target with your shield. They make a Strength saving throw against a DC of 8 + your prof + your STR Mod and are knocked prone on a failed save."
+        "value": "If you are wielding a shield and have taken the attack action on your turn, you may make a bonus action to hit your target with your shield. They make a Strength saving throw against a DC of 8 + your prof + your STR Mod and are knocked prone on a failed save.",
+        "upgradeable": false
       },
       {
-        "value": "This weapon is considered a light weapon"
+        "value": "This weapon is considered a light weapon",
+        "upgradeable": false
       }
     ],
     "found": false,
@@ -106,7 +124,7 @@
       {
         "value": "+2 damage resistance while in sunlight",
         "upgradeable": true,
-        "__comment": "+1"
+        "comment": "+1"
       },
       {
         "value": "You are permanently under the effect of the Speak with Animals spell"
@@ -114,20 +132,22 @@
     ],
     "available": [
       {
-        "value": "You may cast Animal Shapes once per long rest"
+        "value": "You may cast Animal Shapes once per long rest",
+        "upgradeable": false
       },
       {
-        "value": "You may cast Conjure Animal once per short rest"
+        "value": "You may cast Conjure Animal once per short rest",
+        "upgradeable": false
       },
       {
         "value": "You have proficiency in the Nature skill. If you already have proficiency, you have expertise.",
         "upgradeable": true,
-        "__comment": "prof -> expert -> advantage"
+        "comment": "prof -> expert -> advantage"
       },
       {
         "value": "You have proficiency in the Animal Handling skill. If you already have proficiency, you have expertise.",
         "upgradeable": true,
-        "__comment": "prof -> expert -> advantage"
+        "comment": "prof -> expert -> advantage"
       },
       {
         "value": "Beast and Plant creatures have disadvantage when attacking you"
@@ -141,13 +161,13 @@
     "type": "weapon/armour",
     "existing": [
       {
-        "value": "effect"
+        "value": "effect",
+        "upgradeable": false
       }
     ],
     "available": [
       {
-        "value": "upgradeableEffect",
-        "upgradeable": true
+        "value": "upgradeableEffect"
       }
     ],
     "found": false,

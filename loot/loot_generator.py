@@ -193,7 +193,7 @@ class LootController:
     @staticmethod
     def _create_artifact_mod(artifact_mod_dict: dict) -> loot_types.ArtifactMod:
         return loot_types.ArtifactMod(artifact_mod_dict["value"],
-                                      artifact_mod_dict.get("upgradeable", False))
+                                      artifact_mod_dict.get("upgradeable", True))
 
 
 def get_int_from_str(string, default_integer=None):
