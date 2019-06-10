@@ -4,9 +4,9 @@ import pprint
 import completer
 import loot_types
 import readline
-import os
+from os import sep
 
-DATA_DIR = "data" + os.sep
+DATA_DIR = "data" + sep
 
 
 class LootController:
@@ -157,7 +157,7 @@ class LootController:
             if do_flush:
                 file.flush()
                 file.close()
-                return LootController._create_loot_option(name)
+                return LootController._get_file_contents(name)
             return file.read()
 
     @staticmethod
