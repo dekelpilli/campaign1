@@ -22,43 +22,14 @@ class LootController:
         self.all_crs = list(self.challenge_rating.keys())
         self.found_artifacts, self.unfound_artifacts = LootController._create_artifacts(do_flush)
 
+    def get_new_artifact(self):
+        keys = list(self.unfound_artifacts.keys())
+        randomly_chosen_key = keys[random.randint(0, len(keys) - 1)]
+        artifact = self.unfound_artifacts[randomly_chosen_key]
+        return str(artifact)
+
     def get_found_artifacts(self):
         return list(self.found_artifacts.keys())
-
-    @staticmethod
-    def _create_artifacts(do_flush=False):
-        file_contents = LootController._get_file_contents("artifact", do_flush)
-        artifact_dicts = json.loads(file_contents)
-        found = dict()
-        unfound = dict()
-        for artifact_dict in artifact_dicts:
-            artifact = LootController._create_artifact(artifact_dict)
-            if not artifact.enabled:
-                continue
-            target_dict = found if artifact.found else unfound
-            target_dict[artifact.name] = artifact
-        return found, unfound
-
-    @staticmethod
-    def _create_artifact(artifact_dict):
-        existing = []
-        available = []
-        for mod in artifact_dict["existing"]:
-            existing.append(LootController._create_artifact_mod(mod))
-        for mod in artifact_dict["available"]:
-            available.append(LootController._create_artifact_mod(mod))
-        return loot_types.Artifact(artifact_dict["name"],
-                                   artifact_dict["type"],
-                                   existing,
-                                   available,
-                                   artifact_dict.get("found", False),
-                                   artifact_dict.get("enabled", True),
-                                   artifact_dict.get("level", 1))
-
-    @staticmethod
-    def _create_artifact_mod(artifact_mod_dict: dict) -> loot_types.ArtifactMod:
-        return loot_types.ArtifactMod(artifact_mod_dict["value"],
-                                      artifact_mod_dict.get("upgradeable", False))
 
     def get_random_creature(self, max_cr):
         cr = max_cr
@@ -194,6 +165,41 @@ class LootController:
                 return LootController._create_loot_option(name)
             return file.read()
 
+    @staticmethod
+    def _create_artifacts(do_flush=False):
+        file_contents = LootController._get_file_contents("artifact", do_flush)
+        artifact_dicts = json.loads(file_contents)
+        found = dict()
+        unfound = dict()
+        for artifact_dict in artifact_dicts:
+            artifact = LootController._create_artifact(artifact_dict)
+            if not artifact.enabled:
+                continue
+            target_dict = found if artifact.found else unfound
+            target_dict[artifact.name] = artifact
+        return found, unfound
+
+    @staticmethod
+    def _create_artifact(artifact_dict):
+        existing = []
+        available = []
+        for mod in artifact_dict["existing"]:
+            existing.append(LootController._create_artifact_mod(mod))
+        for mod in artifact_dict["available"]:
+            available.append(LootController._create_artifact_mod(mod))
+        return loot_types.Artifact(artifact_dict["name"],
+                                   artifact_dict["type"],
+                                   existing,
+                                   available,
+                                   artifact_dict.get("found", False),
+                                   artifact_dict.get("enabled", True),
+                                   artifact_dict.get("level", 1))
+
+    @staticmethod
+    def _create_artifact_mod(artifact_mod_dict: dict) -> loot_types.ArtifactMod:
+        return loot_types.ArtifactMod(artifact_mod_dict["value"],
+                                      artifact_mod_dict.get("upgradeable", False))
+
 
 def get_int_from_str(string, default_integer=None):
     try:
@@ -228,7 +234,7 @@ def define_action_map(mapped_loot_controller):
         loot_types.LootType.double_enchant_item: mapped_loot_controller.get_double_enchanted_item,
         loot_types.LootType.crafting_item: mapped_loot_controller.get_crafting_item,
         loot_types.LootType.prayer_stone: mapped_loot_controller.get_prayer_stone,
-        loot_types.LootType.artifact: None
+        loot_types.LootType.artifact: mapped_loot_controller.get_new_artifact
     }
 
 

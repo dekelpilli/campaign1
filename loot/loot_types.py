@@ -32,6 +32,13 @@ class Artifact:
         self.type = artifact_type
         self.name = name
 
+    def __str__(self):
+        base_description = self.name + " (" + self.type + "):"
+        existing_mod_description = ""
+        for existing_mod in self.existing:
+            existing_mod_description += "\n\t" + existing_mod.value
+        return base_description + existing_mod_description
+
 
 class ArtifactMod:
     def __init__(self, value, upgradeable):
