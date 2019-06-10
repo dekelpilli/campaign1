@@ -47,7 +47,7 @@
     "level": 1
   },
   {
-    "name": "Thatar' Corpsemaker",
+    "name": "Thatar' Soulthirst",
     "type": "weapon",
     "existing": [
       {
@@ -89,14 +89,14 @@
         "upgradeable": false
       },
       {
-        "value": ""
+        "value": "+1 to death saves, -1 to death save critical requirement. You cannot get a critical failure with death saves."
       }
     ],
     "found": false,
     "level": 1
   },
   {
-    "name": "Ida's Ferocity",
+    "name": "Unlock when getting on Ida's good side. Not done. Ida's Ferocity",
     "type": "weapon",
     "existing": [
       {
@@ -162,6 +162,20 @@
       {
         "value": "Beast and Plant creatures have disadvantage when attacking you",
         "upgradeable": false
+      },
+      {
+        "value": "+1d4 poison melee thorns",
+        "comment": "Die size"
+      },
+      {
+        "value": "When you are hit, as a reaction, you may force the attacker to make a Constitution saving throw against a DC of 8 + your prof + your CON Mod. On a failed save, they are poisoned until the end of their turn.",
+        "comment": "+1 DC"
+      },
+      {
+        "value": "+4 poison damage resistance"
+      },
+      {
+        "value": "+3 health regeneration per round of combat while outdoors"
       }
     ],
     "found": false,
