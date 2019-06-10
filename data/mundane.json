@@ -148,6 +148,10 @@
     "metadata": ["weapon"]
   },
   {
+    "value": "Wand",
+    "metadata": ["weapon"]
+  },
+  {
     "value": "Padded Body Armour (Light, 11AC, Disadvantage stealth)",
     "metadata": ["armour"]
   },
@@ -250,5 +254,8 @@
   {
     "value": "Heavy helmet",
     "metadata": ["armour"]
+  },
+  {
+    "value": "Ring"
   }
 ]

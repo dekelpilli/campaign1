@@ -11,6 +11,7 @@ DATA_DIR = "data" + os.sep
 
 class LootController:
     def __init__(self, do_flush=False):
+        print("Loading...")
         self.junk = LootController._create_loot_option("junk", do_flush)
         self.crafting_item = LootController._create_loot_option("crafting_item", do_flush)
         self.mundane = LootController._create_loot_option("mundane", do_flush)
@@ -22,11 +23,10 @@ class LootController:
         self.all_crs = list(self.challenge_rating.keys())
         self.found_artifacts, self.unfound_artifacts = LootController._create_artifacts(do_flush)
 
+    # TODO: level up artifact method
+
     def get_new_artifact(self):
-        keys = list(self.unfound_artifacts.keys())
-        randomly_chosen_key = keys[random.randint(0, len(keys) - 1)]
-        artifact = self.unfound_artifacts[randomly_chosen_key]
-        return str(artifact)
+        return str(random.choice(self.unfound_artifacts))
 
     def get_found_artifacts(self):
         return list(self.found_artifacts.keys())
@@ -109,10 +109,7 @@ class LootController:
                    + "\n\t" + self.get_armour_enchant() \
                    + "\n\t" + self.get_armour_enchant()
 
-        print("This item is not an armour or a weapon - " + base_type.value)
-        return base_type.value \
-            + "\n\t" + self.get_enchant() \
-            + "\n\t" + self.get_enchant()
+        return self.get_double_enchanted_item()  # got a ring, try again
 
     def get_single_enchanted_item(self):
         base_type = self.mundane.get_random_item()
@@ -124,9 +121,7 @@ class LootController:
             return base_type.value \
                    + "\n\t" + self.get_armour_enchant()
 
-        print("This item is not an armour or a weapon - " + base_type.value)
-        return base_type \
-            + "\n\t" + self.get_enchant()
+        return self.get_single_enchanted_item()  # got a ring, try again
 
     def get_junk(self):
         return self.junk.get_random_item().value
@@ -215,7 +210,7 @@ def print_options():
     print("\t13: Random weapon enchant")
     print("\t14: Random armour enchant")
     print("\t15: Random enchant")
-    print("\t16: Reload mods")
+    print("\t16: Reload loot")
     print("\t17: Creature of a given CR")
     print("\t18: Level an artifact")
     print("\t>18: Show this")

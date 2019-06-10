@@ -14,7 +14,7 @@ class LootType(IntEnum):
     double_enchant_item = 9
     crafting_item = 10
     prayer_stone = 11
-    artifact = 12
+    artifact = 12  # plus reroll
 
 
 LOOT_TYPES = dict()
@@ -53,7 +53,7 @@ class ChallengeRating:
         self.name = name
 
     def get_random_creature(self):
-        return self.monsters[random.randint(0, len(self.monsters) - 1)] if len(self.monsters) > 0 else None
+        return random.choice(self.monsters) if len(self.monsters) > 0 else None
 
 
 class LootOptionItem:

@@ -4,8 +4,7 @@
     "type": "armour",
     "existing": [
       {
-        "value": "Whenever you make an investigation check, you may spend a minute to also make a religion check and use the higher of the two results.",
-        "upgradeable": false
+        "value": "Whenever you make an investigation check, you may spend a minute to also make a religion check and use the higher of the two results."
       }
     ],
     "available": [
@@ -18,35 +17,141 @@
         "upgradeable": true
       },
       {
-        "value": "You can spend an action making an investigation or perception check to ensure your next two attacks are guaranteed to be critical hits.",
-        "upgradeable": false
+        "value": "You can spend an action making an investigation or perception check to ensure your next two attacks in this encounter are guaranteed to be critical hits."
+      },
+      {
+        "value": "You have advantage on checks to learn creature stats"
+      },
+      {
+        "value": "When learning creature stats, you can sacrifice a question. If you do this, you and your allies deal +1 damage with all spells and attacks against that creature",
+        "upgradeable": true
+      },
+      {
+        "value": "You can make a disadvantaged check (of any appropriate type) to learn creature stats at the start of an encounter as a free action",
+        "upgradeable": true,
+        "__comment": "-> No advantage/disadvantage -> advantage"
       }
     ],
     "found": false,
-    "enabled": true,
     "level": 1
   },
   {
-    "name": "Idas' Corpsemaker",
+    "name": "Thatar' Corpsemaker",
     "type": "weapon",
     "existing": [
       {
-        "value": "You have advantage on attacks that would deal necrotic damage",
-        "upgradeable": false
+        "value": "You have advantage on attacks that would deal necrotic damage"
       }
     ],
     "available": [
       {
         "value": "When you kill a humanoid with an attack or spell, it rises at the start of your next turn as a zombie that is permanently under your command, following your verbal orders to the best of its ability. You may only have 1 such zombie at any given time.",
-        "upgradeable": true
+        "upgradeable": true,
+        "__comment": "More zombies"
       },
       {
         "value": "+1d4 necrotic damage with attacks with this weapon",
+        "upgradeable": true,
+        "__comment": "-> 1d6 -> 1d8 -> etc"
+      },
+      {
+        "value": "You are resistant to necrotic damage"
+      },
+      {
+        "value": "+3 resistance to damage from undead creatures"
+      },
+      {
+        "value": "You learn the Finger of Death spell and may cast it once per long rest. Casting mod is a mental attribute of your choice."
+      }
+    ],
+    "found": false,
+    "level": 1
+  },
+  {
+    "name": "Ida's Ferocity",
+    "type": "weapon",
+    "existing": [
+      {
+        "value": "Attacks with this weapon cannot be disadvantaged"
+      },
+      {
+        "value": "+1 weapon die size",
+        "upgradeable": true
+      }
+    ],
+    "available": [
+      {
+        "value": "You may cast Wrathful Smite as a free action once per short rest",
+        "upgradeable": true,
+        "__comment": "+1 uses per short rest"
+      },
+      {
+        "value": "You and allies within 20 feet cannot be frightened if you have hit an enemy with this weapon in the last 12 seconds"
+      },
+      {
+        "value": "If you are wielding a shield and have taken the attack action on your turn, you may make a bonus action to hit your target with your shield. They make a Strength saving throw against a DC of 8 + your prof + your STR Mod and are knocked prone on a failed save."
+      },
+      {
+        "value": "This weapon is considered a light weapon"
+      }
+    ],
+    "found": false,
+    "level": 1,
+    "enabled": false
+  },
+  {
+    "name": "Cerasil's Protection",
+    "type": "armour",
+    "existing": [
+      {
+        "value": "+2 damage resistance while in sunlight",
+        "upgradeable": true,
+        "__comment": "+1"
+      },
+      {
+        "value": "You are permanently under the effect of the Speak with Animals spell"
+      }
+    ],
+    "available": [
+      {
+        "value": "You may cast Animal Shapes once per long rest"
+      },
+      {
+        "value": "You may cast Conjure Animal once per short rest"
+      },
+      {
+        "value": "You have proficiency in the Nature skill. If you already have proficiency, you have expertise.",
+        "upgradeable": true,
+        "__comment": "prof -> expert -> advantage"
+      },
+      {
+        "value": "You have proficiency in the Animal Handling skill. If you already have proficiency, you have expertise.",
+        "upgradeable": true,
+        "__comment": "prof -> expert -> advantage"
+      },
+      {
+        "value": "Beast and Plant creatures have disadvantage when attacking you"
+      }
+    ],
+    "found": false,
+    "level": 1
+  },
+  {
+    "name": "Template",
+    "type": "weapon/armour",
+    "existing": [
+      {
+        "value": "effect"
+      }
+    ],
+    "available": [
+      {
+        "value": "upgradeableEffect",
         "upgradeable": true
       }
     ],
     "found": false,
-    "enabled": true,
-    "level": 1
+    "level": 1,
+    "enabled": false
   }
 ]
