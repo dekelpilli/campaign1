@@ -28,11 +28,11 @@
   },
   {
     "value": "Orb of Rare Candy - level up an artifact",
-    "weighting": 2,
+    "weighting": 4,
     "metadata": ["1"]
   },
   {
-    "value": "Orb of Empowerment - double a mod on a magic item or artifact (can't be a unique mod). An item cannot have more than one doubled mod",
+    "value": "Orb of Empowerment - double a mod on a magic item or artifact (can't be a special relic mod). An item cannot have more than one doubled mod",
     "weighting": 2,
     "metadata": ["1"]
   }

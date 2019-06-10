@@ -14,7 +14,7 @@ class LootType(IntEnum):
     double_enchant_item = 9
     crafting_item = 10
     prayer_stone = 11
-    artifact = 12  # plus reroll
+    relic = 12  # plus reroll
 
 
 LOOT_TYPES = dict()

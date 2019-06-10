@@ -23,7 +23,48 @@ class LootController:
         self.all_crs = list(self.challenge_rating.keys())
         self.found_relics, self.unfound_relics = LootController._create_relics(do_flush)
 
-    # TODO: level up relic method
+    def level_up_relic_by_name(self, relic_name):
+        assert relic_name in self.found_relics
+        relic = self.found_relics[relic_name]
+        assert relic.enabled
+        return self._level_up_relic(relic)
+
+    def _level_up_relic(self, relic, num_choices=2):
+        options = 2  # new random mod, new relic mod
+        upgradeable_mods = []
+        for existing_mod in relic.existing:
+            if existing_mod.upgradeable:
+                upgradeable_mods.append(existing_mod)
+        if len(upgradeable_mods) > 0:
+            options += 2  # double weighting
+
+        output = "Options:\n\t"
+        for i in range(num_choices):
+            if i != 0:
+                output += "\nOR\n\t"
+            output += self._get_upgrade_option(relic, random.randint(1, options), upgradeable_mods)
+        return output
+
+    def _get_upgrade_option(self, relic, option_id, upgradeable_mods):
+        option_string = ""
+        if option_id == 1:
+            option_string += "New mod: "
+            if relic.type == "weapon":
+                option_string += self.get_weapon_enchant()
+            elif relic.type == "armour":
+                option_string += self.get_armour_enchant()
+            else:
+                option_string += self.get_enchant()
+            return option_string
+
+        if option_id == 2:
+            option_string += "New Relic mod: "
+            mod = random.choice(relic.available)
+            return option_string + mod.value
+
+        if option_id > 2:
+            option_string += "Upgrade existing mod: "
+            return option_string + random.choice(upgradeable_mods).value
 
     def get_new_relic(self):
         keys = list(self.unfound_relics.keys())
@@ -227,11 +268,12 @@ def define_action_map(mapped_loot_controller):
         loot_types.LootType.junk.value: mapped_loot_controller.get_junk,
         loot_types.LootType.mundane.value: mapped_loot_controller.get_mundane,
         loot_types.LootType.consumable.value: mapped_loot_controller.get_consumable,
-        loot_types.LootType.low_gold.value: lambda: random.randint(30, 100),
+        loot_types.LootType.low_gold.value: lambda: str(random.randint(30, 100)) + " gold",
         loot_types.LootType.ring.value: mapped_loot_controller.get_ring,
         loot_types.LootType.single_enchant_item.value: mapped_loot_controller.get_single_enchanted_item,
         loot_types.LootType.amulet.value: mapped_loot_controller.get_amulet,
-        loot_types.LootType.high_gold.value: lambda: min(random.randint(200, 600), random.randint(200, 600)),
+        loot_types.LootType.high_gold.value:
+            lambda: str(min(random.randint(200, 600), random.randint(200, 600))) + " gold",
         loot_types.LootType.double_enchant_item.value: mapped_loot_controller.get_double_enchanted_item,
         loot_types.LootType.crafting_item.value: mapped_loot_controller.get_crafting_item,
         loot_types.LootType.prayer_stone.value: mapped_loot_controller.get_prayer_stone,
@@ -249,11 +291,14 @@ if __name__ == "__main__":
     loot_action_map = define_action_map(loot_controller)
     print_options()
     while True:
+        readline.set_completer_delims(' \t\n;')
+        readline.parse_and_bind("tab: complete")
+        readline.set_completer(lambda text, state: None)
         roll = get_int_from_str(input("\nLoot roll: "), random.randint(1, 12))
         if roll < 0:
             exit(0)
         print(loot_action_map.get(roll,
-                                  lambda: str(roll) + " is not a valid loot option, checking extra options")())
+                                  lambda: str(roll) + " is not a normal loot option, checking extra options")())
 
         if roll == 16:
             loot_controller = LootController(True)
@@ -264,11 +309,12 @@ if __name__ == "__main__":
             if len(found_relics) == 0:
                 print("No relics to level")
                 continue
-            comp = completer.Completer(found_relics)
-            readline.set_completer_delims(' \t\n;')
-            readline.parse_and_bind("tab: complete")
-            readline.set_completer(comp.complete)
+            readline.set_completer(completer.Completer(found_relics).complete)
             print(found_relics)
-            input("\nWhich relic do you want to level? ")
+            relic_choice = input("\nWhich relic do you want to level? ")
+            if relic_choice not in found_relics:
+                print(relic_choice + " is not a valid relic choice")
+                continue
+            print(loot_controller.level_up_relic_by_name(relic_choice))
         if roll > 18:
             print_options()
