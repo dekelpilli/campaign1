@@ -4,3 +4,6 @@ Amulets:
     While in this form, you retain all magical bonuses from your gear.
     Amulets are created with a certain CR capacity. You can combine multiple amulets to create an amulet with a higher CR capacity (resulting amulet's CR is the highest CR whose XP is lower than the sum of the given amulet CR XPs)
     You can pay 10 * CR gold to replace the creature in an amulet
+
+Prayer Stones:
+    You can use any prayer stone to pray to any Deity, but when using the appropriate prayer stone, you get the option of skipping a step

@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Odi's relentlessness",
+    "type": "armour",
+    "existing": [
+      {
+        "value": "Whenever you make an investigation check, you may spend a minute to also make a religion check and use the higher of the two results.",
+        "upgradeable": false
+      }
+    ],
+    "available": [
+      {
+        "value": "+1 intelligence",
+        "upgradeable": true
+      },
+      {
+        "value": "+1 to all saving throws if you have made an investigation check in the last minute",
+        "upgradeable": true
+      },
+      {
+        "value": "You can spend an action making an investigation or perception check to ensure your next two attacks are guaranteed to be critical hits.",
+        "upgradeable": false
+      }
+    ],
+    "found": false,
+    "enabled": true,
+    "level": 1
+  }
+]

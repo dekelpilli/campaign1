@@ -2,6 +2,8 @@ import random
 import json
 from enum import IntEnum
 import pprint
+import completer
+import readline
 
 DATA_DIR = "data/"
 
@@ -269,5 +271,13 @@ if __name__ == "__main__":
             print("Reloaded loot from files")
         if roll == 17:
             print(loot_controller.get_random_creature(input("\nMonster CR: ")))
-        if roll > 17:
+        if roll == 18:
+            # get existing artifacts
+            # if more than 0, print list and take input
+            comp = completer.Completer(["above list"])
+            readline.set_completer_delims(' \t\n;')
+            readline.parse_and_bind("tab: complete")
+            readline.set_completer(comp.complete)
+            input("\nWhich artifact do you want to level? ")
+        if roll > 18:
             print_options()
