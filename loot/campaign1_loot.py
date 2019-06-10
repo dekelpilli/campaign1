@@ -1,23 +1,64 @@
 import random
 import json
 import pprint
-from loot import completer, loot_types
+import completer
+import loot_types
 import readline
+import os
 
-DATA_DIR = "../data/"
+DATA_DIR = "data" + os.sep
 
 
 class LootController:
     def __init__(self, do_flush=False):
-        self.junk = LootController.create_loot_option("junk", do_flush)
-        self.crafting_item = LootController.create_loot_option("crafting_item", do_flush)
-        self.mundane = LootController.create_loot_option("mundane", do_flush)
-        self.ring = LootController.create_loot_option("ring", do_flush)
-        self.enchant = LootController.create_loot_option("enchant", do_flush)
-        self.consumable = LootController.create_loot_option("consumable", do_flush)
-        self.prayer_stone = LootController.create_loot_option("prayer_stone", do_flush)
-        self.challenge_rating = LootController.create_challenge_ratings(do_flush)
+        self.junk = LootController._create_loot_option("junk", do_flush)
+        self.crafting_item = LootController._create_loot_option("crafting_item", do_flush)
+        self.mundane = LootController._create_loot_option("mundane", do_flush)
+        self.ring = LootController._create_loot_option("ring", do_flush)
+        self.enchant = LootController._create_loot_option("enchant", do_flush)
+        self.consumable = LootController._create_loot_option("consumable", do_flush)
+        self.prayer_stone = LootController._create_loot_option("prayer_stone", do_flush)
+        self.challenge_rating = LootController._create_challenge_ratings(do_flush)
         self.all_crs = list(self.challenge_rating.keys())
+        self.found_artifacts, self.unfound_artifacts = LootController._create_artifacts(do_flush)
+
+    def get_found_artifacts(self):
+        return list(self.found_artifacts.keys())
+
+    @staticmethod
+    def _create_artifacts(do_flush=False):
+        file_contents = LootController._get_file_contents("artifact", do_flush)
+        artifact_dicts = json.loads(file_contents)
+        found = dict()
+        unfound = dict()
+        for artifact_dict in artifact_dicts:
+            artifact = LootController._create_artifact(artifact_dict)
+            if not artifact.enabled:
+                continue
+            target_dict = found if artifact.found else unfound
+            target_dict[artifact.name] = artifact
+        return found, unfound
+
+    @staticmethod
+    def _create_artifact(artifact_dict):
+        existing = []
+        available = []
+        for mod in artifact_dict["existing"]:
+            existing.append(LootController._create_artifact_mod(mod))
+        for mod in artifact_dict["available"]:
+            available.append(LootController._create_artifact_mod(mod))
+        return loot_types.Artifact(artifact_dict["name"],
+                                   artifact_dict["type"],
+                                   existing,
+                                   available,
+                                   artifact_dict.get("found", False),
+                                   artifact_dict.get("enabled", True),
+                                   artifact_dict.get("level", 1))
+
+    @staticmethod
+    def _create_artifact_mod(artifact_mod_dict: dict) -> loot_types.ArtifactMod:
+        return loot_types.ArtifactMod(artifact_mod_dict["value"],
+                                      artifact_mod_dict.get("upgradeable", False))
 
     def get_random_creature(self, max_cr):
         cr = max_cr
@@ -99,8 +140,8 @@ class LootController:
 
         print("This item is not an armour or a weapon - " + base_type.value)
         return base_type.value \
-               + "\n\t" + self.get_enchant() \
-               + "\n\t" + self.get_enchant()
+            + "\n\t" + self.get_enchant() \
+            + "\n\t" + self.get_enchant()
 
     def get_single_enchanted_item(self):
         base_type = self.mundane.get_random_item()
@@ -114,19 +155,14 @@ class LootController:
 
         print("This item is not an armour or a weapon - " + base_type.value)
         return base_type \
-               + "\n\t" + self.get_enchant()
+            + "\n\t" + self.get_enchant()
 
     def get_junk(self):
         return self.junk.get_random_item().value
 
     @staticmethod
-    def create_challenge_ratings(do_flush=False):
-        with open(DATA_DIR + "monster.json") as file:
-            if do_flush:
-                file.flush()
-                file.close()
-                return LootController.create_challenge_ratings()
-            file_contents = file.read()
+    def _create_challenge_ratings(do_flush=False):
+        file_contents = LootController._get_file_contents("monster", do_flush)
         cr_dicts = json.loads(file_contents)
         crs = dict()
         for cr in cr_dicts:
@@ -134,13 +170,8 @@ class LootController:
         return crs
 
     @staticmethod
-    def create_loot_option(name, do_flush=False):
-        with open(DATA_DIR + name + ".json") as file:
-            if do_flush:
-                file.flush()
-                file.close()
-                return LootController.create_loot_option(name)
-            file_contents = file.read()
+    def _create_loot_option(name, do_flush=False):
+        file_contents = LootController._get_file_contents(name, do_flush)
         item_dicts = json.loads(file_contents)
         loot_option_items = []
         for item_dict in item_dicts:
@@ -153,6 +184,15 @@ class LootController:
             loot_option.add_item(loot_option_item)
 
         return loot_option
+
+    @staticmethod
+    def _get_file_contents(name, do_flush=False):
+        with open(DATA_DIR + name + ".json") as file:
+            if do_flush:
+                file.flush()
+                file.close()
+                return LootController._create_loot_option(name)
+            return file.read()
 
 
 def get_int_from_str(string, default_integer=None):
@@ -171,7 +211,8 @@ def print_options():
     print("\t15: Random enchant")
     print("\t16: Reload mods")
     print("\t17: Creature of a given CR")
-    print("\t>17: Show this")
+    print("\t18: Level an artifact")
+    print("\t>18: Show this")
 
 
 def define_action_map(mapped_loot_controller):
@@ -214,12 +255,15 @@ if __name__ == "__main__":
         if roll == 17:
             print(loot_controller.get_random_creature(input("\nMonster CR: ")))
         if roll == 18:
-            # get existing artifacts
-            # if more than 0, print list and take input
-            comp = completer.Completer(["above list"])
+            found_artifacts = loot_controller.get_found_artifacts()
+            if len(found_artifacts) == 0:
+                print("No artifacts to level")
+                continue
+            comp = completer.Completer(found_artifacts)
             readline.set_completer_delims(' \t\n;')
             readline.parse_and_bind("tab: complete")
             readline.set_completer(comp.complete)
+            print(found_artifacts)
             input("\nWhich artifact do you want to level? ")
         if roll > 18:
             print_options()

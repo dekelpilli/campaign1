@@ -22,6 +22,23 @@ for loot_type in LootType:
     LOOT_TYPES[loot_type.value] = loot_type
 
 
+class Artifact:
+    def __init__(self, name, artifact_type, existing, available, found, enabled, level):
+        self.level = level
+        self.enabled = enabled
+        self.found = found
+        self.available = available
+        self.existing = existing
+        self.type = artifact_type
+        self.name = name
+
+
+class ArtifactMod:
+    def __init__(self, value, upgradeable):
+        self.upgradeable = upgradeable
+        self.value = value
+
+
 class ChallengeRating:
     def __init__(self, name, monsters, xp):
         self.xp = xp

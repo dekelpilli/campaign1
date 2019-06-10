@@ -1,6 +1,6 @@
 [
   {
-    "name": "Odi's relentlessness",
+    "name": "Odi's Relentlessness",
     "type": "armour",
     "existing": [
       {
@@ -23,6 +23,25 @@
       }
     ],
     "found": false,
+    "enabled": true,
+    "level": 1
+  },
+  {
+    "name": "Idas' Corpsemaker",
+    "type": "weapon",
+    "existing": [
+      {
+        "value": "You have advantage on attacks that would deal necrotic damage",
+        "upgradeable": false
+      }
+    ],
+    "available": [
+      {
+        "value": "When you kill a humanoid with an attack or spell, it rises at the start of your next turn as a zombie that is permanently under your command, following your verbal orders to the best of its ability. You may only have 1 such zombie at any given time.",
+        "upgradeable": true
+      }
+    ],
+    "found": true,
     "enabled": true,
     "level": 1
   }
