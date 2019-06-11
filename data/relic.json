@@ -89,7 +89,8 @@
         "upgradeable": false
       },
       {
-        "value": "+1 to death saves, -1 to death save critical requirement. You cannot get a critical failure with death saves."
+        "value": "Once per long rest, when killing a creature on your turn, you may immediately take another turn.",
+        "comment": "More uses"
       }
     ],
     "found": false,
@@ -152,11 +153,11 @@
         "upgradeable": false
       },
       {
-        "value": "You have proficiency in the Nature skill. If you already have proficiency, you have expertise.",
+        "value": "You have proficiency in the Nature skill. If you already have proficiency in Nature, you have expertise.",
         "comment": "prof -> expert -> advantage"
       },
       {
-        "value": "You have proficiency in the Animal Handling skill. If you already have proficiency, you have expertise.",
+        "value": "You have proficiency in the Animal Handling skill. If you already have proficiency in Animal Handling, you have expertise.",
         "comment": "prof -> expert -> advantage"
       },
       {
@@ -176,10 +177,109 @@
       },
       {
         "value": "+3 health regeneration per round of combat while outdoors"
+      },
+      {
+        "value": "You may cast Healing Spirit as a 3rd level spell once per short rest",
+        "comment": "+1 slot level"
       }
     ],
     "found": false,
     "level": 1
+  },
+  {
+    "name": "Ketis' Dominion",
+    "type": "weapon",
+    "existing": [
+      {
+        "value": "You may choose to convert all physical damage from this weapon to cold, fire, or lightning damage.",
+        "upgradeable": false
+      }
+    ],
+    "available": [
+      {
+        "value": "Attacks with this weapon have advantage against targets that are vulnerable to cold, fire, or lightning damage.",
+        "upgradeable": false
+      },
+      {
+        "value": "+2 fire damage with attacks and spells, even if they don't deal fire damage already"
+      },
+      {
+        "value": "+1d4 lightning damage to attacks and spells"
+      },
+      {
+        "value": "-1 critical strike requirement with attacks that would deal cold damage"
+      },
+      {
+        "value": "Once per long rest, when you take cold, fire, or lightning damage, you can use a reaction to immediately take a full turn",
+        "comment": "+1 uses"
+      },
+      {
+        "value": "+1 cold, fire, and lightning damage"
+      },
+      {
+        "value": "You may cast Conjure Elemental as a 5th level spell once per long rest",
+        "comment": "+1 spell slot level used"
+      },
+      {
+        "value": "You may cast Fire Shield once per short rest",
+        "upgradeable": false
+      },
+      {
+        "value": "You become acclimatised to both hot and cold weather"
+      }
+    ],
+    "found": false,
+    "level": 1
+  },
+  {
+    "name": "Esher's Health",
+    "type": "armour",
+    "existing": [
+      {
+        "value": "+3 health",
+        "comment": "+2 health on level"
+      },
+      {
+        "value": "You are immune to diseases",
+        "upgradeable": false
+      }
+    ],
+    "available": [
+      {
+        "value": "+1 Constitution"
+      },
+      {
+        "value": "You have advantage when using hit die. +1 maximum hit dice.",
+        "comment": "+1 maximum hit dice"
+      },
+      {
+        "value": "You have proficiency in the Medicine skill. If you already have proficiency in Medicine, you have expertise.",
+        "comment": "prof -> expert -> advantage"
+      },
+      {
+        "value": "+1 to death saves, -1 to death save critical requirement. You cannot get a critical failure with death saves."
+      },
+      {
+        "value": "+3 to outgoing healing",
+        "comment": "+2"
+      },
+      {
+        "value": "+2 to incoming healing",
+        "comment": "+1"
+      },
+      {
+        "value": "You can cast Greater Restoration once per long rest"
+      },
+      {
+        "value": "+1 resistance to all damage"
+      },
+      {
+        "value": "If this mod gets to level 3, you gain the Tough feat. Current level: 1"
+      }
+    ],
+    "found": false,
+    "level": 1,
+    "enabled": false
   },
   {
     "name": "Template",
