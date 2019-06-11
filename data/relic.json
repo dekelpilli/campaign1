@@ -278,8 +278,7 @@
       }
     ],
     "found": false,
-    "level": 1,
-    "enabled": false
+    "level": 1
   },
   {
     "name": "Template",

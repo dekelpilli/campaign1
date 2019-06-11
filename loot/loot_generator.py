@@ -23,10 +23,23 @@ class LootController:
         self.all_crs = list(self.challenge_rating.keys())
         self.found_relics, self.unfound_relics = LootController._create_relics(do_flush)
 
-    def level_up_relic_by_name(self, relic_name):
-        assert relic_name in self.found_relics
+    def level_up_relic_by_choice(self):
+        found_relics = self._get_found_relics()
+        if len(found_relics) == 0:
+            print("No relics to level")
+            return None
+        readline.set_completer(completer.Completer(found_relics).complete)
+        print(found_relics)
+        relic_choice = input("\nWhich relic do you want to level? ")
+        if relic_choice not in found_relics:
+            print(relic_choice + " is not a valid relic choice")
+            readline.set_completer(lambda text, state: None)
+            return None
+        readline.set_completer(lambda text, state: None)
+        return self._level_up_relic_by_name(relic_choice)
+
+    def _level_up_relic_by_name(self, relic_name):
         relic = self.found_relics[relic_name]
-        assert relic.enabled
         return self._level_up_relic(relic)
 
     def _level_up_relic(self, relic, num_choices=2):
@@ -72,7 +85,7 @@ class LootController:
         relic = self.unfound_relics[randomly_chosen_key]
         return str(relic)
 
-    def get_found_relics(self):
+    def _get_found_relics(self):
         return list(self.found_relics.keys())
 
     def get_random_creature(self):
@@ -259,7 +272,7 @@ def print_options():
     print("\t15: Random enchant")
     print("\t16: Reload loot")
     print("\t17: Creature of a given CR")
-    print("\t18: Level an relic")
+    print("\t18: Level a relic")
     print("\t>18: Show this")
 
 
@@ -282,7 +295,8 @@ def define_action_map(mapped_loot_controller):
         14: mapped_loot_controller.get_armour_enchant,
         15: mapped_loot_controller.get_enchant,
         # 16: reload loot
-        17: mapped_loot_controller.get_random_creature
+        17: mapped_loot_controller.get_random_creature,
+        18: mapped_loot_controller.level_up_relic_by_choice
     }
 
 
@@ -293,7 +307,6 @@ if __name__ == "__main__":
     while True:
         readline.set_completer_delims(' \t\n;')
         readline.parse_and_bind("tab: complete")
-        readline.set_completer(lambda text, state: None)
         roll = get_int_from_str(input("\nLoot roll: "), random.randint(1, 12))
         if roll < 0:
             exit(0)
@@ -304,17 +317,5 @@ if __name__ == "__main__":
             loot_controller = LootController(True)
             loot_action_map = define_action_map(loot_controller)
             print("Reloaded loot from files")
-        if roll == 18:
-            found_relics = loot_controller.get_found_relics()
-            if len(found_relics) == 0:
-                print("No relics to level")
-                continue
-            readline.set_completer(completer.Completer(found_relics).complete)
-            print(found_relics)
-            relic_choice = input("\nWhich relic do you want to level? ")
-            if relic_choice not in found_relics:
-                print(relic_choice + " is not a valid relic choice")
-                continue
-            print(loot_controller.level_up_relic_by_name(relic_choice))
         if roll > 18:
             print_options()
