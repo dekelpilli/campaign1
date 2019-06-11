@@ -18,10 +18,12 @@ class LootController:
         self.ring = LootController._create_loot_option("ring", do_flush)
         self.enchant = LootController._create_loot_option("enchant", do_flush)
         self.consumable = LootController._create_loot_option("consumable", do_flush)
-        self.prayer_stone = LootController._create_loot_option("prayer_stone", do_flush)
+        self.prayer_stone = LootController._create_prayer_stone(do_flush)
         self.challenge_rating = LootController._create_challenge_ratings(do_flush)
         self.all_crs = list(self.challenge_rating.keys())
         self.found_relics, self.unfound_relics = LootController._create_relics(do_flush)
+
+    # TODO: level up prayer stones by owner
 
     def level_up_relic_by_choice(self):
         found_relics = self._get_found_relics()
@@ -31,11 +33,10 @@ class LootController:
         readline.set_completer(completer.Completer(found_relics).complete)
         print(found_relics)
         relic_choice = input("\nWhich relic do you want to level? ")
+        readline.set_completer(lambda text, state: None)
         if relic_choice not in found_relics:
             print(relic_choice + " is not a valid relic choice")
-            readline.set_completer(lambda text, state: None)
             return None
-        readline.set_completer(lambda text, state: None)
         return self._level_up_relic_by_name(relic_choice)
 
     def _level_up_relic_by_name(self, relic_name):
@@ -207,6 +208,25 @@ class LootController:
                                                                item_dict.get("metadata", [])))
         loot_option = loot_types.LootOption(name)
         for loot_option_item in loot_option_items:
+            loot_option.add_item(loot_option_item)
+
+        return loot_option
+
+    @staticmethod
+    def _create_prayer_stone(do_flush=False):
+        file_contents = LootController._get_file_contents("prayer_stone", do_flush)
+        prayer_stone_dicts = json.loads(file_contents)
+        prayer_stones = []
+        for prayer_stone_dict in prayer_stone_dicts:
+            prayer_stones.append(loot_types.PrayerStone(prayer_stone_dict["value"],
+                                                        prayer_stone_dict.get("weighting", 10),
+                                                        prayer_stone_dict.get("enabled", True),
+                                                        prayer_stone_dict.get("metadata", []),
+                                                        prayer_stone_dict["levels"],
+                                                        prayer_stone_dict.get("owner", None),
+                                                        prayer_stone_dict.get("progress", 0)))
+        loot_option = loot_types.LootOption("prayer_stone")
+        for loot_option_item in prayer_stones:
             loot_option.add_item(loot_option_item)
 
         return loot_option

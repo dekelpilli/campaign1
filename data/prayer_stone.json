@@ -1,41 +1,84 @@
 [
   {
-    "value": "Rheztol"
+    "value": "Rheztol",
+    "progress": 0,
+    "levels": [
+      "You learn the Minor Illusion cantrip. This does not count towards your limit of known cantrips. The spellcasting modifier can be a mental attribute of your choice.",
+      "You have expertise in Investigation when identifying illusions.",
+      "You become proficient in Deception. If you area already proficient, gain +2 deception instead.",
+      "You become proficient in Persuation. If you area already proficient, gain +2 persuasion instead. You may choose to use persuasion instead of deception when communicating something true in a misleading way.",
+      "+1 to the DCs of Illusion spells",
+      "Creatures that currently believe one of your illusions are real have disadvantage when attacking you",
+      "When casting non-cantrip Illusion spells, you may choose to use the spell slot level below that spell's natural casting requirement, to a minimum of 1",
+      "When making Insight checks to analyse a person's statement(s), you may also make a Deception to detect they are lying/concealing information, but not to attempt to understand motivations",
+      "You may cast Zone of Truth once per short rest. When cast in this way, the spell is centered on you and lasts for 1 hour.",
+      "You have 30 feet of Truesight"
+    ],
+    "owner": "Test User 1"
   },
   {
-    "value": "Esher"
+    "value": "Esher",
+    "progress": 0,
+    "levels": [],
+    "owner": "Test User 1"
   },
   {
-    "value": "Ateus"
+    "value": "Ateus",
+    "progress": 0,
+    "levels": []
   },
   {
-    "value": "Vimis"
+    "value": "Vimis",
+    "progress": 0,
+    "levels": []
   },
   {
-    "value": "Vuneta"
+    "value": "Vuneta",
+    "progress": 0,
+    "levels": []
   },
   {
-    "value": "Zetnos"
+    "value": "Zetnos",
+    "progress": 0,
+    "levels": []
   },
   {
-    "value": "Omnos"
+    "value": "Omnos",
+    "progress": 0,
+    "levels": []
   },
   {
-    "value": "Odi"
+    "value": "Odi",
+    "progress": 0,
+    "levels": ["",
+      "",
+      "",
+      "",
+      "You may cast Soul Cage once per long rest, but you may only use the Query Soul option"]
   },
   {
-    "value": "Thetia"
+    "value": "Thetia",
+    "progress": 0,
+    "levels": []
   },
   {
-    "value": "Cerasil"
+    "value": "Cerasil",
+    "progress": 0,
+    "levels": []
   },
   {
-    "value": "Qhanas"
+    "value": "Qhanas",
+    "progress": 0,
+    "levels": []
   },
   {
-    "value": "Idas"
+    "value": "Idas",
+    "progress": 0,
+    "levels": []
   },
   {
-    "value": "Ketis"
+    "value": "Ketis",
+    "progress": 0,
+    "levels": []
   }
 ]
