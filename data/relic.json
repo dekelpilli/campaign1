@@ -249,8 +249,8 @@
         "value": "+1 Constitution"
       },
       {
-        "value": "You have advantage when using hit die. +1 maximum hit dice.",
-        "comment": "+1 maximum hit dice"
+        "value": "+2 maximum hit dice",
+        "comment": "+1"
       },
       {
         "value": "You have proficiency in the Medicine skill. If you already have proficiency in Medicine, you have expertise.",

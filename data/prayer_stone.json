@@ -7,20 +7,31 @@
       "You have expertise in Investigation when identifying illusions.",
       "You become proficient in Deception. If you area already proficient, gain +2 deception instead.",
       "You become proficient in Persuation. If you area already proficient, gain +2 persuasion instead. You may choose to use persuasion instead of deception when communicating something true in a misleading way.",
-      "+1 to the DCs of Illusion spells",
+      "+2 to the DCs of Illusion spells",
       "Creatures that currently believe one of your illusions are real have disadvantage when attacking you",
       "When casting non-cantrip Illusion spells, you may choose to use the spell slot level below that spell's natural casting requirement, to a minimum of 1",
       "When making Insight checks to analyse a person's statement(s), you may also make a Deception to detect they are lying/concealing information, but not to attempt to understand motivations",
       "You may cast Zone of Truth once per short rest. When cast in this way, the spell is centered on you and lasts for 1 hour.",
       "You have 30 feet of Truesight"
     ],
-    "owner": "Test User 1"
+    "owner": "Test User"
   },
   {
     "value": "Esher",
     "progress": 0,
-    "levels": [],
-    "owner": "Test User 1"
+    "levels": [
+      "The meaning amount you heal from using a hit die becomes twice your Constitution modifier",
+      "You become immune to all forms of madness",
+      "Spells that cause healing or remove status conditions can be cast one level higher without consuming a different spell slot",
+      "Creatures that have healed from you in the last minute have +2 incoming healing from you",
+      "You have resistance to poison damage",
+      "Gain temporary hit points equal to your proficiency bonus on turns where you haven't dealt damage",
+      "+10 to maximum hit points",
+      "+1 AC and +1 to spell saves if you have taken damage in the last round",
+      "You take no additional damage from critical strikes",
+      "Once per short rest, when you fail a save, you can choose to succeed instead"
+    ],
+    "owner": "User of Tests"
   },
   {
     "value": "Ateus",
@@ -46,7 +57,18 @@
   {
     "value": "Vuneta",
     "progress": 0,
-    "levels": []
+    "levels": [
+      "You have advantage on Persuasion checks with creatures you are friendly with",
+      "You have expertise in Persuasion and Insight when attempting to avoid violence",
+      "Your spells that cause conditions have +1 DC against creatures that have damaged you in the last minute",
+      "Creatures of your choice within 20 feet of you have -1 AB",
+      "You can cast Misty Step once per long rest. When cast in this way, the spell targets you and up to 5 other creatures that you can see within 60 feet, and can teleport you up to 100 feet away.",
+      "Add your Charisma bonus to the damage of chosen creatures within 20 feet of you, including yourself, when making non-lethal attacks",
+      "Once per short rest, as a bonus action while in combat, if there is an unconscious enemy at 0 hit point, you can force up to five creatures friendly to that enemy, with equal or lower CR, to make a Wisdom save against a DC of 8 + prof + CHA mod. On a failed save, the creatures offer a surrender.",
+      "Once per short rest, as a reaction to getting hit by an enemy, you may cast the Invulnerability spell on both yourself and the enemy",
+      "You may cast the Prismatic Wall spell once per long rest, but you may only choose the Violet variation",
+      "You may cast the Imprisonment spell as an action once per long rest. When cast in this way, the spell cannot last for longer than 1 hour."
+    ]
   },
   {
     "value": "Zetnos",
