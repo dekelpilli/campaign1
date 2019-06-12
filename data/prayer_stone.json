@@ -25,7 +25,18 @@
   {
     "value": "Ateus",
     "progress": 0,
-    "levels": []
+    "levels": [
+      "-1 critical requirement on all skill checks",
+      "You have expertise in Persuasion when negotiating prices",
+      "When you roll a 1 on an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll",
+      "20% increased gold gained from loot rolls",
+      "You have advantage on the amount of loot you get from currency items, consumables, and gold",
+      "As an action, you may cast the Fabricate spell once per short rest",
+      "When you roll for a loot roll and get above a 2, you may choose to roll 1d8 to replace your result. You must then accept this result.",
+      "You may destroy item to immediately gain base sale value.",
+      "Relics attuned to you can be levelled for 50% of their usual levelling cost. Relics levelled beyond level 3 in this way have a base value of 150 (instead of 300).",
+      "Whenever you make a skill check, you may also roll a d12 and use the higher of the scores"
+    ]
   },
   {
     "value": "Vimis",
