@@ -71,7 +71,7 @@
     ]
   },
   {
-    "value": "Zetnos",
+    "value": "Thynos",
     "progress": 0,
     "levels": []
   },
@@ -83,7 +83,8 @@
   {
     "value": "Odi",
     "progress": 0,
-    "levels": ["",
+    "levels": [
+      "",
       "",
       "",
       "",
@@ -112,6 +113,17 @@
   {
     "value": "Ketis",
     "progress": 0,
-    "levels": []
+    "levels": [
+      "You have +1 resistance to cold, fire, and lightning damage",
+      "When you take fire, cold, or lightning damage, you become resistant to the other two until the start of your next turn.",
+      "You can cast Absorb Elements WIS Mod (min 1) times per long rest",
+      "As a reaction to being targeted by a melee attack, You can cast Thunderwave CON Mod (min 1) times per short rest. Mental attribute of your choice.",
+      "When you perform a check to learn a creatures stats, regardless of your roll, you learn about the target creature's vulnerability/resistance/immunity to fire/cold/lightning.",
+      "You may cast Fire Shield once per short rest. When cast in this way, you may also target other willing creatures.",
+      "You may cast Elemental Weapon once per long rest. When cast in this way, the spell does not require concentration.",
+      "+1 AB with attacks that would deal fire, cold, or lightning damage, and +1 spell save DC to spells that would deal fire, cold, or lightning damage",
+      "Once per long rest, when an enemy successfully saves against an effect that would deal fire, cold, or lightning damage, you may instead choose to make them fail.",
+      "You may cast meteor shower once per long rest. When cast in this way, you can replace the bludgeoning damage with fire damage. Mental attribute of your choice."
+    ]
   }
 ]
