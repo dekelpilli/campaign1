@@ -73,12 +73,28 @@
   {
     "value": "Thynos",
     "progress": 0,
-    "levels": []
+    "levels": [
+
+
+
+      "Something to do with Hellish Rebuke"
+    ]
   },
   {
     "value": "Omnos",
     "progress": 0,
-    "levels": []
+    "levels": [
+      "Enemies that damage you become marked for a minute. Marked enemies have -1 damage against you.",
+      "Marked enemies cannot heal",
+      "Marked enemies now have -1 damage, not just against you.",
+      "Your attacks and spells deal +1d4 radiant damage against marked enemies",
+      "Enemies are now considered marked if they damage you or an ally, instead of just you",
+      "You have -1 critical strike requirement against marked enemies",
+      "Marked enemies have -1AB and -1AC",
+      "Gain 20 temporary hit points when you kill or knock unconscious a marked enemy",
+      "+5 radiant thorns",
+      "You have advantage against marked enemies"
+    ]
   },
   {
     "value": "Odi",
@@ -118,7 +134,7 @@
     ]
   },
   {
-    "value": "Idas",
+    "value": "Thatar",
     "progress": 0,
     "levels": []
   },
