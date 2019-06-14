@@ -341,7 +341,7 @@
     "value": "You're acclimated to high altitude, including elevations above 20,000 feet"
   },
   {
-    "value": "Stone's Endurance (if you already have it, you get another use oer long/short rest)",
+    "value": "Stone's Endurance (if you already have it, you get another use per long/short rest)",
     "weighting": 2
   },
   {
@@ -354,7 +354,7 @@
     "value": "+10 feet speed in all of your available speed types"
   },
   {
-    "value": "+1 to hit die size"
+    "value": "+1 to hit die size for regaining health during short rests"
   },
   {
     "value": "+1 weapon attack AB with attacks that deal non-physical damage",
