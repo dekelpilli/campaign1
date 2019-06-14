@@ -498,5 +498,96 @@
   },
   {
     "value": "Once per long rest, when rolling a natural 1 on a d20, you may reroll."
+  },
+  {
+    "value": "+1 to this weapon's base damage die size",
+    "weighting": 3,
+    "metadata": ["weapon"]
+  },
+  {
+    "value": "Heal 1 HP on striking with this weapon in combat",
+    "metadata": ["weapon"]
+  },
+  {
+    "value": "Ignore acid resistance",
+    "weighting": 3
+  },
+  {
+    "value": "Ignore bludgeoning resistance",
+    "weighting": 2
+  },
+  {
+    "value": "Ignore cold resistance",
+    "weighting": 3
+  },
+  {
+    "value": "Ignore fire resistance",
+    "weighting": 3
+  },
+  {
+    "value": "Ignore force resistance",
+    "weighting": 3
+  },
+  {
+    "value": "Ignore lightning resistance",
+    "weighting": 3
+  },
+  {
+    "value": "Ignore necrotic resistance",
+    "weighting": 3
+  },
+  {
+    "value": "Ignore piercing resistance",
+    "weighting": 2
+  },
+  {
+    "value": "Ignore poison resistance",
+    "weighting": 3
+  },
+  {
+    "value": "Ignore psychic resistance",
+    "weighting": 3
+  },
+  {
+    "value": "Ignore radiant resistance",
+    "weighting": 3
+  },
+  {
+    "value": "Ignore slashing resistance",
+    "weighting": 2
+  },
+  {
+    "value": "Ignore thunder resistance",
+    "weighting": 3
+  },
+  {
+    "value": "When you take damage from a melee or touch attack, the attacker takes true damage equal to your level",
+    "weighting": 8,
+    "metadata": ["armour"]
+  },
+  {
+    "value": "When a melee or touch fails to hit you, the attacker takes true damage equal to half your level (rounded up)",
+    "weighting": 8,
+    "metadata": ["armour"]
+  },
+  {
+    "value": "+1 to saving throws made to end an ongoing condition if your HP is above 0",
+    "metadata": ["armour"]
+  },
+  {
+    "value": "When you score a critical hit, recover a 1st-level spell slot",
+    "weighting": 5
+  },
+  {
+    "value": "When you score a critical hit, recover a 10% of your maximum class points (minimum 1)",
+    "weighting": 5
+  },
+  {
+    "value": "Recover a 1st-level spell slot when you roll for initiative",
+    "weighting": "3"
+  },
+  {
+    "value": "Recover 10% of your maximum class points (minimum 1) when you roll for initiative",
+    "weighting": "3"
   }
 ]
