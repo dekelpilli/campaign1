@@ -20,10 +20,11 @@ Moving mods:
 Rings:
     Maximum of 2 mods (if using orb of creation, new formula for mods is simply `min(2, disadvantaged_1d4)`
 
-Artifacts:
-    All artifacts are "relics". Instead of getting these when completing a quest for them, artifacts related to a specific personality are unlocked at a certain quest state.
-    Artifacts can only be attuned to one person (old attunements need to be let go, but artifacts are found without attunements). Attunements simply provide a free level up (1 -> 2).
-    Last artifact level (10) is a choice of level (new mod from list of mods available on artifact, upgrade existing mod of choice, new random mod)
+Relics:
+    Relics related to a specific personality are unlocked at a certain quest state.
+    Relics can only be attuned to one person (old attunements need to be let go, but artifacts are found without attunements). Attunements simply provide a free level up (1 -> 2).
+    Mods with a weighting of >= 3 are not upgradeable until level 10.
+    Last artifact level (10) is a choice of level (new random mod from list of mods available on artifact, upgrade existing mod of choice, new random mod)
     Costs:
         1: 0
         2: 0

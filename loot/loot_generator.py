@@ -145,7 +145,7 @@ class LootController:
         for metadata_tag in item.metadata:
             if metadata_tag == "disadvantage":
                 amount = min(randomisation_function(), randomisation_function())
-            elif "advantage" in item.metadata:
+            elif metadata_tag == "advantage":
                 amount = max(randomisation_function(), randomisation_function())
             elif metadata_tag[0] == "x":
                 amount = amount * get_int_from_str(metadata_tag[1:], 1)
