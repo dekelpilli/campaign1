@@ -205,7 +205,7 @@
     "value": "+1 to death saves"
   },
   {
-    "value": "After you received damage for the first time in a combat, you become resistant to that damage for the rest of the combat. You then become vulnerable to two other damage types"
+    "value": "After you received damage for the first time in a combat, you become resistant to that damage type for the rest of the combat. You then become vulnerable to two other damage types (chosen randomly). TODO: Provide table"
   },
   {
     "value": "+1 question when learning creature stats",
@@ -215,17 +215,8 @@
     "value": "Gain temporary hit points equal to your lowest ability score (not bonus) at the beginning of each combat. This mod can stack."
   },
   {
-    "value": "+2 AC while under the effect of a condition",
-    "metadata": ["armour"]
-  },
-  {
     "value": "+2 to loot rolls result, -1 loot roll die size",
     "weighting": 5
-  },
-  {
-    "value": "+1 resistance to all damage",
-    "weighting": 2,
-    "metadata": ["armour"]
   },
   {
     "value": "+1 resistance to acid damage",
@@ -341,7 +332,7 @@
     "value": "You're acclimated to high altitude, including elevations above 20,000 feet"
   },
   {
-    "value": "Stone's Endurance (if you already have it, you get another use per long/short rest)",
+    "value": "Stone's Endurance (if you already have it, you get another use per long/short rest) (Volo's p109) ",
     "weighting": 2
   },
   {
