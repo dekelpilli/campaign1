@@ -575,19 +575,46 @@
     "metadata": ["armour"]
   },
   {
-    "value": "When you score a critical hit, recover a 1st-level spell slot",
+    "value": "When you score a critical strike, recover a 1st-level spell slot",
     "weighting": 5
   },
   {
-    "value": "When you score a critical hit, recover a 10% of your maximum class points (minimum 1)",
+    "value": "When you score a critical strike, recover a 10% of your maximum class points (minimum 1)",
     "weighting": 5
   },
   {
     "value": "Recover a 1st-level spell slot when you roll for initiative",
-    "weighting": "3"
+    "weighting": 3
   },
   {
     "value": "Recover 10% of your maximum class points (minimum 1) when you roll for initiative",
-    "weighting": "3"
+    "weighting": 3
+  },
+  {
+    "value": "Roll again, making that result a negative enchant. Then roll again, empowering that result.",
+    "weighting": 8
+  },
+  {
+    "value": "You have resistance to all damage while taking the Dodge action"
+  },
+  {
+    "value": "Your critical strikes add 1 additional damage die from the source's base damage",
+    "weighting": 7
+  },
+  {
+    "value": "Reduce the damage bonus of incoming damage you are vulnerable to by 25%"
+  },
+  {
+    "value": "-1 to a creature's saving throws attempting to end an ongoing condition you caused",
+    "weighting": 8
+  },
+  {
+    "value": "+1 AB with unarmed attacks",
+    "weighting": 5
+  },
+  {
+    "value": "This weapon is considered magical for the purposes of overcoming resistances and immunities",
+    "weighting": 2,
+    "metadata": ["weapon"]
   }
 ]
