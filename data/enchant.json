@@ -505,7 +505,7 @@
     "metadata": ["weapon"]
   },
   {
-    "value": "Heal 1 HP on striking with this weapon in combat",
+    "value": "Heal 1 HP on hitting a creature with this weapon in combat",
     "metadata": ["weapon"]
   },
   {
@@ -616,5 +616,21 @@
     "value": "This weapon is considered magical for the purposes of overcoming resistances and immunities",
     "weighting": 2,
     "metadata": ["weapon"]
+  },
+  {
+    "value": "Gain resistance to physical damage equal to half the CR total of all your active minions",
+    "weighting": 4
+  },
+  {
+    "value": "This item emits bright light in a 5' radius, and dim light for a further 5'"
+  },
+  {
+    "value": "+1 damage to melee and touch attacks"
+  },
+  {
+    "value": "Recover a 1st-level spell slot on Killing Blow"
+  },
+  {
+    "value": "Recover 10% of your maximum class points (minimum 1) on Killing Blow"
   }
 ]
