@@ -740,5 +740,22 @@
     "value": "This weapon deals no base damage. Roll again and empower twice",
     "metadata": ["weapon"],
     "weight": 6
+  },
+  {
+    "value": "Once per long rest, when you need make an attack roll, ability check, or saving throw, you can use your reaction to replace it with a 50% chance to critically succeed and 50% chance to to critically fail",
+    "weight": 9
+  },
+  {
+    "value": "You can travel through 1\" of solid surface with a full movement action. If you end your turn inside the surface, you are shunted back to your original location."
+  },
+  {
+    "value": "+1 to a random numeric value on your character sheet \n\t\t(random, 37 options, only prof bonus, AC, init, speed, ability scores, saving throws, and skills)",
+    "weight": 8
+  },
+  {
+    "value": "Against creatures of a certain type, all of your damage type-seeks to maximise damage \n\t\t(random, 1-14, [1 Abberation, 2 Beast, 3 Celestial, 4 Construct, 5 Dragon, 6 Elemental, 7 Fey, 8 Fiend, 9 Giant, 10 Humanoid, 11 Monstrosity, 12 Ooze, 13 Plant, 14 Undead]"
+  },
+  {
+    "value": "+2 resistance to damage from creatures of a certain type \n\t\t(random, 1-14, [1 Abberation, 2 Beast, 3 Celestial, 4 Construct, 5 Dragon, 6 Elemental, 7 Fey, 8 Fiend, 9 Giant, 10 Humanoid, 11 Monstrosity, 12 Ooze, 13 Plant, 14 Undead]"
   }
 ]
