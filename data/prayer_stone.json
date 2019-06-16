@@ -13,14 +13,13 @@
       "When making Insight checks to analyse a person's statement(s), you may also make a Deception to detect they are lying/concealing information, but not to attempt to understand motivations",
       "You may cast Zone of Truth once per short rest. When cast in this way, the spell is centered on you and lasts for 1 hour.",
       "You have 30 feet of Truesight"
-    ],
-    "owner": "Test User"
+    ]
   },
   {
     "value": "Esher",
     "progress": 0,
     "levels": [
-      "The minimum amount you heal from using a hit die becomes twice your Constitution modifier",
+      "The minimum amount you healing you receive from using a hit die becomes twice your Constitution modifier",
       "You become immune to all forms of madness",
       "Spells that cause healing or remove status conditions can be cast one level higher without consuming a different spell slot",
       "Creatures that have healed from you in the last minute have +2 incoming healing from you",
@@ -30,8 +29,7 @@
       "+1 AC and +1 to spell saves if you have taken damage in the last round",
       "You take no additional damage from critical strikes",
       "Once per short rest, when you fail a save, you can choose to succeed instead"
-    ],
-    "owner": "User of Tests"
+    ]
   },
   {
     "value": "Ateus",

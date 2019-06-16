@@ -31,8 +31,7 @@ class LootController:
             set(self.prayer_stone.loot_options)))
 
         if len(prayer_paths_started) == 0:
-            print("No paths to level")
-            return None
+            return "No paths to level"
 
         owners = set(map(lambda prayer_stone: prayer_stone.owner, prayer_paths_started))
         readline.set_completer(completer.Completer(owners).complete)
@@ -40,23 +39,23 @@ class LootController:
         prayer_path_owner_choice = input("\nWhich owner's path do you want to level? ")
         readline.set_completer(lambda text, state: None)
         if prayer_path_owner_choice not in owners:
-            print(prayer_path_owner_choice + " is not a valid prayer path owner choice")
-            return None
+            return prayer_path_owner_choice + " is not a valid prayer path owner choice"
+
         return list(filter(lambda prayer_stone: prayer_path_owner_choice == prayer_stone.owner,
                            prayer_paths_started))[0].get_next()
 
     def level_up_relic_by_choice(self):
         found_relics = self._get_found_relics()
         if len(found_relics) == 0:
-            print("No relics to level")
-            return None
+            return "No relics to level"
+
         readline.set_completer(completer.Completer(found_relics).complete)
         print(found_relics)
         relic_choice = input("\nWhich relic do you want to level? ")
         readline.set_completer(lambda text, state: None)
         if relic_choice not in found_relics:
-            print(relic_choice + " is not a valid relic choice")
-            return None
+            return relic_choice + " is not a valid relic choice"
+
         return self._level_up_relic_by_name(relic_choice)
 
     def _level_up_relic_by_name(self, relic_name):
@@ -352,6 +351,7 @@ if __name__ == "__main__":
         roll = get_int_from_str(input("\nLoot roll: "), 99)
         if roll == 0:
             roll = random.randint(1, 12)
+            print("Random roll: " + str(roll) + ", (" + str(loot_action_map[roll]) + ")")
         if roll < 0:
             exit(0)
         print(loot_action_map.get(roll,
