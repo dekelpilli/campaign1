@@ -170,25 +170,27 @@
   },
   {
     "value": "+1 to Strength saves",
+    "weighting": 8,
     "metadata": ["armour"]
   },
   {
     "value": "+1 to Dexterity saves",
-    "weighting": 8,
+    "weighting": 6,
     "metadata": ["armour"]
   },
   {
     "value": "+1 to Constitution saves",
-    "weighting": 8,
+    "weighting": 6,
     "metadata": ["armour"]
   },
   {
     "value": "+1 to Intelligence saves",
+    "weighting": 6,
     "metadata": ["armour"]
   },
   {
     "value": "+1 to Wisdom saves",
-    "weighting": 8,
+    "weighting": 6,
     "metadata": ["armour"]
   },
   {
@@ -683,30 +685,6 @@
   },
   {
     "value": "When you hit a creature with this weapon, they get -1 resistance to all damage dealt by creatures other than yourself for the remainder of combat. This does not stack, though multiple instances of this enchant do."
-  },
-  {
-    "value": "+1 to Strength saving throws",
-    "weighting": 6
-  },
-  {
-    "value": "+1 to Dexterity saving throws",
-    "weighting": 4
-  },
-  {
-    "value": "+1 to Constitution saving throws",
-    "weighting": 4
-  },
-  {
-    "value": "+1 to Intelligence saving throws",
-    "weighting": 8
-  },
-  {
-    "value": "+1 to Wisdom saving throws",
-    "weighting": 4
-  },
-  {
-    "value": "+1 to Charisma saving throws",
-    "weighting": 8
   },
   {
     "value": "+1 resistance to projectile damage"
