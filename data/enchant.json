@@ -632,5 +632,25 @@
   },
   {
     "value": "Recover 10% of your maximum class points (minimum 1) on Killing Blow"
+  },
+  {
+    "value": "At the start of your turn in combat, if you haven't taken damage since the start of your last turn, gain 1 temporary hit point. This stacks with any existing temporary hit points.",
+    "metadata": ["armour"]
+  },
+  {
+    "value": "If you take damage exceeding 25% of your maximum hit points in one turn and do not reach 0 hit points by its end, heal hit points equal to your level.",
+    "weighting": 9
+  },
+  {
+    "value": "If you take damage exceeding 25% of your maximum hit points in one turn and do not reach 0 hit points by its end, move up one space in the initiative tracker, if possible.",
+    "weighting": 9
+  },
+  {
+    "value": "+1 damage with weapon attacks",
+    "metadata": ["weapon"]
+  },
+  {
+    "value": "Once per long rest, you can choose a target as an action and then cast a random 1st-level spell on that target, ignoring range restrictions",
+    "metadata": ["weapon"]
   }
 ]
