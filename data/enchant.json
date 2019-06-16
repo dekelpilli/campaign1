@@ -161,7 +161,7 @@
     "weighting": 5
   },
   {
-    "value": "+1 to saves against spells",
+    "value": "+1 to saving throws against spells",
     "weighting": 3
   },
   {
@@ -169,27 +169,27 @@
     "weighting": 4
   },
   {
-    "value": "+1 to Strength saves",
+    "value": "+1 to Strength saving throws",
     "weighting": 8,
     "metadata": ["armour"]
   },
   {
-    "value": "+1 to Dexterity saves",
+    "value": "+1 to Dexterity saving throws",
     "weighting": 6,
     "metadata": ["armour"]
   },
   {
-    "value": "+1 to Constitution saves",
+    "value": "+1 to Constitution saving throws",
     "weighting": 6,
     "metadata": ["armour"]
   },
   {
-    "value": "+1 to Intelligence saves",
+    "value": "+1 to Intelligence saving throws",
     "weighting": 6,
     "metadata": ["armour"]
   },
   {
-    "value": "+1 to Wisdom saves",
+    "value": "+1 to Wisdom saving throws",
     "weighting": 6,
     "metadata": ["armour"]
   },
