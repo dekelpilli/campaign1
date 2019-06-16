@@ -279,7 +279,7 @@
     "metadata": ["armour"]
   },
   {
-    "value": "When you score a critical hit on a death saving throw, you gain 1 hit point and immediately end your turn",
+    "value": "When you score a critical success on a death saving throw, you gain 1 hit point and immediately end your turn",
     "metadata": ["armour"]
   },
   {
@@ -652,5 +652,27 @@
   {
     "value": "Once per long rest, you can choose a target as an action and then cast a random 1st-level spell on that target, ignoring range restrictions",
     "metadata": ["weapon"]
+  },
+  {
+    "value": "When you score a critical strike, the target gains a condition that deals 1d4 damage of the strike's primary damage type every round to the target for 1d4 rounds. If the condition is reapplied, the longer of the two durations becomes the new duration and the damage stacks."
+  },
+  {
+    "value": "You can use your reaction to change any damage you deal into a damage type of your choice. This is visually noticeable.",
+    "weighting": 7
+  },
+  {
+    "value": "When you deliver a Killing Blow, gain +2 global damage for the remainder of the combat"
+  },
+  {
+    "value": "+2 to physical resistance while taking Damage Over Time"
+  },
+  {
+    "value": "+1 to damage with light weapons"
+  },
+  {
+    "value": "Reroll, the resulting enchant is applied to minions instead of the wielder (assuming their basic attacks use weapons)"
+  },
+  {
+    "value": "Your minions have +1 resistance to all damage"
   }
 ]
