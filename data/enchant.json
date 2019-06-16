@@ -409,7 +409,7 @@
     "value": "+1 to death saves"
   },
   {
-    "value": "After you received damage for the first time in a combat, you become resistant to that damage type for the rest of the combat. You then become vulnerable to two other damage types (chosen randomly). TODO: Provide table"
+    "value": "After you received damage for the first time in a combat, you become resistant to that damage type for the rest of the combat. You then become vulnerable to two other damage types (chosen randomly). \n\t\t(random, 1-13, [1 Acid, 2 Bludgeoning, 3 Cold, 4 Fire, 5 Force, 6 Lightning, 7 Necrotic, 8 Piercing, 9 Poison, 10 Psychic, 11  Radiant, 12 Slashing, 13 Thunder]"
   },
   {
     "value": "Gain temporary hit points equal to your lowest ability score (not bonus) at the beginning of each combat. This mod can stack."
@@ -689,7 +689,9 @@
     "value": "When you hit a creature with this weapon, they get -1 resistance to all damage dealt by creatures other than yourself for the remainder of combat. This does not stack, though multiple instances of this enchant do."
   },
   {
-    "value": "+1 resistance to projectile damage"
+    "value": "+2 resistance to damage from projectiles",
+    "weighting": 8,
+    "metadata": ["armour"]
   },
   {
     "value": "When you deliver a Killing Blow, gain 10 temporary hit points"
@@ -742,7 +744,8 @@
     "value": "+2 health regeneration per round of combat"
   },
   {
-    "value": "+3 to maximum HP"
+    "value": "+3 to maximum HP",
+    "weighting": 7
   },
   {
     "value": "+3 to minion damage"
