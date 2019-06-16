@@ -23,7 +23,27 @@ class LootController:
         self.all_crs = list(self.challenge_rating.keys())
         self.found_relics, self.unfound_relics = LootController._create_relics(do_flush)
 
-    # TODO: level up prayer stones by owner
+    def level_up_prayer_path(self):
+        prayer_paths_started = list(filter(
+            lambda prayer_stone: prayer_stone.owner is not None
+                                 and prayer_stone.enabled
+                                 and prayer_stone.progress != 10,
+            set(self.prayer_stone.loot_options)))
+
+        if len(prayer_paths_started) == 0:
+            print("No paths to level")
+            return None
+
+        owners = set(map(lambda prayer_stone: prayer_stone.owner, prayer_paths_started))
+        readline.set_completer(completer.Completer(owners).complete)
+        print(owners)
+        prayer_path_owner_choice = input("\nWhich owner's path do you want to level? ")
+        readline.set_completer(lambda text, state: None)
+        if prayer_path_owner_choice not in owners:
+            print(prayer_path_owner_choice + " is not a valid prayer path owner choice")
+            return None
+        return list(filter(lambda prayer_stone: prayer_path_owner_choice == prayer_stone.owner,
+                           prayer_paths_started))[0].get_next()
 
     def level_up_relic_by_choice(self):
         found_relics = self._get_found_relics()
@@ -293,7 +313,8 @@ def print_options():
     print("\t16: Reload loot")
     print("\t17: Creature of a given CR")
     print("\t18: Level a relic")
-    print("\t>18: Show this")
+    print("\t18: Level a prayer path")
+    print("\t>19: Show this")
 
 
 def define_action_map(mapped_loot_controller):
@@ -316,7 +337,8 @@ def define_action_map(mapped_loot_controller):
         15: mapped_loot_controller.get_enchant,
         # 16: reload loot
         17: mapped_loot_controller.get_random_creature,
-        18: mapped_loot_controller.level_up_relic_by_choice
+        18: mapped_loot_controller.level_up_relic_by_choice,
+        19: mapped_loot_controller.level_up_prayer_path
     }
 
 
@@ -327,7 +349,9 @@ if __name__ == "__main__":
     while True:
         readline.set_completer_delims(' \t\n;')
         readline.parse_and_bind("tab: complete")
-        roll = get_int_from_str(input("\nLoot roll: "), random.randint(1, 12))
+        roll = get_int_from_str(input("\nLoot roll: "), 99)
+        if roll == 0:
+            roll = random.randint(1, 12)
         if roll < 0:
             exit(0)
         print(loot_action_map.get(roll,
@@ -337,5 +361,5 @@ if __name__ == "__main__":
             loot_controller = LootController(True)
             loot_action_map = define_action_map(loot_controller)
             print("Reloaded loot from files")
-        if roll > 18:
+        if roll > 19:
             print_options()
