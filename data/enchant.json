@@ -759,7 +759,8 @@
     "value": "+2 resistance to damage from creatures of a certain type \n\t\t(random, 1-14, [1 Abberation, 2 Beast, 3 Celestial, 4 Construct, 5 Dragon, 6 Elemental, 7 Fey, 8 Fiend, 9 Giant, 10 Humanoid, 11 Monstrosity, 12 Ooze, 13 Plant, 14 Undead]"
   },
   {
-    "value": "+25% chance to ignore bonus damage from incoming critical strikes"
+    "value": "+25% chance to ignore bonus damage from incoming critical strikes",
+    "metadata": ["armour"]
   },
   {
     "value": "While you have 3 different items equipped that grant bonuses against the same type of creature, you have +1 to your proficiency bonus"
