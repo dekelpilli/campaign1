@@ -722,5 +722,23 @@
   },
   {
     "value": "+2 global AB against creatures of a certain type \n\t\t(random, 1-14, [1 Abberation, 2 Beast, 3 Celestial, 4 Construct, 5 Dragon, 6 Elemental, 7 Fey, 8 Fiend, 9 Giant, 10 Humanoid, 11 Monstrosity, 12 Ooze, 13 Plant, 14 Undead]"
+  },
+  {
+    "value": "+2 to global damage while flanking"
+  },
+  {
+    "value": "+2 to global damage against creatures behind you in the initiative tracker"
+  },
+  {
+    "value": "This weapon gains the light property",
+    "metadata": ["weapon"]
+  },
+  {
+    "value": "Heal 5 hit points when you roll for initiative"
+  },
+  {
+    "value": "This weapon deals no base damage. Roll again and empower twice",
+    "metadata": ["weapon"],
+    "weight": 6
   }
 ]
