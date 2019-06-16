@@ -674,5 +674,38 @@
   },
   {
     "value": "Your minions have +1 resistance to all damage"
+  },
+  {
+    "value": "When an attack fails to hit you in combat, you can use your reaction to reduce your AC for the attack until it does hit you. Your next instance of damage in the next minute is then increased by 3 for each point of AC you dropped."
+  },
+  {
+    "value": "+1 to Damage Over Time"
+  },
+  {
+    "value": "When you hit a creature with this weapon, they get -1 resistance to all damage dealt by creatures other than yourself for the remainder of combat. This does not stack, though multiple instances of this enchant do."
+  },
+  {
+    "value": "+1 to Strength saving throws",
+    "weighting": 6
+  },
+  {
+    "value": "+1 to Dexterity saving throws",
+    "weighting": 4
+  },
+  {
+    "value": "+1 to Constitution saving throws",
+    "weighting": 4
+  },
+  {
+    "value": "+1 to Intelligence saving throws",
+    "weighting": 8
+  },
+  {
+    "value": "+1 to Wisdom saving throws",
+    "weighting": 4
+  },
+  {
+    "value": "+1 to Charisma saving throws",
+    "weighting": 8
   }
 ]
