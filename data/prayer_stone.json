@@ -23,12 +23,12 @@
       "You become immune to all forms of madness",
       "Spells that cause healing or remove status conditions can be cast one level higher without consuming a different spell slot",
       "Creatures that have healed from you in the last minute have +2 incoming healing from you",
-      "You have resistance to poison damage",
       "Gain temporary hit points equal to your proficiency bonus on turns where you haven't dealt damage",
       "+10 to maximum hit points",
       "+1 AC and +1 to spell saves if you have taken damage in the last round",
       "You take no additional damage from critical strikes",
-      "Once per short rest, when you fail a save, you can choose to succeed instead"
+      "Once per short rest, when you fail a save, you can choose to succeed instead",
+      "You gain the Healer feat. When you use the healer feat to heal someone, you may also feed them a potion with the same action. If you already have this feat, gain another one instead."
     ]
   },
   {
@@ -50,7 +50,18 @@
   {
     "value": "Vimis",
     "progress": 0,
-    "levels": []
+    "levels": [
+      "You cannot have disadvantage when learning creature stats",
+      "You have expertise in Investigation when doing research via reading",
+      "You gain proficiency in History. If you are already proficient, you gain Expertise instead.",
+      "You may spend an action instead of a bonus action when learning creature stats to guarantee two additional questions",
+      "When you get hit by a critical strike from a creature you've learned about, it instead misses you",
+      "You have +1AB and deal an additional 1d4 true damage against creature you have learned about",
+      "When you are hit by a melee attack from a creature you've learned about, you may use a reaction to disengage and take a normal movement action",
+      "You have +2AC if you're learned about a creature in the last 2 rounds",
+      "Gain the Linguist feat. If you already have this feat, you gain another feat.",
+      "Gain the Keen Mind feat. If you already have this feat, you gain another feat."
+    ]
   },
   {
     "value": "Vuneta",
