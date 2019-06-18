@@ -90,7 +90,10 @@ class PrayerStone(LootOptionItem):
         self.owner = owner
 
     def get_next(self):
-        return "\t" + self._get_offset_option(0) + "\nOR:\n\t" + self._get_offset_option(1)
+        first_mod = "\t" + self._get_offset_option(0)
+        if len(self.levels) < 1 + self.progress:
+            return first_mod + "\nOR:\n\t" + self._get_offset_option(1)
+        return first_mod
 
     def _get_offset_option(self, n):
         index = self.progress + n

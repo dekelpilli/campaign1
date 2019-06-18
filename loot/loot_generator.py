@@ -123,8 +123,8 @@ class LootController:
                 return creature
 
     def get_amulet(self):
-        max_allowed_cr_index = self.all_crs.index(str(random.randint(1, 6)))
-        amulet_cr_capacity_idx = random.randint(0, max_allowed_cr_index)
+        max_allowed_cr_index = self.all_crs.index(str(random.randint(2, 4)))
+        amulet_cr_capacity_idx = random.randint(2, max_allowed_cr_index)
         amulet_max_cr = self.all_crs[amulet_cr_capacity_idx]
         return "CR: " + amulet_max_cr + "\n\tCreature: " + self.get_random_creature_of_cr(amulet_max_cr)
 

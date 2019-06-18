@@ -80,20 +80,26 @@
     ]
   },
   {
-    "value": "Thynos",
+    "value": "Qheddor",
     "progress": 0,
     "levels": [
-
-
-
-      "Something to do with Hellish Rebuke"
+      "Enemies that have damaged you more than once become vulnerable to fire damage if they were not previously resistant or immune",
+      "You have expertise in Intimidation against hostile creatures",
+      "You may cast Hellish Rebuke as a first level spell. You can do this an amount of times equal to a mental attribute of your choice (min 1) every long rest.",
+      "As a reaction to seeing a creature within 60ft of you damage another creature, you can cast Cause Fear against the attacking creature. You cannot end concentration on this prematurely, and you cannot cast it again while a creature is already affected by your Cause Fear spell.",
+      "Once per short rest, you may cast Banishment on a creature within 5 feet of you. If that creature has dealt damage in the last minute, it has disadvantage on the save. When cast in this way, the creature is always sent to the Plane of Fire for a minute.",
+      "Whenever casting Hellish Rebuke as a first level spell, you may instead cast it as second level spell.",
+      "Your attacks and spells deal +1d6 fire damage against that have dealt damage in the last minute",
+      "After using Hellish Rebuke, if the target was no killed, you may make an Intimidation content against the target's Wisdom Save. On a success, you regain the use Hellish Rebuke (spell slot or limit impose by this path).",
+      "Creatures you have Intimidated in the last minute have -2 on spell saves against your spells, and you have +2 global AB against them.",
+      "You may cast the Weird spell once per long rest (mental attribute of your choice). When cast in this way, the spell on impact hostile creatures, and does not require concentration again against creatures you have Intimidated in the last minute."
     ]
   },
   {
     "value": "Omnos",
     "progress": 0,
     "levels": [
-      "Enemies that damage you become marked for a minute. Marked enemies have -1 damage against you.",
+      "Enemies that damage you become marked for a minute. Marked enemies have -1 damage against you. DO NOT SKIP.",
       "Marked enemies cannot heal",
       "Marked enemies now have -1 damage, not just against you.",
       "Your attacks and spells deal +1d4 radiant damage against marked enemies",
@@ -118,12 +124,33 @@
   {
     "value": "Thetia",
     "progress": 0,
-    "levels": []
+    "levels": [
+      "+1 damage while you within 30 feet of more than one hostile creature",
+      "You have advantage on Deception checks when the lie is about deaths you've been involved in, and advantage in Persuasion checks that would allow you to engage in more battles",
+      "You gain +10% XP in combat where you landed a Killing Blow. You are always the one to gain this XP (even if the other ~91% goes to another party member).",
+      "You gain temporary hit points equal to three times your level when you land a Killing Blow",
+      "Enemies you land a Killing Blow against generate an additional loot roll of size 1d8",
+      "Once per short rest, when you take damage that would bring you down to 0 hit points or below, you may transfer the damage to a random creature within 60 feet, potentially including allies.",
+      "The loot roll you gain from Killing Blows now becomes 1d12. If you skipped that step, you gain take it now instead.",
+      "+10 global damage",
+      "Once per long rest, when you finish an encounter, you may immediately gain the benefits of a short rest."
+    ]
   },
   {
     "value": "Cerasil",
     "progress": 0,
-    "levels": []
+    "levels": [
+      "You have advantage on Charisma checks directed at non-hostile or non-intelligent plant and beast creatures. Additionally, you can communicate telepathically with them within 30 feet.",
+      "You are immune to natural diseases",
+      "You become acclimatised to both extreme hot and cold environments, and you gain +30ft of Darkvision",
+      "You have +2 resistance against damage from living creatures",
+      "You may cast Grasping Vines [Prof Mod] times per short rest",
+      "You have +1d6 poison damage with attacks and spells",
+      "You may cast Sunburst once per long rest, and one additional time while outdoors. You may use a mental attribute of your choice.",
+      "As a bonus action, you may grow/remove a hard bark shell. While this is active, you have +2 AC, but are vulnerable to fire damage.",
+      "In addition to your regular amulet, you are always considered to be wearing an amulet that contains a Treant. Using this is independent of your other amulet's uses.",
+      "You are permanently under the effect of Freedom of Movement spell"
+    ]
   },
   {
     "value": "Qhanas",
@@ -133,7 +160,6 @@
       "When you score a critical strike with a spell attack or spell, you recover the spell slot used to cast it. This does not include guaranteed crits (paralysis, unconscious).",
       "You may cast the Identify spell at will",
       "You may cast cantrips as if you were one level tier higher (1.g. 2d6 acid splash at level 1, 5d6 at level 17)",
-      "You have advantage on saves against spells you currently have prepared.",
       "You may cast spells that require a verbal component silently",
       "When a creature casts a spell, you may use a reaction to make an Arcana check against the enemies' spell save DC. If you succeed, you learn of all the spells that creature can cast.",
       "If you summon/conjure a creature that can cast spells, you may add half of your spell casting modifier to its spell attacks and spell save DC.",
