@@ -115,11 +115,18 @@
     "value": "Odi",
     "progress": 0,
     "levels": [
+      "You have Expertise with Sleight of Hand when stealing documents (can be plans, contracts, maps, etc)",
+      "You have +1 damage against creatures with less Intelligence than you.",
+      "Prof Mod times per short rest, when you successfully learn about a creature within 5 feet of you, that creature must make against 8 + your prof mod + a mental attribute mod of your choice. On a failed save, it has disadvantage when attacking you for a minute.",
+      "You have advantage on all Wisdom and Intelligence skill checks if you have taken at least 10 damage in the last minute. You may self-inflict this damage to trigger this.",
       "",
       "",
-      "",
-      "",
-      "You may cast Soul Cage once per long rest, but you may only use the Query Soul option"]
+      "You may cast Soul Cage once per long rest, but you may only use the Query Soul option",
+
+
+      "While below 50% HP, as a reaction to being hit, or as a reaction to taking a critical hit, you may cast Foresight. You can do this once per long rest.",
+      "You gain the Investigator feat."]
+
   },
   {
     "value": "Thetia",
