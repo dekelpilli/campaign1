@@ -13,7 +13,8 @@
       "When making Insight checks to analyse a person's statement(s), you may also make a Deception to detect they are lying/concealing information, but not to attempt to understand motivations",
       "You may cast Zone of Truth once per short rest. When cast in this way, the spell is centered on you and lasts for 1 hour.",
       "You have 30 feet of Truesight"
-    ]
+    ],
+    "owner": null
   },
   {
     "value": "Esher",
