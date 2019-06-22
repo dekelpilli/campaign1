@@ -117,16 +117,15 @@
     "levels": [
       "You have Expertise with Sleight of Hand when stealing documents (can be plans, contracts, maps, etc)",
       "You have +1 damage against creatures with less Intelligence than you.",
-      "Prof Mod times per short rest, when you successfully learn about a creature within 5 feet of you, that creature must make against 8 + your prof mod + a mental attribute mod of your choice. On a failed save, it has disadvantage when attacking you for a minute.",
       "You have advantage on all Wisdom and Intelligence skill checks if you have taken at least 10 damage in the last minute. You may self-inflict this damage to trigger this.",
-      "",
-      "",
+      "As a bonus action when you successfully learn about a creature within 5 feet of you, you may force that creature to make against 8 + your prof mod + a mental attribute mod of your choice. On a failed save, it has disadvantage when attacking you for a minute.",
+      "When you are forced to make a save with a mental attribute, you may use your Investigation bonus instead of your save bonus. You may do this an amount of times equal to your Int Mod per short rest.",
       "You may cast Soul Cage once per long rest, but you may only use the Query Soul option",
-
-
+      "You get 10 levels worth of spell sots every long rest. You can use these to cast any Divination spell, using a mental attribute of your choice.",
       "While below 50% HP, as a reaction to being hit, or as a reaction to taking a critical hit, you may cast Foresight. You can do this once per long rest.",
-      "You gain the Investigator feat."]
-
+      "You gain the Investigator feat.",
+      "You gain the Historian feat."
+    ]
   },
   {
     "value": "Thetia",
@@ -178,7 +177,18 @@
   {
     "value": "Thatar",
     "progress": 0,
-    "levels": []
+    "levels": [
+      "Undead creatures have disadvantage when attacking you.",
+      "Divine Sense (Paladin), but you can only sense undead, and you can use any mental attribute for uses.",
+      "You may convert all physical damage you deal with weapon attacks to Necrotic damage",
+      "You are immune to Necrotic damage",
+      "You may convert all damage you or your undead minions deal to Necrotic damage",
+      "+1 die size of Necromancy spells",
+      "You may choose to count as undead instead of humanoid for the purpose of spells and affects.",
+      "You may cast Abi-Dalzim's Horrid Wilting (mental attribute of choice) once. You regain uses on killing blow and on long rests.",
+      "You ignore resistances and immunities to Necrotic damage",
+      "You may cast Create Undead as a 9th level spell once per Long rest. If you already have undead minions, its casting time becomes 1 action instead of 1 minute."
+    ]
   },
   {
     "value": "Ketis",
