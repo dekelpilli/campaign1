@@ -44,8 +44,7 @@ Vendor valuations:
     Junk: 0, but can go up with good persuasion
     Currency items: 100g
     Prayer stones: 100
-    Relics: 300 + half of money spent on levelling:
-        2: 300, 3: 325, 4: 400, 5: 537, 6:  737, 7: 1012, 8: 1387, 9: 1862, 10: 2462
+    Relics: 300 + half of money spent on levelling
 
 Sales and services:
     Orbs of flux: 200g
@@ -54,8 +53,6 @@ Sales and services:
 
     Horses: 800
     Warhorses: 1200
-    Hippogriff: 2000
-    Griffon: 2500
 
 XP      Challenge
 0,      10
