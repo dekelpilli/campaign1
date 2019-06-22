@@ -312,7 +312,7 @@ def print_options():
     print("\t16: Reload loot")
     print("\t17: Creature of a given CR")
     print("\t18: Level a relic")
-    print("\t18: Level a prayer path")
+    print("\t19: Level a prayer path")
     print("\t>19: Show this")
 
 
