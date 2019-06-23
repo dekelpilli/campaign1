@@ -635,7 +635,7 @@
     "value": "Reduce the damage bonus of incoming damage you are vulnerable to by 25%"
   },
   {
-    "value": "This item emits bright light in a 5' radius, and dim light for a further 5'"
+    "value": "This item emits bright light in a 5 foot radius, and dim light for a further 5 feet"
   },
   {
     "value": "+1 damage to melee and touch attacks"
@@ -716,7 +716,7 @@
     "value": "Heal 5 hit points when you roll for initiative"
   },
   {
-    "value": "You can travel through 1\" of solid surface with a full movement action. If you end your turn inside the surface, you are shunted back to your original location."
+    "value": "You can travel through 1 inch of solid surface with a full movement action. If you end your turn inside the surface, you are shunted back to your original location."
   },
   {
     "value": "Against creatures of a certain type, all of your damage type-seeks to maximise damage \n\t\t(random, 1-14, [1 Abberation, 2 Beast, 3 Celestial, 4 Construct, 5 Dragon, 6 Elemental, 7 Fey, 8 Fiend, 9 Giant, 10 Humanoid, 11 Monstrosity, 12 Ooze, 13 Plant, 14 Undead]"
