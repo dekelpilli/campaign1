@@ -3,11 +3,11 @@
     "value": "Magic toy boat. While on this boat, you can't drown if the boat is completely dry. ~20cm long"
   },
   {
-    "value": "Reroll with 8",
+    "value": "Reroll with d8",
     "weighting": 2
   },
   {
-    "value": "Reroll with 12",
+    "value": "Reroll with d12",
     "weighting": 1
   },
   {
@@ -24,9 +24,6 @@
   },
   {
     "value": "The autobiography of a horse named https://appzaza.com/random-interjection-generator"
-  },
-  {
-    "value": "A CD-ROM"
   },
   {
     "value": "Mitts that give +1 hand warmth"
