@@ -1,6 +1,6 @@
 [
   {
-    "value": "Chaos Orb(s) - reroll all mods on a magic item",
+    "value": "Chaos Orb(s) - remove all mods on a magical item and replace them with 1d4 mods",
     "metadata": ["disadvantage"]
   },
   {
@@ -13,13 +13,12 @@
   },
   {
     "value": "Orb(s) of Creation - Convert a mundane item into a magical item with disadvantaged 1d4 mods",
-    "weighting": 5,
+    "weighting": 8,
     "metadata": ["disadvantage"]
   },
   {
     "value": "Orb(s) of Flux - swap magical properties between compatible items, including simply moving enchantments to mundane items",
-    "metadata": ["advantage"],
-    "weighting": 15
+    "weighting": 12
   },
   {
     "value": "Exalted Orb - add a mod to a magical item, to a maximum of 4",

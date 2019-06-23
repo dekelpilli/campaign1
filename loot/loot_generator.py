@@ -252,12 +252,11 @@ class LootController:
 
     @staticmethod
     def _get_file_contents(name, do_flush=False):
-        with open(DATA_DIR + name + ".json") as file:
+        with open(DATA_DIR + name + ".json") as data_file:
             if do_flush:
-                file.flush()
-                file.close()
+                data_file.flush()
                 return LootController._get_file_contents(name)
-            return file.read()
+            return data_file.read()
 
     @staticmethod
     def _create_relics(do_flush=False):
