@@ -749,5 +749,59 @@
   },
   {
     "value": "+5 to minion HP per minion CR"
+  },
+  {
+    "value": "+10HP while transformed"
+  },
+  {
+    "value": "When you exit your transformed state, you gain temporary hit points equal to twice the CR of the creature you were transformed into."
+  },
+  {
+    "value": "+2 global damage and +10ft speed while transformed into a Beast"
+  },
+  {
+    "value": "+1d6 radiant damage while transformed into a Celestial"
+  },
+  {
+    "value": "+2 to DCs of effects that cause conditions while transformed"
+  },
+  {
+    "value": "All of your ring mods are empowered while you are transformed"
+  },
+  {
+    "value": "You retain your normal speed while transformed into an Ooze"
+  },
+  {
+    "value": "You may keep your current appearance, minus size, while transformed into a Humanoid."
+  },
+  {
+    "value": "+1d6 psychic damage while transformed into an Aberration."
+  },
+  {
+    "value": "You are immune to conditions while transformed into a Construct"
+  },
+  {
+    "value": "Attacks that would deal fire, cold, or lightning damage have +2AB while you are transformed into an Elemental"
+  },
+  {
+    "value": "While transformed into a Dragon, you are immune to any non-physical damage types you can deal"
+  },
+  {
+    "value": "You have advantage on all skill checks while transformed into a Fey."
+  },
+  {
+    "value": "+1d8 bludgeoning damage while transformed into a Giant."
+  },
+  {
+    "value": "+1d4 fire damage while transformed into a Fiend. +1d4 poison damage if it is also a Demon."
+  },
+  {
+    "value": "While transformed into an undead creature, if you go down to 0 hit points, you do not transform back to your normal form for two more rounds."
+  },
+  {
+    "value": "Once per short rest, while transformed into a Monstrosity, you may take two actions instead of one on your turn."
+  },
+  {
+    "value": "While transformed into a Plant, you regenerate health equal to your Constitution modifier every round, to a minimum of 1 (the plant's value + any of your bonuses)."
   }
 ]

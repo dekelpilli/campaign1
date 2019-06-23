@@ -84,7 +84,7 @@ class LootOption:
 
 class PrayerStone(LootOptionItem):
     def __init__(self, value, weighting, enabled, metadata, levels, owner=None, progress=0):
-        super().__init__(value, weighting, enabled, metadata)
+        LootOptionItem.__init__(self, value, weighting, enabled, metadata)
         self.levels = levels
         self.progress = progress
         self.owner = owner
