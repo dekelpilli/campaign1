@@ -109,7 +109,7 @@ class LootController:
         return list(self.found_relics.keys())
 
     def get_random_creature(self):
-        return self.get_random_creature_of_cr(input("\nMonster CR: "))
+        pass
 
     def get_random_creature_of_cr(self, max_cr):
         cr = max_cr
@@ -309,7 +309,7 @@ def print_options():
     print("\t14: Random armour enchant")
     print("\t15: Random enchant")
     print("\t16: Reload loot")
-    print("\t17: Creature of a given CR")
+    # print("\t17: Creature of a given CR")
     print("\t18: Level a relic")
     print("\t19: Level a prayer path")
     print("\t>19: Show this")
@@ -334,7 +334,7 @@ def define_action_map(mapped_loot_controller):
         14: mapped_loot_controller.get_armour_enchant,
         15: mapped_loot_controller.get_enchant,
         # 16: reload loot
-        17: mapped_loot_controller.get_random_creature,
+        # 17: mapped_loot_controller.get_random_creature,
         18: mapped_loot_controller.level_up_relic_by_choice,
         19: mapped_loot_controller.level_up_prayer_path
     }
@@ -355,6 +355,13 @@ if __name__ == "__main__":
             exit(0)
         print(loot_action_map.get(roll,
                                   lambda: str(roll) + " is not a normal loot option, checking extra options")())
+
+        if roll == 17:
+            while True:
+                cr = input("\nMonster CR: ")
+                if cr == "-1":
+                    break
+                print(loot_controller.get_random_creature_of_cr(cr))
 
         if roll == 16:
             loot_controller = LootController(True)
