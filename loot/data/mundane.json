@@ -256,6 +256,10 @@
     "metadata": ["armour"]
   },
   {
+    "value": "Spell Focus",
+    "metadata": ["armour"]
+  },
+  {
     "value": "Ring"
   }
 ]

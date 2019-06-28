@@ -12,6 +12,9 @@ Wands:
     Local wand bonuses apply to cantrips
     While using a wand, you may choose to make cantrip spells with a spell save DC as spell attacks
 
+Spell Focus:
+    +1 spell save DC, +1 spell AB
+
 Moving mods:
     Between any weapon and any weapon
     Between rings

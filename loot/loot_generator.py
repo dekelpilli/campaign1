@@ -359,7 +359,7 @@ if __name__ == "__main__":
         if roll == 17:
             while True:
                 cr = input("\nMonster CR: ")
-                if cr == "-1":
+                if "-1" in cr:
                     break
                 print(loot_controller.get_random_creature_of_cr(cr))
 
