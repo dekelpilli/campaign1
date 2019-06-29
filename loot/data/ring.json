@@ -122,51 +122,51 @@
     "value": "+4 damage against unconscious enemies"
   },
   {
-    "value": "+1 to the DC of your spells that can cause the 'paralysed' condition",
+    "value": "+1 to the DC of your effects that can cause the 'paralysed' condition",
     "weighting": 5
   },
   {
-    "value": "+1 to the DC of your spells that can cause the 'blinded' condition",
+    "value": "+1 to the DC of your effects that can cause the 'blinded' condition",
     "weighting": 5
   },
   {
-    "value": "+1 to the DC of your spells that can cause the 'charmed' condition",
+    "value": "+1 to the DC of your effects that can cause the 'charmed' condition",
     "weighting": 5
   },
   {
-    "value": "+1 to the DC of your spells that can cause the 'deafened' condition",
+    "value": "+1 to the DC of your effects that can cause the 'deafened' condition",
     "weighting": 5
   },
   {
-    "value": "+1 to the DC of your spells that can cause the 'frightened' condition",
+    "value": "+1 to the DC of your effects that can cause the 'frightened' condition",
     "weighting": 5
   },
   {
-    "value": "+1 to the DC of your spells that can cause the 'grappled' condition",
+    "value": "+1 to the DC of your effects that can cause the 'grappled' condition",
     "weighting": 5
   },
   {
-    "value": "+1 to the DC of your spells that can cause the 'petrified' condition",
+    "value": "+1 to the DC of your effects that can cause the 'petrified' condition",
     "weighting": 5
   },
   {
-    "value": "+1 to the DC of your spells that can cause the 'poisoned' condition",
+    "value": "+1 to the DC of your effects that can cause the 'poisoned' condition",
     "weighting": 5
   },
   {
-    "value": "+1 to the DC of your spells that can cause the 'prone' condition",
+    "value": "+1 to the DC of your effects that can cause the 'prone' condition",
     "weighting": 5
   },
   {
-    "value": "+1 to the DC of your spells that can cause the 'restrained' condition",
+    "value": "+1 to the DC of your effects that can cause the 'restrained' condition",
     "weighting": 5
   },
   {
-    "value": "+1 to the DC of your spells that can cause the 'stunned' condition",
+    "value": "+1 to the DC of your effects that can cause the 'stunned' condition",
     "weighting": 5
   },
   {
-    "value": "+1 to the DC of your spells that can cause the 'unconscious' condition",
+    "value": "+1 to the DC of your effects that can cause the 'unconscious' condition",
     "weighting": 5
   }
 ]

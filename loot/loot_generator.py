@@ -321,7 +321,7 @@ def define_action_map(mapped_loot_controller):
         loot_types.LootType.mundane.value: mapped_loot_controller.get_mundane,
         loot_types.LootType.consumable.value: mapped_loot_controller.get_consumable,
         loot_types.LootType.low_gold.value: lambda: str(random.randint(30, 100)) + " gold",
-        loot_types.LootType.ring.value: mapped_loot_controller.get_ring,
+        loot_types.LootType.ring.value: lambda: "Ring: " + mapped_loot_controller.get_ring(),
         loot_types.LootType.single_enchant_item.value: mapped_loot_controller.get_single_enchanted_item,
         loot_types.LootType.amulet.value: mapped_loot_controller.get_amulet,
         loot_types.LootType.high_gold.value:
