@@ -48,6 +48,9 @@ Vendor valuations:
     Currency items: 100g
     Prayer stones: 100
     Relics: 300 + half of money spent on levelling
+    Rations: 1g
+    Health potions: half buy price
+    Other potions: 10g
 
 Sales and services:
     Orbs of flux: 200g

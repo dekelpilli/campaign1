@@ -124,6 +124,14 @@
       {
         "value": "You may wield any weapon as if it were a light weapon",
         "upgradeable": false
+      },
+      {
+        "value": "+4 damage against frightened enemies",
+        "comment": "+3"
+      },
+      {
+        "value": "+2 to saves and checks against non-magical grapples and restrains, including getting out from existing ones",
+        "comment": "+1"
       }
     ],
     "found": false,

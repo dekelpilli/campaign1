@@ -42,46 +42,46 @@
     "value": "As a reaction, you may gain advantage on a save against becoming incapacitated (does not include conditions where incapacitated is a side-effect)."
   },
   {
-    "value": "You may spend an action to cause targets of your next effect that can cause the 'paralysed' condition to make that save with disadvantage. This does not work if a minute has passed since you sacrificed your action.",
+    "value": "You may spend an action to cause targets of your next effect that can cause the 'paralysed' condition to make that save with disadvantage. This does not work if a minute has passed since you sacrificed your action.". Alternatively, you  may gain advantage and sacrifice your next action,
     "weighting": 5
   },
   {
-    "value": "You may spend an action to cause targets of your next effect that can cause the 'blinded' condition to make that save with disadvantage. This does not work if a minute has passed since you sacrificed your action."
+    "value": "You may spend an action to cause targets of your next effect that can cause the 'blinded' condition to make that save with disadvantage. This does not work if a minute has passed since you sacrificed your action. Alternatively, you  may gain advantage and sacrifice your next action."
   },
   {
-    "value": "You may spend an action to cause targets of your next effect that can cause the 'charmed' condition to make that save with disadvantage. This does not work if a minute has passed since you sacrificed your action."
+    "value": "You may spend an action to cause targets of your next effect that can cause the 'charmed' condition to make that save with disadvantage. This does not work if a minute has passed since you sacrificed your action. Alternatively, you  may gain advantage and sacrifice your next action."
   },
   {
-    "value": "You may spend an action to cause targets of your next effect that can cause the 'deafened' condition to make that save with disadvantage. This does not work if a minute has passed since you sacrificed your action.",
+    "value": "You may spend an action to cause targets of your next effect that can cause the 'deafened' condition to make that save with disadvantage. This does not work if a minute has passed since you sacrificed your action. Alternatively, you  may gain advantage and sacrifice your next action.",
     "weighting": 20
   },
   {
-    "value": "You may spend an action to cause targets of your next effect that can cause the 'frightened' condition to make that save with disadvantage. This does not work if a minute has passed since you sacrificed your action."
+    "value": "You may spend an action to cause targets of your next effect that can cause the 'frightened' condition to make that save with disadvantage. This does not work if a minute has passed since you sacrificed your action. Alternatively, you  may gain advantage and sacrifice your next action."
   },
   {
-    "value": "You may spend an action to cause targets of your next effect that can cause the 'grappled' condition to make that save with disadvantage. This does not work if a minute has passed since you sacrificed your action."
+    "value": "You may spend an action to cause targets of your next effect that can cause the 'grappled' condition to make that save with disadvantage. This does not work if a minute has passed since you sacrificed your action. Alternatively, you  may gain advantage and sacrifice your next action."
   },
   {
-    "value": "You may spend an action to cause targets of your next effect that can cause the 'petrified' condition to make that save with disadvantage. This does not work if a minute has passed since you sacrificed your action."
+    "value": "You may spend an action to cause targets of your next effect that can cause the 'petrified' condition to make that save with disadvantage. This does not work if a minute has passed since you sacrificed your action. Alternatively, you  may gain advantage and sacrifice your next action."
   },
   {
-    "value": "You may spend an action to cause targets of your next effect that can cause the 'poisoned' condition to make that save with disadvantage. This does not work if a minute has passed since you sacrificed your action."
+    "value": "You may spend an action to cause targets of your next effect that can cause the 'poisoned' condition to make that save with disadvantage. This does not work if a minute has passed since you sacrificed your action. Alternatively, you  may gain advantage and sacrifice your next action."
   },
   {
-    "value": "You may spend an action to cause targets of your next effect that can cause the 'prone' condition to make that save with disadvantage. This does not work if a minute has passed since you sacrificed your action."
+    "value": "You may spend an action to cause targets of your next effect that can cause the 'prone' condition to make that save with disadvantage. This does not work if a minute has passed since you sacrificed your action. Alternatively, you  may gain advantage and sacrifice your next action."
   },
   {
-    "value": "You may spend an action to cause targets of your next effect that can cause the 'restrained' condition to make that save with disadvantage. This does not work if a minute has passed since you sacrificed your action."
+    "value": "You may spend an action to cause targets of your next effect that can cause the 'restrained' condition to make that save with disadvantage. This does not work if a minute has passed since you sacrificed your action. Alternatively, you  may gain advantage and sacrifice your next action."
   },
   {
-    "value": "You may spend an action to cause targets of your next effect that can cause the 'stunned' condition to make that save with disadvantage. This does not work if a minute has passed since you sacrificed your action."
+    "value": "You may spend an action to cause targets of your next effect that can cause the 'stunned' condition to make that save with disadvantage. This does not work if a minute has passed since you sacrificed your action. Alternatively, you  may gain advantage and sacrifice your next action."
   },
   {
-    "value": "You may spend an action to cause targets of your next effect that can cause the 'unconscious' condition to make that save with disadvantage. This does not work if a minute has passed since you sacrificed your action.",
+    "value": "You may spend an action to cause targets of your next effect that can cause the 'unconscious' condition to make that save with disadvantage. This does not work if a minute has passed since you sacrificed your action. Alternatively, you  may gain advantage and sacrifice your next action.",
     "weighting": 5
   },
   {
-    "value": "You may spend an action to cause targets of your next effect that can cause the 'incapacitated' condition to make that save with disadvantage (this does not include conditions where incapacitated is a side-effect). This does not work if a minute has passed since you sacrificed your action."
+    "value": "You may spend an action to cause targets of your next effect that can cause the 'incapacitated' condition to make that save with disadvantage (this does not include conditions where incapacitated is a side-effect). This does not work if a minute has passed since you sacrificed your action. Alternatively, you  may gain advantage and sacrifice your next action."
   },
   {
     "value": "+4 damage against paralysed enemies"
