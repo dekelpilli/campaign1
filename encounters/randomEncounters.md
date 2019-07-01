@@ -21,5 +21,5 @@ Difficulties:
 
 http://dhmstark.co.uk/rpgs/encounter-calculator-5th/
 
-Wild: 50%, then 15% for positive
+Wild: 40%, then 15% for positive
 City: 30%, then 20% for positive
