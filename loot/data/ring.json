@@ -42,7 +42,7 @@
     "value": "As a reaction, you may gain advantage on a save against becoming incapacitated (does not include conditions where incapacitated is a side-effect)."
   },
   {
-    "value": "You may spend an action to cause targets of your next effect that can cause the 'paralysed' condition to make that save with disadvantage. This does not work if a minute has passed since you sacrificed your action.". Alternatively, you  may gain advantage and sacrifice your next action,
+    "value": "You may spend an action to cause targets of your next effect that can cause the 'paralysed' condition to make that save with disadvantage. This does not work if a minute has passed since you sacrificed your action. Alternatively, you  may gain advantage and sacrifice your next action.",
     "weighting": 5
   },
   {

@@ -334,6 +334,53 @@
     "enabled": false
   },
   {
+    "name": "Tea's Gratitude",
+    "type": "weapon",
+    "existing": [
+      {
+        "value": "+2 damage with attacks against surprised targets"
+      }
+    ],
+    "available": [
+      {
+        "value": "You always have advantage on Stealth",
+        "upgradeable": false
+      },
+      {
+        "value": "You always have advantage on Sleight of Hand",
+        "upgradeable": false
+      },
+      {
+        "value": "+1 dexterity while wearing a stolen item (owner must be alive at time of theft)."
+      },
+      {
+        "value": "You have expertise in deception when in regards to crimes you have committed.",
+        "upgradeable": false
+      },
+      {
+        "value": "+1d4 damage against flanked enemies"
+      },
+      {
+        "value": "When rolling more than one mod on a magic item (crafting or finding double enchanted item), you may roll another mod and choose to ignore one",
+        "upgradeable": false
+      },
+      {
+        "value": "Once per short rest, you may disengage as a bonus action",
+        "comment": "free action instead of bonus"
+      },
+      {
+        "value": "+1 to all dexterity skills and saves"
+      },
+      {
+        "value": "You cannot be surprised",
+        "upgradeable": false
+      }
+    ],
+    "found": false,
+    "level": 1,
+    "enabled": false
+  },
+  {
     "name": "Template",
     "type": "weapon/armour",
     "existing": [

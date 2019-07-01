@@ -167,7 +167,7 @@ class LootController:
             elif metadata_tag == "advantage":
                 amount = max(randomisation_function(), randomisation_function())
             elif metadata_tag[0] == "x":
-                amount = amount * get_int_from_str(metadata_tag[1:], 1)
+                amount = randomisation_function() * get_int_from_str(metadata_tag[1:], 1)
             else:
                 potentially_static_value = get_int_from_str(metadata_tag)
                 if potentially_static_value is not None:
