@@ -281,6 +281,51 @@
     "level": 1
   },
   {
+    "name": "Jemima's Forgery",
+    "type": "armour",
+    "existing": [
+      {
+        "value": "+1 physical damage resistance"
+      }
+    ],
+    "available": [
+      {
+        "value": "+1 AC if you have heavy armour proficiency"
+      },
+      {
+        "value": "+1 physical damage"
+      },
+      {
+        "value": "You may take an additional reaction if you received damage in the last round",
+        "upgradeable": false
+      },
+      {
+        "value": "-1 melee critical strike requirement"
+      },
+      {
+        "value": "When hit by a melee attack, you can use a reaction to force the attacker to make a save against a DC of 8 + prof + your STR mod. On a failed save, their turn ends."
+      },
+      {
+        "value": "When you block a melee attack, you can make a headbutt as a reaction. Deal 1+STR MOD bludgeoning damage.",
+        "comment": "+1 damage"
+      },
+      {
+        "value": "+1 Strength"
+      },
+      {
+        "value": "You become proficient with heavy armour",
+        "upgradeable": false
+      },
+      {
+        "value": "You become proficient with martial weapons",
+        "upgradeable": false
+      }
+    ],
+    "found": false,
+    "level": 1,
+    "enabled": false
+  },
+  {
     "name": "Template",
     "type": "weapon/armour",
     "existing": [

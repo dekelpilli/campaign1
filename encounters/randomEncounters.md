@@ -16,8 +16,10 @@ Difficulties:
     - Investigation: DC16 for advantage on the 1d4, DC20 for +1 1d10 loot roll, DC23/Crit +2 1d10 loot roll
 - Boss
     - 3d12s loot rolls
-    - 1d4 x 1d10s rolls
     - XP: 40 + 2d10
-    - Investigation: DC16 for advantage of 1d4, DC20 to turn one d10 to d12, DC23/Crit to turn all d10s to d12s
+    - Investigation: DC16 for 1d4 x 1d10s, DC20 to turn one d10 to d12, DC23/Crit to turn all d10s to d12s
 
 http://dhmstark.co.uk/rpgs/encounter-calculator-5th/
+
+Wild: 50%, then 15% for positive
+City: 30%, then 20% for positive

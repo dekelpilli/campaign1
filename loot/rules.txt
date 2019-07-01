@@ -53,6 +53,7 @@ Sales and services:
     Orbs of flux: 200g
     Orb of destruction: 250g
     Mundanes: 60
+    HP potions: 5 per level per potion
 
     Horses: 800
     Warhorses: 1200
