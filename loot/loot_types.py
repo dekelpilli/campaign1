@@ -23,13 +23,13 @@ for loot_type in LootType:
 
 
 class Relic:
-    def __init__(self, name, artifact_type, existing, available, found, enabled, level):
+    def __init__(self, name, relic_type, existing, available, found, enabled, level):
         self.level = level
         self.enabled = enabled
         self.found = found
         self.available = available
         self.existing = existing
-        self.type = artifact_type
+        self.type = relic_type
         self.name = name
 
     def __str__(self):
