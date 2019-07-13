@@ -1,8 +1,8 @@
 import random
 import json
 from pprint import PrettyPrinter
-import completer
-import loot_types
+import input_completer
+import types
 import readline
 from os import sep
 
@@ -34,7 +34,7 @@ class LootController:
             return "No paths to level"
 
         owners = set(map(lambda prayer_stone: prayer_stone.owner, prayer_paths_started))
-        readline.set_completer(completer.Completer(owners).complete)
+        readline.set_completer(input_completer.Completer(owners).complete)
         print(owners)
         prayer_path_owner_choice = input("\nWhich owner's path do you want to level? ")
         readline.set_completer(lambda text, state: None)
@@ -49,7 +49,7 @@ class LootController:
         if len(found_relics) == 0:
             return "No relics to level"
 
-        readline.set_completer(completer.Completer(found_relics).complete)
+        readline.set_completer(input_completer.Completer(found_relics).complete)
         print(found_relics)
         relic_choice = input("\nWhich relic do you want to level? ")
         readline.set_completer(lambda text, state: None)
@@ -212,7 +212,7 @@ class LootController:
         cr_dicts = json.loads(file_contents)
         crs = dict()
         for cr in cr_dicts:
-            crs[cr] = loot_types.ChallengeRating(cr, cr_dicts[cr]["monsters"], cr_dicts[cr]["XP"])
+            crs[cr] = types.ChallengeRating(cr, cr_dicts[cr]["monsters"], cr_dicts[cr]["XP"])
         return crs
 
     @staticmethod
@@ -221,11 +221,11 @@ class LootController:
         item_dicts = json.loads(file_contents)
         loot_option_items = []
         for item_dict in item_dicts:
-            loot_option_items.append(loot_types.LootOptionItem(item_dict["value"],
-                                                               item_dict.get("weighting", 10),
-                                                               item_dict.get("enabled", True),
-                                                               item_dict.get("metadata", [])))
-        loot_option = loot_types.LootOption(name)
+            loot_option_items.append(types.LootOptionItem(item_dict["value"],
+                                                          item_dict.get("weighting", 10),
+                                                          item_dict.get("enabled", True),
+                                                          item_dict.get("metadata", [])))
+        loot_option = types.LootOption(name)
         for loot_option_item in loot_option_items:
             loot_option.add_item(loot_option_item)
 
@@ -237,14 +237,14 @@ class LootController:
         prayer_stone_dicts = json.loads(file_contents)
         prayer_stones = []
         for prayer_stone_dict in prayer_stone_dicts:
-            prayer_stones.append(loot_types.PrayerStone(prayer_stone_dict["value"],
-                                                        prayer_stone_dict.get("weighting", 10),
-                                                        prayer_stone_dict.get("enabled", True),
-                                                        prayer_stone_dict.get("metadata", []),
-                                                        prayer_stone_dict["levels"],
-                                                        prayer_stone_dict.get("owner", None),
-                                                        prayer_stone_dict.get("progress", 0)))
-        loot_option = loot_types.LootOption("prayer_stone")
+            prayer_stones.append(types.PrayerStone(prayer_stone_dict["value"],
+                                                   prayer_stone_dict.get("weighting", 10),
+                                                   prayer_stone_dict.get("enabled", True),
+                                                   prayer_stone_dict.get("metadata", []),
+                                                   prayer_stone_dict["levels"],
+                                                   prayer_stone_dict.get("owner", None),
+                                                   prayer_stone_dict.get("progress", 0)))
+        loot_option = types.LootOption("prayer_stone")
         for loot_option_item in prayer_stones:
             loot_option.add_item(loot_option_item)
 
@@ -280,18 +280,18 @@ class LootController:
             existing.append(LootController._create_relic_mod(mod))
         for mod in relic_dict["available"]:
             available.append(LootController._create_relic_mod(mod))
-        return loot_types.Relic(relic_dict["name"],
-                                relic_dict["type"],
-                                existing,
-                                available,
-                                relic_dict.get("found", False),
-                                relic_dict.get("enabled", True),
-                                relic_dict.get("level", 1))
+        return types.Relic(relic_dict["name"],
+                           relic_dict["type"],
+                           existing,
+                           available,
+                           relic_dict.get("found", False),
+                           relic_dict.get("enabled", True),
+                           relic_dict.get("level", 1))
 
     @staticmethod
-    def _create_relic_mod(relic_mod_dict: dict) -> loot_types.RelicMod:
-        return loot_types.RelicMod(relic_mod_dict["value"],
-                                   relic_mod_dict.get("upgradeable", True))
+    def _create_relic_mod(relic_mod_dict: dict) -> types.RelicMod:
+        return types.RelicMod(relic_mod_dict["value"],
+                              relic_mod_dict.get("upgradeable", True))
 
 
 def get_int_from_str(string, default_integer=None):
@@ -304,7 +304,7 @@ def get_int_from_str(string, default_integer=None):
 def print_options():
     pp = PrettyPrinter(indent=4)
     print("\n")
-    pp.pprint(loot_types.LOOT_TYPES)
+    pp.pprint(types.LOOT_TYPES)
     print("\t13: Random weapon enchant")
     print("\t14: Random armour enchant")
     print("\t15: Random enchant")
@@ -317,19 +317,19 @@ def print_options():
 
 def define_action_map(mapped_loot_controller):
     return {
-        loot_types.LootType.junk.value: mapped_loot_controller.get_junk,
-        loot_types.LootType.mundane.value: mapped_loot_controller.get_mundane,
-        loot_types.LootType.consumable.value: mapped_loot_controller.get_consumable,
-        loot_types.LootType.low_gold.value: lambda: str(random.randint(30, 100)) + " gold",
-        loot_types.LootType.ring.value: lambda: "Ring: " + mapped_loot_controller.get_ring(),
-        loot_types.LootType.single_enchant_item.value: mapped_loot_controller.get_single_enchanted_item,
-        loot_types.LootType.amulet.value: mapped_loot_controller.get_amulet,
-        loot_types.LootType.high_gold.value:
+        types.LootType.junk.value: mapped_loot_controller.get_junk,
+        types.LootType.mundane.value: mapped_loot_controller.get_mundane,
+        types.LootType.consumable.value: mapped_loot_controller.get_consumable,
+        types.LootType.low_gold.value: lambda: str(random.randint(30, 100)) + " gold",
+        types.LootType.ring.value: lambda: "Ring: " + mapped_loot_controller.get_ring(),
+        types.LootType.single_enchant_item.value: mapped_loot_controller.get_single_enchanted_item,
+        types.LootType.amulet.value: mapped_loot_controller.get_amulet,
+        types.LootType.high_gold.value:
             lambda: str(min(random.randint(200, 600), random.randint(200, 600))) + " gold",
-        loot_types.LootType.double_enchant_item.value: mapped_loot_controller.get_double_enchanted_item,
-        loot_types.LootType.crafting_item.value: mapped_loot_controller.get_crafting_item,
-        loot_types.LootType.prayer_stone.value: mapped_loot_controller.get_prayer_stone,
-        loot_types.LootType.relic.value: mapped_loot_controller.get_new_relic,
+        types.LootType.double_enchant_item.value: mapped_loot_controller.get_double_enchanted_item,
+        types.LootType.crafting_item.value: mapped_loot_controller.get_crafting_item,
+        types.LootType.prayer_stone.value: mapped_loot_controller.get_prayer_stone,
+        types.LootType.relic.value: mapped_loot_controller.get_new_relic,
         13: mapped_loot_controller.get_weapon_enchant,
         14: mapped_loot_controller.get_armour_enchant,
         15: mapped_loot_controller.get_enchant,
