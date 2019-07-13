@@ -261,5 +261,23 @@
   },
   {
     "value": "Ring"
+  },
+  {
+    "value": "Brass knuckles: regular fist weapon",
+    "comment": "+1 bludgeoning damage with this weapon",
+    "weighting": 4,
+    "metadata": ["armour"]
+  },
+  {
+    "value": "Stabber: piercing fist weapon",
+    "comment": "+1 piercing damage with this weapon, your bludgeoning damage is converted to piercing with this weapon",
+    "weighting": 3,
+    "metadata": ["armour"]
+  },
+  {
+    "value": "Claw: slashing fist weapon",
+    "comment": "+1 slashing damage with this weapon, your bludgeoning damage is converted to slashing with this weapon",
+    "weighting": 3,
+    "metadata": ["armour"]
   }
 ]
