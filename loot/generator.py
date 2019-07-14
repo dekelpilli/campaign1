@@ -126,7 +126,7 @@ class LootController:
         max_allowed_cr_index = self.all_crs.index(str(random.randint(2, 4)))
         amulet_cr_capacity_idx = random.randint(2, max_allowed_cr_index)
         amulet_max_cr = self.all_crs[amulet_cr_capacity_idx]
-        return "CR: " + amulet_max_cr + "\n\tCreature: " + self.get_random_creature_of_cr(amulet_max_cr)
+        return "Amulet CR: " + amulet_max_cr + "\n\tCreature: " + self.get_random_creature_of_cr(amulet_max_cr)
 
     def get_mundane(self):
         return self.mundane.get_random_item().value
@@ -177,31 +177,28 @@ class LootController:
             amount = randomisation_function()
         return str(amount) + " " + item.value
 
-    def get_double_enchanted_item(self):
+    def _get_n_enchanted_item(self, n: int):
         base_type = self.mundane.get_random_item()
+
+        enchant_generator_function = None
         if "weapon" in base_type.metadata:
-            return base_type.value \
-                   + "\n\t" + self.get_weapon_enchant() \
-                   + "\n\t" + self.get_weapon_enchant()
-
+            enchant_generator_function = self.get_weapon_enchant
         if "armour" in base_type.metadata:
-            return base_type.value \
-                   + "\n\t" + self.get_armour_enchant() \
-                   + "\n\t" + self.get_armour_enchant()
+            enchant_generator_function = self.get_armour_enchant
 
-        return self.get_double_enchanted_item()  # got a ring, try again
+        if enchant_generator_function is None:
+            return self.get_double_enchanted_item()  # got a ring, try again
+
+        item_string = base_type.value
+        for i in range(n):
+            item_string += "\n\t" + enchant_generator_function()
+        return item_string
+
+    def get_double_enchanted_item(self):
+        return self._get_n_enchanted_item(2)
 
     def get_single_enchanted_item(self):
-        base_type = self.mundane.get_random_item()
-        if "weapon" in base_type.metadata:
-            return base_type.value \
-                   + "\n\t" + self.get_weapon_enchant()
-
-        if "armour" in base_type.metadata:
-            return base_type.value \
-                   + "\n\t" + self.get_armour_enchant()
-
-        return self.get_single_enchanted_item()  # got a ring, try again
+        return self._get_n_enchanted_item(1)
 
     def get_junk(self):
         return self.junk.get_random_item().value

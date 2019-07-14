@@ -402,7 +402,7 @@
         "upgradeable": false
       },
       {
-        "value": "+2 resistance to all damage while you have at least 3 allies within 60 feet of your, including minions (yours and other allies')",
+        "value": "+2 resistance to all damage while you have at least 3 allies within 60 feet of you, including minions (yours and other allies')",
         "comment": "player choice: +1 res or -1 ally requirement"
       },
       {
