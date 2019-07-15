@@ -42,6 +42,7 @@ Relics:
 
 Vendor valuations:
     Mundane: 30
+    Ring: 50
     Magical: 30 + 75*numOfEnchants
     Amulets: 50 * CR capacity
     Junk: 0, but can go up with good persuasion

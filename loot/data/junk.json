@@ -29,7 +29,8 @@
     "value": "Mitts that give +1 hand warmth"
   },
   {
-    "value": "A waterproof towel. Takes 2 carrying capacity"
+    "value": "A waterproof towel. Takes 2 carrying capacity",
+    "enabled": false
   },
   {
     "value": "Infinite ammo machine gun",
