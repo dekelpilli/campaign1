@@ -187,7 +187,7 @@ class LootController:
             enchant_generator_function = self.get_armour_enchant
 
         if enchant_generator_function is None:
-            return self.get_double_enchanted_item()  # got a ring, try again
+            return self._get_n_enchanted_item(n)  # got a ring, try again
 
         item_string = base_type.value
         for i in range(n):
