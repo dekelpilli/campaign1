@@ -47,7 +47,7 @@
     "level": 1
   },
   {
-    "name": "Thatar' Soulthirst",
+    "name": "Thatar's Soulthirst",
     "type": "weapon",
     "existing": [
       {
@@ -233,7 +233,8 @@
         "upgradeable": false
       },
       {
-        "value": "You become acclimatised to both hot and cold weather"
+        "value": "You become acclimatised to both hot and cold weather",
+        "upgradeable": false
       }
     ],
     "found": false,
@@ -265,7 +266,8 @@
         "comment": "prof -> expert -> advantage"
       },
       {
-        "value": "+1 to death saves, -1 to death save critical requirement. You cannot get a critical failure with death saves."
+        "value": "+1 to death saves, -1 to death save critical requirement. You cannot get a critical failure with death saves.",
+        "comment": "both +1 and -1"
       },
       {
         "value": "+3 to outgoing healing",
@@ -395,14 +397,15 @@
         "comment": "+1"
       },
       {
-        "value": "You have advantage on Wisdom (Perception) checks that rely on smell"
+        "value": "You have advantage on Wisdom (Perception) checks that rely on smell",
+        "upgradeable": false
       },
       {
         "value": "If your current amulet is at least CR3, in addition to your regular amulet, you are always considered to be wearing an amulet that contains a Rat King (ToB 318). Using this is independent of your other amulet's uses.",
         "upgradeable": false
       },
       {
-        "value": "+2 resistance to all damage while you have at least 3 allies within 60 feet of you, including minions (yours and other allies')",
+        "value": "+2 resistance to all damage while you have at least 3 allies within 60 feet of your, including minions (yours and other allies')",
         "comment": "player choice: +1 res or -1 ally requirement"
       },
       {
