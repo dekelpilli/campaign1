@@ -17,12 +17,10 @@
     "metadata": ["disadvantage"]
   },
   {
-    "value": "Orb(s) of Flux - swap magical properties between compatible items, including simply moving enchantments to mundane items",
-    "weighting": 12
+    "value": "Orb(s) of Flux - swap magical properties between compatible items, including simply moving enchantments to mundane items"
   },
   {
     "value": "Exalted Orb - add a mod to a magical item, to a maximum of 5",
-    "weighting": 8,
     "metadata": ["1"]
   },
   {

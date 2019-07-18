@@ -177,7 +177,7 @@ class LootController:
             amount = randomisation_function()
         return str(amount) + " " + item.value
 
-    def _get_n_enchanted_item(self, n: int):
+    def get_n_enchanted_item(self, n: int):
         base_type = self.mundane.get_random_item()
 
         enchant_generator_function = None
@@ -187,18 +187,12 @@ class LootController:
             enchant_generator_function = self.get_armour_enchant
 
         if enchant_generator_function is None:
-            return self._get_n_enchanted_item(n)  # got a ring, try again
+            return self.get_n_enchanted_item(n)  # got a ring, try again
 
         item_string = base_type.value
         for i in range(n):
             item_string += "\n\t" + enchant_generator_function()
         return item_string
-
-    def get_double_enchanted_item(self):
-        return self._get_n_enchanted_item(2)
-
-    def get_single_enchanted_item(self):
-        return self._get_n_enchanted_item(1)
 
     def get_junk(self):
         return self.junk.get_random_item().value
@@ -306,7 +300,7 @@ def print_options():
     print("\t14: Random armour enchant")
     print("\t15: Random enchant")
     print("\t16: Reload loot")
-    # print("\t17: Creature of a given CR")
+    print("\t17: Creature of a given CR")
     print("\t18: Level a relic")
     print("\t19: Level a prayer path")
     print("\t>19: Show this")
@@ -319,11 +313,10 @@ def define_action_map(mapped_loot_controller):
         loot_types.LootType.consumable.value: mapped_loot_controller.get_consumable,
         loot_types.LootType.low_gold.value: lambda: str(random.randint(30, 100)) + " gold",
         loot_types.LootType.ring.value: lambda: "Ring: " + mapped_loot_controller.get_ring(),
-        loot_types.LootType.single_enchant_item.value: mapped_loot_controller.get_single_enchanted_item,
+        loot_types.LootType.single_enchant_item.value: mapped_loot_controller.get_n_enchanted_item(1),
         loot_types.LootType.amulet.value: mapped_loot_controller.get_amulet,
-        loot_types.LootType.high_gold.value:
-            lambda: str(min(random.randint(200, 600), random.randint(200, 600))) + " gold",
-        loot_types.LootType.double_enchant_item.value: mapped_loot_controller.get_double_enchanted_item,
+        loot_types.LootType.double_enchant_item.value: lambda: mapped_loot_controller.get_n_enchanted_item(2),
+        loot_types.LootType.triple_enchant_item: lambda: mapped_loot_controller.get_n_enchanted_item(3),
         loot_types.LootType.crafting_item.value: mapped_loot_controller.get_crafting_item,
         loot_types.LootType.prayer_stone.value: mapped_loot_controller.get_prayer_stone,
         loot_types.LootType.relic.value: mapped_loot_controller.get_new_relic,

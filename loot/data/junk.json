@@ -7,6 +7,10 @@
     "weighting": 2
   },
   {
+    "value": "Reroll with d10",
+    "weighting": 1
+  },
+  {
     "value": "Reroll with d12",
     "weighting": 1
   },
@@ -26,15 +30,10 @@
     "value": "The autobiography of a horse named https://appzaza.com/random-interjection-generator"
   },
   {
-    "value": "Mitts that give +1 hand warmth"
+    "value": "Mitts that give +1 hand warmth, but are too awkward and big to hold anything"
   },
   {
     "value": "A waterproof towel. Takes 2 carrying capacity",
     "enabled": false
-  },
-  {
-    "value": "Infinite ammo machine gun",
-    "enabled": false,
-    "weighting": 10000
   }
 ]
