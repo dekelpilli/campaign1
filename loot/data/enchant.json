@@ -334,7 +334,7 @@
     "weighting": 6
   },
   {
-    "value": "+1 question when learning creature stats",
+    "value": "+1 question when learning creature stats (must have earned at least one question)",
     "weighting": 7
   },
   {
