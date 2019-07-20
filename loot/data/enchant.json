@@ -655,7 +655,7 @@
     "metadata": ["weapon"]
   },
   {
-    "value": "Once per long rest, you can choose a target as an action and then cast a random 1st-level spell on that target, ignoring range restrictions",
+    "value": "Once per long rest, you can choose a target you can see as an action and then cast a random 1st-level spell on that target, ignoring range restrictions",
     "metadata": ["weapon"]
   },
   {
