@@ -16,7 +16,7 @@
     "weighting": 2
   },
   {
-    "value": "Stone's Endurance (if you already have it, you get another use per long/short rest) (Volo's p109) ",
+    "value": "Stone's Endurance (if you already have it, you get another use per long/short rest) (Volo's p109)",
     "weighting": 2
   },
   {
@@ -273,7 +273,7 @@
     "weighting": 5
   },
   {
-    "value": "This item's maximum number of mods is increased by 2. This mod cannot appear twice or be empowered.",
+    "value": "This item's maximum number of mods is increased by 2",
     "weighting": 5
   },
   {
@@ -334,7 +334,7 @@
     "weighting": 6
   },
   {
-    "value": "+1 question when learning creature stats",
+    "value": "+1 question when learning creature stats (must have earned at least one question)",
     "weighting": 7
   },
   {
@@ -484,7 +484,7 @@
     "value": "You're acclimated to high altitude, including elevations above 20,000 feet"
   },
   {
-    "value": "First wearer chooses a language in which that this item grants perfect knowledge"
+    "value": "First wearer chooses a language in which this item grants perfect knowledge"
   },
   {
     "value": "+2 passive perception"
