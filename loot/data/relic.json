@@ -432,6 +432,56 @@
     "enabled": true
   },
   {
+    "name": "Neldor's Treasure",
+    "type": "ring",
+    "existing": [
+      {
+        "value": "You may always ignore difficult terrain",
+        "upgradeable": false
+      }
+    ],
+    "available": [
+      {
+        "value": "Your movement cannot be reduced to 0 by non-magical effects (including grapple/restraint). Instead, it will remain at 5 feet.",
+        "upgradeable": false
+      },
+      {
+        "value": "When you find more than 1 of a crafting item, you find one additional item of that type",
+        "upgradeable": false
+      },
+      {
+        "value": "+1 to your saves when avoiding conditions",
+        "upgradeable": false
+      },
+      {
+        "value": "As a free action when learning about a creature, you may also learn one of its save bonuses",
+        "upgradeable": false
+      },
+      {
+        "value": "-1 save critical requirement (i.e. 20 -> 19)",
+        "comment": "No more than 2 upgrades"
+      },
+      {
+        "value": "Once per short rest, you can make a save to end a condition at the start of your turn instead of at the end",
+        "comment": "More uses"
+      },
+      {
+        "value": "If you upgrade or empower this mod, you gain one use of Legendary Resistance per long rest.",
+        "comment": "Only upgradeable once"
+      },
+      {
+        "value": "You can move at normal speed while prone"
+      },
+      {
+        "value": "You gain 20 additional gold when finding gold from loot boxes",
+        "comment": "+10"
+      }
+    ],
+    "found": false,
+    "level": 1,
+    "enabled": false
+  },
+  {
     "name": "Template",
     "type": "weapon/armour",
     "existing": [

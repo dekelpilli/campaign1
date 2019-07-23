@@ -75,10 +75,10 @@ class LootController:
         for i in range(num_choices):
             if i != 0:
                 output += "\nOR\n\t"
-            output += self._get_upgrade_option(relic, random.randint(1, options), upgradeable_mods)
+            output += self._get_relic_upgrade_option(relic, random.randint(1, options), upgradeable_mods)
         return output
 
-    def _get_upgrade_option(self, relic, option_id, upgradeable_mods):
+    def _get_relic_upgrade_option(self, relic, option_id, upgradeable_mods):
         option_string = ""
         if option_id == 1:
             option_string += "New mod: "
@@ -86,6 +86,8 @@ class LootController:
                 option_string += self.get_weapon_enchant()
             elif relic.type == "armour":
                 option_string += self.get_armour_enchant()
+            elif relic.type == "ring":
+                option_string += self.get_ring()
             else:
                 option_string += self.get_enchant()
             return option_string
