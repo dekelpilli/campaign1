@@ -482,6 +482,55 @@
     "enabled": false
   },
   {
+    "name": "Naba's Power",
+    "type": "weapon",
+    "existing": [
+      {
+        "value": "You may convert any physical damage you deal with this weapon to lightning damage",
+        "upgradeable": false
+      }
+    ],
+    "available": [
+      {
+        "value": "+1d6 lightning damage with attacks with this weapon",
+        "comment": "Die size"
+      },
+      {
+        "value": "+2 lightning damage",
+        "comment": "+1"
+      },
+      {
+        "value": "+1 to the DC of spells and cantrips that would deal lightning damage"
+      },
+      {
+        "value": "You may ignore lightning resistance",
+        "comment": "res + immunity on upgrade"
+      },
+      {
+        "value": "You become resistant to lightning damage",
+        "upgradeable": false
+      },
+      {
+        "value": "When you score a critical strike with this weapon, the target must succeed a CON save against a DC of half the lightning damage dealt or be stunned for 1 minute (repeat save at end of turns).",
+        "comment": "+1 DC"
+      },
+      {
+        "value": "You can cast call lightning once per long rest. Mental mod of your choice.",
+        "comment": "+1 uses"
+      },
+      {
+        "value": "Once per short rest, when you land a killing blow with this weapon, you may force creatures within 5 feet of the target to make a save against 8 + the AB for that attack. On a failed save, they are stunned until the end of your next turn.",
+        "comment": "+1 uses"
+      },
+      {
+        "value": "Once per long rest, as a reaction to being hit by a creature within 60 feet from you, you may target them with the effects Lightning Lure (i.e. they are guaranteed to fail the save)."
+      }
+    ],
+    "found": false,
+    "level": 1,
+    "enabled": false
+  },
+  {
     "name": "Template",
     "type": "weapon/armour",
     "existing": [
