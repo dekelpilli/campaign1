@@ -294,6 +294,15 @@ def get_int_from_str(string, default_integer=None):
         return default_integer
 
 
+def get_creature_from_input_crs():
+    while True:
+        cr = input("\nMonster CR: ")
+        if "-1" in cr:
+            break
+        print(loot_controller.get_random_creature_of_cr(cr))
+    return ""
+
+
 def print_options():
     pp = PrettyPrinter(indent=4)
     print("\n")
@@ -318,15 +327,15 @@ def define_action_map(mapped_loot_controller):
         loot_types.LootType.single_enchant_item.value: lambda: mapped_loot_controller.get_n_enchanted_item(1),
         loot_types.LootType.amulet.value: mapped_loot_controller.get_amulet,
         loot_types.LootType.double_enchant_item.value: lambda: mapped_loot_controller.get_n_enchanted_item(2),
-        loot_types.LootType.triple_enchant_item: lambda: mapped_loot_controller.get_n_enchanted_item(3),
+        loot_types.LootType.triple_enchant_item.value: lambda: mapped_loot_controller.get_n_enchanted_item(3),
         loot_types.LootType.crafting_item.value: mapped_loot_controller.get_crafting_item,
         loot_types.LootType.prayer_stone.value: mapped_loot_controller.get_prayer_stone,
         loot_types.LootType.relic.value: mapped_loot_controller.get_new_relic,
         13: mapped_loot_controller.get_weapon_enchant,
         14: mapped_loot_controller.get_armour_enchant,
         15: mapped_loot_controller.get_enchant,
-        # 16: reload loot
-        # 17: mapped_loot_controller.get_random_creature,
+        # 16: reload_loot,
+        17: get_creature_from_input_crs,
         18: mapped_loot_controller.level_up_relic_by_choice,
         19: mapped_loot_controller.level_up_prayer_path
     }
@@ -343,21 +352,14 @@ if __name__ == "__main__":
         if roll == 0:
             roll = random.randint(1, 12)
             print("Random roll: " + str(roll) + ", (" + str(loot_action_map[roll]) + ")")
-        if roll < 0:
+        elif roll < 0:
             exit(0)
         print(loot_action_map.get(roll,
                                   lambda: str(roll) + " is not a normal loot option, checking extra options")())
-
-        if roll == 17:
-            while True:
-                cr = input("\nMonster CR: ")
-                if "-1" in cr:
-                    break
-                print(loot_controller.get_random_creature_of_cr(cr))
 
         if roll == 16:
             loot_controller = LootController(True)
             loot_action_map = define_action_map(loot_controller)
             print("Reloaded loot from files")
-        if roll > 19:
+        elif roll > 19:
             print_options()
