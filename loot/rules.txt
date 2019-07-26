@@ -59,6 +59,7 @@ Sales and services:
     Mundanes: 60
     HP potions: 5 per level per potion
     Rations: 2, or 1 for perishable
+    Single enchanted item: 210 with mundane, 150 with mundane provided
 
     Horses: 800
     Warhorses: 1200
