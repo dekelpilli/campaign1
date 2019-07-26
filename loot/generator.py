@@ -131,7 +131,10 @@ class LootController:
         return "Amulet CR: " + amulet_max_cr + "\n\tCreature: " + self.get_random_creature_of_cr(amulet_max_cr)
 
     def get_mundane(self):
-        return self.mundane.get_random_item().value
+        is_weapon = random.randint(1, 100) > 66
+        mundane_type = "weapon" if is_weapon else "armour"
+        possible_mundanes = list(filter(lambda mundane: mundane_type in mundane.metadata, self.mundane.loot_options))
+        return random.choice(possible_mundanes).value
 
     def get_ring(self):
         return self.ring.get_random_item().value
@@ -180,16 +183,11 @@ class LootController:
         return str(amount) + " " + item.value
 
     def get_n_enchanted_item(self, n: int):
-        base_type = self.mundane.get_random_item()
-
-        enchant_generator_function = None
-        if "weapon" in base_type.metadata:
-            enchant_generator_function = self.get_weapon_enchant
-        if "armour" in base_type.metadata:
-            enchant_generator_function = self.get_armour_enchant
-
-        if enchant_generator_function is None:
-            return self.get_n_enchanted_item(n)  # got a ring, try again
+        is_weapon = random.randint(1, 100) > 66
+        mundane_type = "weapon" if is_weapon else "armour"
+        possible_mundanes = list(filter(lambda mundane: mundane_type in mundane.metadata, self.mundane.loot_options))
+        base_type = random.choice(possible_mundanes)
+        enchant_generator_function = self.get_weapon_enchant if is_weapon else self.get_armour_enchant
 
         item_string = base_type.value
         for i in range(n):

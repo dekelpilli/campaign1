@@ -79,7 +79,7 @@ class LootOption:
         random.shuffle(self.loot_options)
 
     def get_random_item(self):
-        return self.loot_options[random.randint(0, len(self.loot_options) - 1)]
+        return random.choice(self.loot_options)
 
 
 class PrayerStone(LootOptionItem):
