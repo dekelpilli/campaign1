@@ -97,7 +97,7 @@
     "level": 1
   },
   {
-    "name": "Unlock when getting on Ida's good side. Not done. Ida's Ferocity",
+    "name": "Not done. Ida's Ferocity",
     "type": "weapon",
     "existing": [
       {
@@ -136,7 +136,7 @@
     ],
     "found": false,
     "level": 1,
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "Cerasil's Protection",
@@ -337,10 +337,14 @@
   },
   {
     "name": "Tea's Gratitude",
-    "type": "weapon",
+    "type": "armour",
     "existing": [
       {
         "value": "+2 damage with attacks against surprised targets"
+      },
+      {
+        "value": "Once per short rest, you may disengage as a bonus action",
+        "comment": "free action instead of bonus"
       }
     ],
     "available": [
@@ -367,10 +371,6 @@
         "upgradeable": false
       },
       {
-        "value": "Once per short rest, you may disengage as a bonus action",
-        "comment": "free action instead of bonus"
-      },
-      {
         "value": "+1 to all dexterity skills and saves"
       },
       {
@@ -378,9 +378,9 @@
         "upgradeable": false
       }
     ],
-    "found": false,
-    "level": 1,
-    "enabled": false
+    "found": true,
+    "level": 2,
+    "enabled": true
   },
   {
     "name": "Erin's Infestation",
