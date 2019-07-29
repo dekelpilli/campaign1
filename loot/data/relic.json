@@ -132,6 +132,9 @@
       {
         "value": "+2 to saves and checks against non-magical grapples and restrains, including getting out from existing ones",
         "comment": "+1"
+      },
+      {
+        "value": "Allies within 5 feet of your have +1 global damage"
       }
     ],
     "found": false,
@@ -340,7 +343,8 @@
     "type": "armour",
     "existing": [
       {
-        "value": "+2 damage with attacks against surprised targets"
+        "value": "+2 damage with attacks against surprised targets",
+        "comment": "Original"
       },
       {
         "value": "Once per short rest, you may disengage as a bonus action",

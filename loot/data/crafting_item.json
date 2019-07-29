@@ -32,5 +32,10 @@
     "value": "Orb of Empowerment - double a mod on a magic item or artifact (can't be a special relic mod). An item cannot have more than one doubled mod",
     "weighting": 2,
     "metadata": ["1"]
+  },
+  {
+    "value": "Orb of Mulligan - completely level down a relic, then level it back up to its current level. Before levelling it back up, you can let go of your attunement to it.",
+    "weighting": 4,
+    "metadata": ["1"]
   }
 ]
