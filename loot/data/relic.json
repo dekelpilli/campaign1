@@ -97,7 +97,7 @@
     "level": 1
   },
   {
-    "name": "Not done. Ida's Ferocity",
+    "name": "Rislog's Ferocity",
     "type": "weapon",
     "existing": [
       {
@@ -110,7 +110,7 @@
     ],
     "available": [
       {
-        "value": "You may cast Wrathful Smite as a free action once per short rest",
+        "value": "You may cast Wrathful Smite as a free action once per short rest. DC = 8 + AB for the attack that applied it.",
         "comment": "+1 uses per short rest"
       },
       {
@@ -122,7 +122,7 @@
         "upgradeable": false
       },
       {
-        "value": "You may wield any weapon as if it were a light weapon",
+        "value": "You may wield any weapon as if it were a light weapon, and you have proficiency with all weapons.",
         "upgradeable": false
       },
       {
@@ -135,6 +135,14 @@
       },
       {
         "value": "Allies within 5 feet of your have +1 global damage"
+      },
+      {
+        "value": "When you hit an enemy with more than one attack in a turn, you may also shove that target as a free action. You can do this [prof mod] times per long rest.",
+        "upgradeable": false
+      },
+      {
+        "value": "If this weapon is a melee weapon, it is considered to have reach.",
+        "upgradeable": false
       }
     ],
     "found": false,
