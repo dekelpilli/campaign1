@@ -55,7 +55,7 @@ Vendor valuations:
 
 Sales and services:
     Orbs of flux: 200g
-    Orb of destruction: 250g
+    Orb of destruction: 200g
     Mundanes: 60
     HP potions: 5 per level per potion
     Rations: 2, or 1 for perishable
