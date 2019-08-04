@@ -177,7 +177,7 @@
   },
   {
     "value": "Thatar",
-    "progress": 0,
+    "progress": 1,
     "levels": [
       "Undead creatures have disadvantage when attacking you.",
       "Divine Sense (Paladin), but you can only sense undead, and you can use any mental attribute for uses.",
@@ -189,7 +189,8 @@
       "You may cast Abi-Dalzim's Horrid Wilting (mental attribute of choice) once. You regain uses on killing blow and on long rests.",
       "You ignore resistances and immunities to Necrotic damage",
       "You may cast Create Undead as a 9th level spell once per Long rest. If you already have undead minions, its casting time becomes 1 action instead of 1 minute."
-    ]
+    ],
+    "owner": "Surge"
   },
   {
     "value": "Ketis",

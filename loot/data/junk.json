@@ -1,6 +1,7 @@
 [
   {
-    "value": "Magic toy boat. While on this boat, you can't drown if the boat is completely dry. ~20cm long"
+    "value": "Magic toy boat. While on this boat, you can't drown if the boat is completely dry. ~20cm long",
+    "enabled": false
   },
   {
     "value": "Reroll with d8",
