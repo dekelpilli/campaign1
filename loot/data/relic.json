@@ -105,7 +105,18 @@
         "upgradeable": false
       },
       {
-        "value": "+1 weapon die size"
+        "value": "+2 weapon die size",
+        "upgradeable": false
+      },
+      {
+        "value": "+1 damage to melee and touch attacks"
+      },
+      {
+        "value": "+1d4 piercing damage with attacks with this weapon"
+      },
+      {
+        "value": "If this weapon is a melee weapon, it is considered to have reach.",
+        "upgradeable": false
       }
     ],
     "available": [
@@ -139,14 +150,10 @@
       {
         "value": "When you hit an enemy with more than one attack in a turn, you may also shove that target as a free action. You can do this [prof mod] times per long rest.",
         "upgradeable": false
-      },
-      {
-        "value": "If this weapon is a melee weapon, it is considered to have reach.",
-        "upgradeable": false
       }
     ],
-    "found": false,
-    "level": 1,
+    "found": true,
+    "level": 5,
     "enabled": true
   },
   {
