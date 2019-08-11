@@ -93,7 +93,7 @@
         "comment": "More uses"
       }
     ],
-    "found": false,
+    "found": true,
     "level": 1
   },
   {
@@ -306,7 +306,7 @@
       }
     ],
     "found": false,
-    "level": 1
+    "level": 2
   },
   {
     "name": "Jemima's Forgery",
