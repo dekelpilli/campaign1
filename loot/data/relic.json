@@ -550,6 +550,54 @@
     "enabled": false
   },
   {
+    "name": "Barker's Innovation",
+    "type": "armour",
+    "existing": [
+      {
+        "value": "+15 feet flight speed"
+      }
+    ],
+    "available": [
+      {
+        "value": "Whenever you use a crafting item with random effects, you can use it twice and choose your preferred result.",
+        "upgradeable": false
+      },
+      {
+        "value": "You may have an extra choice when levelling relics",
+        "upgradeable": false
+      },
+      {
+        "value": "When you level a relic attuned to you to level 10, you may level it again (normal level) for free"
+      },
+      {
+        "value": "+2 to loot rolls result, -1 loot roll die size",
+        "upgradeable": false
+      },
+      {
+        "value": "Magic items you have crafted (excludes flux) can have up to 6 mods, instead of 5",
+        "upgradeable": false
+      },
+      {
+        "value": "Relics attuned to you only cost 75% of their regular price to level",
+        "comment": "-5%"
+      },
+      {
+        "value": "If flying is your highest speed, your flight does not provoke opportunity attacks"
+      },
+      {
+        "value": "Your amulets are considered to be able to hold 1 CR higher",
+        "comment": "1 upgrade max"
+      },
+      {
+        "value": "+1 global damage for each relic you are wearing",
+        "upgradeable": false
+      }
+    ],
+    "found": false,
+    "level": 1,
+    "enabled": true
+  },
+  {
     "name": "Template",
     "type": "weapon/armour",
     "existing": [
