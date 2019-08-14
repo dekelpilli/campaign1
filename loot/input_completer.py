@@ -3,11 +3,12 @@ import readline
 
 class Completer:
     def __init__(self, options_list):
-        self.options_list = options_list
+        self.options = set(options_list)
 
     def complete(self, text, state):
-        for option in self.options_list:
-            if option.startswith(text):
+        text = text.lower()
+        for option in self.options:
+            if option.lower().startswith(text):
                 if not state:
                     return option
                 else:
