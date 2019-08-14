@@ -305,8 +305,8 @@
         "value": "If this mod gets to level 3, you gain the Tough feat. Current level: 1"
       }
     ],
-    "found": false,
-    "level": 2
+    "found": true,
+    "level": 1
   },
   {
     "name": "Jemima's Forgery",
