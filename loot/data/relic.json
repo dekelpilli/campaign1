@@ -604,7 +604,7 @@
     "type": "armour",
     "existing": [
       {
-        "value": "You become proficient in Arcana. If you area already proficient, you gain expertise.",
+        "value": "You become proficient in Arcana. If you are already proficient, you gain expertise.",
         "comment": "Expertise"
       }
     ],
