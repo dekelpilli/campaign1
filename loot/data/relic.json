@@ -567,7 +567,8 @@
         "upgradeable": false
       },
       {
-        "value": "When you level a relic attuned to you to level 10, you may level it again (normal level) for free"
+        "value": "When you level a relic attuned to you to level 10, you may level it again (normal level) for free",
+        "comment": "More free levels"
       },
       {
         "value": "+2 to loot rolls result, -1 loot roll die size",
@@ -582,7 +583,8 @@
         "comment": "-5%"
       },
       {
-        "value": "If flying is your highest speed, your flight does not provoke opportunity attacks"
+        "value": "If flying is your highest speed, your flight does not provoke opportunity attacks",
+        "upgradeable": false
       },
       {
         "value": "Your amulets are considered to be able to hold 1 CR higher",
@@ -596,6 +598,57 @@
     "found": false,
     "level": 1,
     "enabled": true
+  },
+  {
+    "name": "Qhanas' Potency",
+    "type": "armour",
+    "existing": [
+      {
+        "value": "You become proficient in Arcana. If you area already proficient, you gain expertise.",
+        "comment": "Expertise"
+      }
+    ],
+    "available": [
+      {
+        "value": "You have Legendary Resistance (once per long rest)",
+        "upgradeable": false
+      },
+      {
+        "value": "+10ft range with spells that have 10ft range or more",
+        "comment": "+5ft"
+      },
+      {
+        "value": "Once per long rest, when you cast a spell that requires concentration, you may choose to not require concentration for its first minute.",
+        "upgradeable": false
+      },
+      {
+        "value": "You are permanently under the effect of the Detect Magic spell, but with only a 10ft radius",
+        "comment": "+10ft, max of spell's base (10)"
+      },
+      {
+        "value": "+1 to your spell saves",
+        "upgradeable": false
+      },
+      {
+        "value": "+1 to your spell save DC",
+        "upgradeable": false
+      },
+      {
+        "value": "When a creature fails a spell save against a spell you cast, you learn its spell save bonus for that attribute",
+        "upgradeable": false
+      },
+      {
+        "value": "You become proficient in Intelligence and Charisma spell saving throws (does nothing if you are already proficient).",
+        "upgradeable": false
+      },
+      {
+        "value": "When a creature fails a spell save against your spell, or is hit by your spell attack, you gain temporary hit points equal to the spell slot level used",
+        "upgradeable": false
+      }
+    ],
+    "found": false,
+    "level": 1,
+    "enabled": false
   },
   {
     "name": "Template",
