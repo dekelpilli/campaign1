@@ -167,12 +167,14 @@ class LootController:
     def get_multiple_items(item, randomisation_function):
         amount = None
         for metadata_tag in item.metadata:
+            old_function = randomisation_function
             if metadata_tag == "disadvantage":
-                amount = min(randomisation_function(), randomisation_function())
+                randomisation_function = lambda: min(old_function(), old_function())
             elif metadata_tag == "advantage":
-                amount = max(randomisation_function(), randomisation_function())
+                randomisation_function = lambda: max(old_function(), old_function())
             elif metadata_tag[0] == "x":
-                amount = randomisation_function() * get_int_from_str(metadata_tag[1:], 1)
+                multiplier = get_int_from_str(metadata_tag[1:], 1)
+                randomisation_function = lambda: old_function() * multiplier
             else:
                 potentially_static_value = get_int_from_str(metadata_tag)
                 if potentially_static_value is not None:

@@ -16,7 +16,7 @@
         "value": "+1 to all saving throws if you have made an investigation check in the last minute"
       },
       {
-        "value": "You can spend an action making an investigation or perception check to ensure your next two attacks in this encounter are guaranteed to be critical hits.",
+        "value": "You can spend an action making an investigation or perception check. If you earn at least one question with this check, your next two attacks in this encounter are guaranteed to be critical hits.",
         "upgradeable": false
       },
       {
@@ -634,11 +634,11 @@
         "upgradeable": false
       },
       {
-        "value": "When a creature fails a spell save against a spell you cast, you learn its spell save bonus for that attribute",
+        "value": "When a creature fails a spell save against a spell you cast, you learn its spell save bonus for all attributes",
         "upgradeable": false
       },
       {
-        "value": "You become proficient in Intelligence and Charisma spell saving throws (does nothing if you are already proficient).",
+        "value": "You become proficient in Intelligence or Charisma spell saving throws (does nothing if you are already proficient).",
         "upgradeable": false
       },
       {
