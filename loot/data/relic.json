@@ -53,13 +53,21 @@
       {
         "value": "You have advantage on attacks that would deal necrotic damage",
         "upgradeable": false
+      },
+      {
+        "value": "For every effect that would target you, you may choose to be considered undead instead of humanoid",
+        "upgradeable": false
+      },
+      {
+        "value": "+3 resistance to damage from undead creatures",
+        "comment": "+1"
+      },
+      {
+        "value": "Once per long rest, when you kill a creature, you can choose to reanimate it for 1 round. While reanimated in this way, the creature cannot die, and it is completely under your control.",
+        "comment": "+1 round"
       }
     ],
     "available": [
-      {
-        "value": "When you kill a humanoid with an attack or spell, it rises at the start of your next turn as a zombie that is permanently under your command, following your verbal orders to the best of its ability. You may only have 1 such zombie at any given time.",
-        "comment": "Ogre zombies instead"
-      },
       {
         "value": "+1d4 necrotic damage with attacks with this weapon",
         "comment": "-> 1d6 -> 1d8 -> etc"
@@ -69,24 +77,12 @@
         "upgradeable": false
       },
       {
-        "value": "+3 resistance to damage from undead creatures",
-        "comment": "+1"
-      },
-      {
         "value": "You learn the Finger of Death spell and may cast it once per long rest. Casting mod is a mental attribute of your choice.",
         "upgradeable": false
       },
       {
-        "value": "Once per long rest, when you kill a creature, you can choose to reanimate it for 1 round. While reanimated in this way, the creature cannot die, and it is completely under your control.",
-        "comment": "+1 round"
-      },
-      {
         "value": "Once per long rest, you may cast 1 spell slot worth of Necromany spells for without consuming a spell slot (you must still know the spell).",
         "comment": "When upgraded, can be used to cast 2x level 1 or 1x level 2, etc."
-      },
-      {
-        "value": "For every effect that would target you, you may choose to be considered undead instead of humanoid",
-        "upgradeable": false
       },
       {
         "value": "Once per long rest, when killing a creature on your turn, you may immediately take another turn.",
@@ -94,7 +90,7 @@
       }
     ],
     "found": true,
-    "level": 1
+    "level": 3
   },
   {
     "name": "Rislog's Ferocity",
@@ -112,7 +108,7 @@
         "value": "+1 damage to melee and touch attacks"
       },
       {
-        "value": "+1d4 piercing damage with attacks with this weapon"
+        "value": "+1d6 piercing damage with attacks with this weapon"
       },
       {
         "value": "If this weapon is a melee weapon, it is considered to have reach.",
@@ -153,7 +149,7 @@
       }
     ],
     "found": true,
-    "level": 5,
+    "level": 6,
     "enabled": true
   },
   {
@@ -167,6 +163,9 @@
       {
         "value": "You are permanently under the effect of the Speak with Animals spell",
         "upgradeable": false
+      },
+      {
+        "value": "+2 health regeneration per round of combat while outdoors"
       }
     ],
     "available": [
@@ -202,15 +201,12 @@
         "value": "+4 poison damage resistance"
       },
       {
-        "value": "+3 health regeneration per round of combat while outdoors"
-      },
-      {
         "value": "You may cast Healing Spirit as a 3rd level spell once per short rest",
         "comment": "+1 slot level"
       }
     ],
-    "found": false,
-    "level": 1
+    "found": true,
+    "level": 2
   },
   {
     "name": "Ketis' Dominion",
@@ -219,6 +215,9 @@
       {
         "value": "You may choose to convert all physical damage from this weapon to cold, fire, or lightning damage.",
         "upgradeable": false
+      },
+      {
+        "value": "+1d4 lightning damage to attacks and spells"
       }
     ],
     "available": [
@@ -228,9 +227,6 @@
       },
       {
         "value": "+2 fire damage with attacks and spells, even if they don't deal fire damage already"
-      },
-      {
-        "value": "+1d4 lightning damage to attacks and spells"
       },
       {
         "value": "-1 critical strike requirement with attacks that would deal cold damage"
@@ -255,15 +251,15 @@
         "upgradeable": false
       }
     ],
-    "found": false,
-    "level": 1
+    "found": true,
+    "level": 2
   },
   {
     "name": "Esher's Health",
     "type": "armour",
     "existing": [
       {
-        "value": "+3 health",
+        "value": "+5 health",
         "comment": "+2 health on level"
       },
       {
@@ -306,7 +302,7 @@
       }
     ],
     "found": true,
-    "level": 1
+    "level": 2
   },
   {
     "name": "Jemima's Forgery",
@@ -507,6 +503,13 @@
       {
         "value": "You may convert any physical damage you deal with this weapon to lightning damage",
         "upgradeable": false
+      },
+      {
+        "value": "Once per long rest, as a reaction to being hit by a creature within 60 feet from you, you may target them with the effects Lightning Lure (i.e. they are guaranteed to fail the save)."
+      },
+      {
+        "value": "When you become unconscious as a result of going down to 0 hit points, creatures of your choice within 5 feet of you must succeed a Constitution save against a DC of (8 + prof + attribute mod of your choice) or be stunned until the end of your next turn",
+        "upgradeable": false
       }
     ],
     "available": [
@@ -540,14 +543,11 @@
       {
         "value": "Once per short rest, when you land a killing blow with this weapon, you may force creatures within 5 feet of the target to make a save against 8 + the AB for that attack. On a failed save, they are stunned until the end of your next turn.",
         "comment": "+1 uses"
-      },
-      {
-        "value": "Once per long rest, as a reaction to being hit by a creature within 60 feet from you, you may target them with the effects Lightning Lure (i.e. they are guaranteed to fail the save)."
       }
     ],
-    "found": false,
-    "level": 1,
-    "enabled": false
+    "found": true,
+    "level": 3,
+    "enabled": true
   },
   {
     "name": "Barker's Innovation",
