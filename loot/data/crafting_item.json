@@ -6,12 +6,12 @@
   {
     "value": "Orb(s) of Destruction - Remove a random mod from a magic item or artifact",
     "weighting": 7,
-    "metadata": ["advantage"]
+    "metadata": ["advantage"],
+    "enabled": false
   },
   {
     "value": "Annulment Orb(s) - Remove a mod of your choice from a magic item or artifact",
-    "weighting": 7,
-    "metadata": ["disadvantage"]
+    "weighting": 5
   },
   {
     "value": "Orb(s) of Creation - Convert a mundane item into a magical item with disadvantaged 1d4 mods",
@@ -25,7 +25,7 @@
     "metadata": ["1"]
   },
   {
-    "value": "Orb of Rare Candy - level up a relic, must use within 1 day",
+    "value": "Orb of Rare Candy - level up a relic, must use within 24 hours",
     "weighting": 7,
     "metadata": ["1"]
   },

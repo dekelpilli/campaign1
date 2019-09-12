@@ -20,10 +20,12 @@
     "enabled": false
   },
   {
-    "value": "Invisible ink marker. The ink can only be made visible with the use of a Wish spell. Good for 1d20 words."
+    "value": "Invisible ink marker. The ink can only be made visible with the use of a Wish spell. Good for 1d20 words.",
+    "enabled": false
   },
   {
-    "value": "A cell phone"
+    "value": "A cell phone",
+    "enabled": false
   },
   {
     "value": "A recipe for https://www.fantasynamegenerators.com/food-names.php"
@@ -32,10 +34,20 @@
     "value": "The autobiography of a horse named https://appzaza.com/random-interjection-generator"
   },
   {
-    "value": "Mitts that give +1 hand warmth, but are too awkward and big to hold anything"
+    "value": "Mitts that give +1 hand warmth, but are too awkward and big to hold anything",
+    "enabled": false
   },
   {
     "value": "A waterproof towel. Takes 2 carrying capacity",
     "enabled": false
+  },
+  {
+    "value": "A cursed ring: wearing this ring, you believe your other ring is cursed"
+  },
+  {
+    "value": "Belt. While it is in your possession, you are always at Exhaustion level 5."
+  },
+  {
+    "value": "A helmet that vibrates whenever you take damage, to let you know you took damage."
   }
 ]

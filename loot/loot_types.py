@@ -10,11 +10,12 @@ class LootType(IntEnum):
     ring = 5
     single_enchant_item = 6
     amulet = 7
-    double_enchant_item = 8
-    triple_enchant_item = 9
-    crafting_item = 10
+    triple_enchant_item = 8
+    crafting_item = 9
+    prayer_stone_2 = 10
     prayer_stone = 11
     relic = 12  # plus reroll
+    double_enchant_item = -1  # disabled
 
 
 LOOT_TYPES = dict()
