@@ -651,6 +651,55 @@
     "enabled": true
   },
   {
+    "name": "Ateus' Fortune",
+    "type": "armour",
+    "existing": [
+      {
+        "value": "You have 1 luck point (see Lucky feat for explanation). You regain your expended luck points when you finish a long rest.",
+        "upgradeable": false
+      }
+    ],
+    "available": [
+      {
+        "value": "This mod does nothing, but gain 400 gold when you choose it",
+        "comment": "+100 gold for each choice. Current: 0"
+      },
+      {
+        "value": "When you find any amount of a crafting item, gain an additional crafting item of that type"
+      },
+      {
+        "value": "You have +1 on d8 and d10 loot rolls",
+        "upgradeable": false
+      },
+      {
+        "value": "You take no extra damage from critical strikes if you have dealt a critical strike in the last 12 seconds.",
+        "upgradeable": false
+      },
+      {
+        "value": "When you roll 1 on loot rolls, instead reroll with a d8",
+        "comment": "d10, d12"
+      },
+      {
+        "value": "Enemies that recharge abilities on a die roll have -1 to that die roll",
+        "upgradeable": false
+      },
+      {
+        "value": "+2 to critical loot roll rerolls",
+        "comment": "Can't chain on unnatural 12"
+      },
+      {
+        "value": "Once per long rest, you may choose to gain advantage on a loot roll"
+      },
+      {
+        "value": "Enemies you critically strike provide an additional d10 loot roll (maximum 1 per creature)",
+        "comment": "-> d12, max 1 upgrade"
+      }
+    ],
+    "found": false,
+    "level": 1,
+    "enabled": true
+  },
+  {
     "name": "Template",
     "type": "weapon/armour",
     "existing": [
