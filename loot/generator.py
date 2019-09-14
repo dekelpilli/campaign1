@@ -116,6 +116,8 @@ class LootController:
     def get_random_creature_of_cr(self, max_cr):
         cr = max_cr
         while True:
+            if cr not in self.challenge_rating:
+                return "'" + cr + "' is not a valid CR option"
             creature = self.challenge_rating[cr].get_random_creature()
             if creature is None:
                 cr = str(int(cr) - 1)  # Not protecting against 0.125/0.25/0.5 because those have creatures
