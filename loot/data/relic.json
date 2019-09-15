@@ -105,10 +105,10 @@
         "upgradeable": false
       },
       {
-        "value": "+1 damage to melee and touch attacks"
+        "value": "+3 damage to melee and touch attacks"
       },
       {
-        "value": "+1d6 piercing damage with attacks with this weapon"
+        "value": "+1d8 piercing damage with attacks with this weapon"
       },
       {
         "value": "If this weapon is a melee weapon, it is considered to have reach.",
@@ -149,7 +149,7 @@
       }
     ],
     "found": true,
-    "level": 6,
+    "level": 9,
     "enabled": true
   },
   {
@@ -265,6 +265,16 @@
       {
         "value": "You are immune to diseases",
         "upgradeable": false
+      },
+      {
+        "value": "Once per long rest, you can make a Persuasion check contested by a non-hostile creature's Wisdom save. The creature must be within 60 feet of you. On a success, you can give them a command as per the Command spell",
+        "upgradeable": false
+      },
+      {
+        "value": "+2 to outgoing healing"
+      },
+      {
+        "value": "After you received damage for the first time in a combat, you become resistant to that damage type for the rest of the combat. You then become vulnerable to Necrotic and Thunder damage."
       }
     ],
     "available": [
@@ -302,14 +312,14 @@
       }
     ],
     "found": true,
-    "level": 2
+    "level": 3
   },
   {
     "name": "Jemima's Forgery",
     "type": "armour",
     "existing": [
       {
-        "value": "+1 physical damage resistance"
+        "value": "+2 physical damage resistance"
       }
     ],
     "available": [
@@ -345,8 +355,8 @@
         "upgradeable": false
       }
     ],
-    "found": false,
-    "level": 1,
+    "found": true,
+    "level": 2,
     "enabled": true
   },
   {

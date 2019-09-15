@@ -34,7 +34,7 @@
   },
   {
     "value": "Ateus",
-    "progress": 0,
+    "progress": 3,
     "levels": [
       "-1 critical requirement on all skill checks",
       "You have expertise in Persuasion and Deception when negotiating trades",
@@ -46,7 +46,8 @@
       "You may destroy an item to immediately gain its base sale value (i.e. no negotiation).",
       "Relics attuned to you can be levelled for 50% of their usual levelling cost, but also sell for half of their usual cost.",
       "Whenever you make a skill check, you may also roll a d12 and use the higher of the scores"
-    ]
+    ],
+    "owner": "Sarashi"
   },
   {
     "value": "Vimis",
@@ -177,7 +178,7 @@
   },
   {
     "value": "Thatar",
-    "progress": 1,
+    "progress": 2,
     "levels": [
       "Undead creatures have disadvantage when attacking you.",
       "Divine Sense (Paladin), but you can only sense undead, and you can use any mental attribute for uses.",
