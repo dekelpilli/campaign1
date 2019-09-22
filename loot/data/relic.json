@@ -217,7 +217,10 @@
         "upgradeable": false
       },
       {
-        "value": "+1d4 lightning damage to attacks and spells"
+        "value": "+1d8 lightning damage to attacks and spells"
+      },
+      {
+        "value": "-1 critical strike requirement with attacks that would deal cold damage"
       }
     ],
     "available": [
@@ -227,9 +230,6 @@
       },
       {
         "value": "+2 fire damage with attacks and spells, even if they don't deal fire damage already"
-      },
-      {
-        "value": "-1 critical strike requirement with attacks that would deal cold damage"
       },
       {
         "value": "Once per long rest, when you take cold, fire, or lightning damage, you can use a reaction to immediately take a full turn",
@@ -252,7 +252,7 @@
       }
     ],
     "found": true,
-    "level": 2
+    "level": 5
   },
   {
     "name": "Esher's Health",
@@ -515,18 +515,19 @@
         "upgradeable": false
       },
       {
-        "value": "Once per long rest, as a reaction to being hit by a creature within 60 feet from you, you may target them with the effects Lightning Lure (i.e. they are guaranteed to fail the save)."
+        "value": "Twice per long rest, as a reaction to being hit by a creature within 60 feet from you, you may target them with the effects Lightning Lure (i.e. they are guaranteed to fail the save).",
+        "comment": "+1 uses"
       },
       {
         "value": "When you become unconscious as a result of going down to 0 hit points, creatures of your choice within 5 feet of you must succeed a Constitution save against a DC of (8 + prof + attribute mod of your choice) or be stunned until the end of your next turn",
         "upgradeable": false
-      }
-    ],
-    "available": [
+      },
       {
         "value": "+1d6 lightning damage with attacks with this weapon",
         "comment": "Die size"
-      },
+      }
+    ],
+    "available": [
       {
         "value": "+2 lightning damage",
         "comment": "+1"
@@ -556,7 +557,7 @@
       }
     ],
     "found": true,
-    "level": 3,
+    "level": 5,
     "enabled": true
   },
   {

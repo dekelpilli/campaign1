@@ -110,9 +110,6 @@ class LootController:
     def _get_found_relics(self):
         return list(self.found_relics.keys())
 
-    def get_random_creature(self):
-        pass
-
     def get_random_creature_of_cr(self, max_cr):
         cr = max_cr
         while True:
