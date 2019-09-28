@@ -41,8 +41,9 @@ class LootController:
         if prayer_path_owner_choice not in owners:
             return prayer_path_owner_choice + " is not a valid prayer path owner choice"
 
-        return list(filter(lambda prayer_stone: prayer_path_owner_choice == prayer_stone.owner,
-                           prayer_paths_started))[0].get_next()
+        selected_prayer_stone = list(filter(lambda prayer_stone: prayer_path_owner_choice == prayer_stone.owner,
+                                            prayer_paths_started))[0]
+        return "(" + selected_prayer_stone.value + ")\n" + selected_prayer_stone.get_next()
 
     def level_up_relic_by_choice(self):
         found_relics = self._get_found_relics()
