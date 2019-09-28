@@ -27,7 +27,8 @@
   {
     "value": "Orb of Rare Candy - level up a relic, must use within 24 hours",
     "weighting": 5,
-    "metadata": ["1"]
+    "metadata": ["1"],
+    "enabled": false
   },
   {
     "value": "Orb of Empowerment - double a mod on a magic item or artifact (can't be a special relic mod). An item cannot have more than one doubled mod",

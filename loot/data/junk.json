@@ -42,12 +42,27 @@
     "enabled": false
   },
   {
-    "value": "A cursed ring: wearing this ring, you believe your other ring is cursed"
+    "value": "A cursed ring: wearing this ring, you believe your other ring is cursed",
+    "enabled": false
   },
   {
-    "value": "Belt. While it is in your possession, you are always at Exhaustion level 5."
+    "value": "Belt. While it is in your possession, you are always at Exhaustion level 5.",
+    "enabled": false
   },
   {
-    "value": "A helmet that vibrates whenever you take damage, to let you know you took damage."
+    "value": "A helmet that vibrates whenever you take damage, to let you know you took damage.",
+    "enabled": false
+  },
+  {
+    "value": "Reroll with 1d12, but ignore result and give an autobiography of a horse anyway."
+  },
+  {
+    "value": "A piece of lead"
+  },
+  {
+    "value": "A toaster"
+  },
+  {
+    "value": "Boots that, while worn, make you think everyone's speed is 30ft."
   }
 ]
