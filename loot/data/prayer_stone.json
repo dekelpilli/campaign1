@@ -41,11 +41,11 @@
       "When you roll a 1 on an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll",
       "20% increased gold gained from loot rolls",
       "You have advantage on the amount of loot you get from crafting items, consumables, and gold",
-      "As an action, you may cast the Fabricate spell once per short rest",
-      "When you roll for a loot roll and get above a 2, you may choose to roll 1d8 to replace your result. You must then accept this result.",
       "You may destroy an item to immediately gain its base sale value (i.e. no negotiation).",
-      "Relics attuned to you can be levelled for 50% of their usual levelling cost, but also sell for half of their usual cost.",
-      "Whenever you make a skill check, you may also roll a d12 and use the higher of the scores"
+      "When you get this level, all worn relics are levelled. Also, from now on, relic attuned to you become level 3, instead of just 2.",
+      "When you roll for a loot roll and get above a 2, you may choose to roll 1d8 to replace your result. You must then accept this result.",
+      "Relics attuned to you can be levelled for 50% of their usual levelling cost. When you use this on a relic, from then on, it sells for half of its usual cost, and loses 2 levels when targeted by an Orb of Mulligan.",
+      "Whenever you make a skill check or save, you may also roll a d12 and use the higher of the scores"
     ],
     "owner": "Sarashi"
   },
@@ -140,7 +140,7 @@
       "Enemies you land a Killing Blow against generate an additional loot roll of size 1d8",
       "Once per short rest, when you take damage that would bring you down to 0 hit points or below, you may transfer the damage to a random creature within 60 feet, potentially including allies.",
       "The loot roll you gain from Killing Blows now becomes 1d12. If you skipped that step, you gain take it now instead.",
-      "+10 global damage",
+      "+5 global damage",
       "Once per long rest, when you finish an encounter, you may immediately gain the benefits of a short rest."
     ],
     "owner": "Lemuku"
