@@ -83,14 +83,14 @@ class LootController:
         if option_id == 1:
             option_string += "New mod: "
             if relic.type == "weapon":
-                option_string += self.get_weapon_enchant()
+                return option_string + self.get_weapon_enchant()
             elif relic.type == "armour":
-                option_string += self.get_armour_enchant()
+                return option_string + self.get_armour_enchant()
             elif relic.type == "ring":
-                option_string += self.get_ring()
-            else:
-                option_string += self.get_enchant()
-            return option_string
+                return option_string + self.get_ring()
+            elif relic.type == "amulet":
+                option_string = ""
+                option_id = random.randint(2, 2 + min(1, len(upgradeable_mods)))
 
         if option_id == 2:
             option_string += "New Relic mod: "

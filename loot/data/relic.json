@@ -727,5 +727,63 @@
     "found": false,
     "level": 1,
     "enabled": false
+  },
+  {
+    "name": "Indrai's Rescue",
+    "type": "amulet",
+    "existing": [
+      {
+        "value": "You cannot transform into a creature contained in this amulet unless it is a dragon",
+        "comment": "Can be annulled/orb of destructioned",
+        "upgradeable": false
+      }
+    ],
+    "available": [
+      {
+        "value": "+3 life while transformed into a dragon (after 20%)",
+        "comment": "+2"
+      },
+      {
+        "value": "+4 poison while transformed into a dragon",
+        "comment": "+2"
+      },
+      {
+        "value": "All of your speed types become as fast as your fastest speed while transformed into a dragon",
+        "upgradeable": false
+      },
+      {
+        "value": "Once per long rest, when you transform into a dragon, you may choose for that transformation to not count towards your transformation limit.",
+        "upgradeable": false
+      },
+      {
+        "value": "While you are transformed into a dragon, enemies that have damaged you while you were transformed into a dragon in the last minute are considered vulnerable to all of your damage",
+        "upgradeable": false
+      },
+      {
+        "value": "While this amulet contains a dragon, if requires 300XP fewer to be upgraded.",
+        "upgradeable": false
+      },
+      {
+        "value": "This amulet has an additional creature slot. When transforming, if both creatures are dragons, you can choose to transform into either of them.",
+        "upgradeable": false
+      },
+      {
+        "value": "+1 to recharge rolls while transformed into a dragon",
+        "upgradeable": false
+      },
+      {
+        "value": "Once per long rest, if the contained creature is a dragon with a Dragon Breath attack, you can use it while not transformed."
+      },
+      {
+        "value": "+1 to all damage while transformed into a dragon"
+      },
+      {
+        "value": "If his amulet contains a dragon and that dragon's AC is higher than your AC would be without this mod, your AC is increased by 1.",
+        "upgradeable": false
+      }
+    ],
+    "found": false,
+    "level": 1,
+    "enabled": true
   }
 ]
