@@ -6,14 +6,18 @@
       {
         "value": "Whenever you make an investigation check, you may spend a minute to also make a religion check and use the higher of the two results.",
         "upgradeable": false
+      },
+      {
+        "value": "+1 AB with unarmed attacks",
+        "upgradeable": false
+      },
+      {
+        "value": "+1 to all saving throws if you have made an investigation check in the last minute"
       }
     ],
     "available": [
       {
         "value": "+1 intelligence"
-      },
-      {
-        "value": "+1 to all saving throws if you have made an investigation check in the last minute"
       },
       {
         "value": "You can spend an action making an investigation or perception check. If you earn at least one question with this check, your next two attacks in this encounter are guaranteed to be critical hits.",
@@ -43,8 +47,8 @@
         "upgradeable": false
       }
     ],
-    "found": false,
-    "level": 1
+    "found": true,
+    "level": 3
   },
   {
     "name": "Thatar's Soulthirst",
@@ -90,7 +94,8 @@
       }
     ],
     "found": true,
-    "level": 3
+    "level": 3,
+    "enabled": false
   },
   {
     "name": "Rislog's Ferocity",
@@ -166,6 +171,10 @@
       },
       {
         "value": "+2 health regeneration per round of combat while outdoors"
+      },
+      {
+        "value": "+1d4 poison melee thorns",
+        "comment": "Die size"
       }
     ],
     "available": [
@@ -190,10 +199,6 @@
         "upgradeable": false
       },
       {
-        "value": "+1d4 poison melee thorns",
-        "comment": "Die size"
-      },
-      {
         "value": "When you are hit, as a reaction, you may force the attacker to make a Constitution saving throw against a DC of 8 + your prof + your CON Mod. On a failed save, they are poisoned until the end of their turn.",
         "comment": "+1 DC"
       },
@@ -206,7 +211,7 @@
       }
     ],
     "found": true,
-    "level": 2
+    "level": 3
   },
   {
     "name": "Ketis' Dominion",
@@ -370,6 +375,9 @@
       {
         "value": "Once per short rest, you may disengage as a bonus action",
         "comment": "free action instead of bonus"
+      },
+      {
+        "value": "+1 to damage with light weapons"
       }
     ],
     "available": [
@@ -523,7 +531,7 @@
         "upgradeable": false
       },
       {
-        "value": "+1d6 lightning damage with attacks with this weapon",
+        "value": "+1d8 lightning damage with attacks with this weapon",
         "comment": "Die size"
       }
     ],
@@ -557,7 +565,7 @@
       }
     ],
     "found": true,
-    "level": 5,
+    "level": 6,
     "enabled": true
   },
   {

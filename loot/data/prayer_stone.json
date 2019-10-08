@@ -34,7 +34,7 @@
   },
   {
     "value": "Ateus",
-    "progress": 5,
+    "progress": 8,
     "levels": [
       "-1 critical requirement on all skill checks",
       "You have expertise in Persuasion and Deception when negotiating trades",
@@ -179,7 +179,7 @@
   },
   {
     "value": "Thatar",
-    "progress": 6,
+    "progress": 7,
     "levels": [
       "Undead creatures have disadvantage when attacking you.",
       "Divine Sense (Paladin), but you can only sense undead, and you can use any mental attribute for uses.",
