@@ -793,5 +793,53 @@
     "found": false,
     "level": 1,
     "enabled": true
+  },
+  {
+    "name": "Dilnis' Retribution",
+    "type": "armour",
+    "existing": [
+      {
+        "value": "You become resistant to cold damage",
+        "upgradeable": false
+      }
+    ],
+    "available": [
+      {
+        "value": "You can ignore opportunity attacks while underwater",
+        "upgradeable": false
+      },
+      {
+        "value": "+1d4 cold damage with melee attacks"
+      },
+      {
+        "value": "+1d4 cold damage with ranged attacks"
+      },
+      {
+        "value": "You may cast Control Water once per long rest",
+        "comment": "More uses"
+      },
+      {
+        "value": "At the end of your turn, enemies that have taken cold damage from you have -3 cold resistance until the start of your next turn",
+        "comment": "-2 res"
+      },
+      {
+        "value": "+15 feet swimming speed",
+        "comment": "+10"
+      },
+      {
+        "value": "You may ignore enemy cold resistance",
+        "upgradeable": false
+      },
+      {
+        "value": "You always know if a creature is immune/resistant/vulnerable to cold damage"
+      },
+      {
+        "value": "You learn the shape water cantrip",
+        "upgradeable": false
+      }
+    ],
+    "found": false,
+    "level": 1,
+    "enabled": false
   }
 ]
