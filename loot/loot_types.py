@@ -42,9 +42,10 @@ class Relic:
 
 
 class RelicMod:
-    def __init__(self, value, upgradeable):
+    def __init__(self, value, upgradeable, comment=None):
         self.upgradeable = upgradeable
         self.value = value
+        self.comment = comment
 
 
 class ChallengeRating:

@@ -99,8 +99,11 @@ class LootController:
             return option_string + mod.value
 
         if option_id > 2:
-            option_string += "Upgrade existing mod: "
-            return option_string + random.choice(upgradeable_mods).value
+            chosen_mod = random.choice(upgradeable_mods)
+            option_string += "Upgrade existing mod: " + chosen_mod.value
+            if chosen_mod.comment is not None:
+                option_string += " (" + chosen_mod.comment + ")"
+            return option_string
 
     def get_new_relic(self):
         keys = list(self.unfound_relics.keys())
@@ -284,7 +287,8 @@ class LootController:
     @staticmethod
     def _create_relic_mod(relic_mod_dict: dict) -> loot_types.RelicMod:
         return loot_types.RelicMod(relic_mod_dict["value"],
-                                   relic_mod_dict.get("upgradeable", True))
+                                   relic_mod_dict.get("upgradeable", True),
+                                   relic_mod_dict.get("comment", None))
 
 
 def get_int_from_str(string, default_integer=None):

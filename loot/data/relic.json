@@ -110,10 +110,12 @@
         "upgradeable": false
       },
       {
-        "value": "+3 damage to melee and touch attacks"
+        "value": "+3 damage to melee and touch attacks",
+        "comment": "+1"
       },
       {
-        "value": "+1d8 piercing damage with attacks with this weapon"
+        "value": "+1d8 piercing damage with attacks with this weapon",
+        "comment": "Die size"
       },
       {
         "value": "If this weapon is a melee weapon, it is considered to have reach.",
