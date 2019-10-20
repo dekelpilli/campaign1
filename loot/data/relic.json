@@ -10,9 +10,6 @@
       {
         "value": "+1 AB with unarmed attacks",
         "upgradeable": false
-      },
-      {
-        "value": "+1 to all saving throws if you have made an investigation check in the last minute"
       }
     ],
     "available": [
@@ -172,7 +169,10 @@
         "upgradeable": false
       },
       {
-        "value": "+2 health regeneration per round of combat while outdoors"
+        "value": "+2 health regeneration per round of combat while outdoors and above 0 hit points"
+      },
+      {
+        "value": "After you received damage for the first time in a combat, you become resistant to that damage type for the rest of the combat. You then become vulnerable to two other damage types (fire + thunder)."
       },
       {
         "value": "+1d4 poison melee thorns",
@@ -213,7 +213,7 @@
       }
     ],
     "found": true,
-    "level": 3
+    "level": 4
   },
   {
     "name": "Ketis' Dominion",
@@ -533,7 +533,7 @@
         "upgradeable": false
       },
       {
-        "value": "+1d8 lightning damage with attacks with this weapon",
+        "value": "+1d10 lightning damage with attacks with this weapon",
         "comment": "Die size"
       }
     ],
@@ -576,6 +576,18 @@
     "existing": [
       {
         "value": "+15 feet flight speed"
+      },
+      {
+        "value": "You may have an extra choice when levelling relics",
+        "upgradeable": false
+      },
+      {
+        "value": "When you deliver a Killing Blow, heal 5 hit points",
+        "comment": "+2"
+      },
+      {
+        "value": "When you level a relic attuned to you to level 10, you may level it again (normal level) for free",
+        "comment": "More free levels"
       }
     ],
     "available": [
@@ -616,8 +628,8 @@
         "upgradeable": false
       }
     ],
-    "found": false,
-    "level": 1,
+    "found": true,
+    "level": 4,
     "enabled": true
   },
   {
@@ -627,6 +639,13 @@
       {
         "value": "You become proficient in Arcana. If you are already proficient, you gain expertise.",
         "comment": "Expertise"
+      },
+      {
+        "value": "Once per long rest, when you cast a spell that requires concentration, you may choose to not require concentration for its first minute.",
+        "upgradeable": false
+      },
+      {
+        "value": "+1 insight"
       }
     ],
     "available": [
@@ -637,10 +656,6 @@
       {
         "value": "+10ft range with spells that have 10ft range or more",
         "comment": "+5ft"
-      },
-      {
-        "value": "Once per long rest, when you cast a spell that requires concentration, you may choose to not require concentration for its first minute.",
-        "upgradeable": false
       },
       {
         "value": "You are permanently under the effect of the Detect Magic spell, but with only a 10ft radius",
@@ -667,8 +682,8 @@
         "upgradeable": false
       }
     ],
-    "found": false,
-    "level": 1,
+    "found": true,
+    "level": 2,
     "enabled": true
   },
   {

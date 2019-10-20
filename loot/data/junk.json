@@ -66,6 +66,7 @@
     "value": "Boots that, while worn, make you think everyone's speed is 30ft."
   },
   {
-    "value": "A cloak that gives really bad advice while you wear it"
+    "value": "A cloak that gives really bad advice while you wear it",
+    "enabled": false
   }
 ]

@@ -63,7 +63,7 @@ class LootController:
         relic = self.found_relics[relic_name]
         return self._level_up_relic(relic)
 
-    def _level_up_relic(self, relic, num_choices=2):
+    def _level_up_relic(self, relic, num_choices=3):
         options = 2  # new random mod, new relic mod
         upgradeable_mods = []
         for existing_mod in relic.existing:
