@@ -73,10 +73,15 @@ class LootController:
             options += 2  # double weighting
 
         output = "Options:\n\t"
-        for i in range(num_choices):
-            if i != 0:
+        chosen_mods = set()
+        while len(chosen_mods) < num_choices:
+            chosen_mod = self._get_relic_upgrade_option(relic, random.randint(1, options), upgradeable_mods)
+            if chosen_mod in chosen_mods:
+                continue
+            if len(chosen_mods) != 0:
                 output += "\nOR\n\t"
-            output += self._get_relic_upgrade_option(relic, random.randint(1, options), upgradeable_mods)
+            chosen_mods.add(chosen_mod)
+            output += chosen_mod
         return output
 
     def _get_relic_upgrade_option(self, relic, option_id, upgradeable_mods):
