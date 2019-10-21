@@ -409,7 +409,7 @@
     "value": "+1 to death saves"
   },
   {
-    "value": "After you received damage for the first time in a combat, you become resistant to that damage type for the rest of the combat. You then become vulnerable to two other damage types (chosen randomly). \n\t\t(random, 1-13, [1 Acid, 2 Bludgeoning, 3 Cold, 4 Fire, 5 Force, 6 Lightning, 7 Necrotic, 8 Piercing, 9 Poison, 10 Psychic, 11  Radiant, 12 Slashing, 13 Thunder]"
+    "value": "After you received damage for the first time in a combat, you may choose to become resistant to that damage type for the rest of the combat.\n\tIf you choose to do so, you then become vulnerable to two other damage types (chosen randomly). \n\t\t(random, 1-13, [1 Acid, 2 Bludgeoning, 3 Cold, 4 Fire, 5 Force, 6 Lightning, 7 Necrotic, 8 Piercing, 9 Poison, 10 Psychic, 11  Radiant, 12 Slashing, 13 Thunder]"
   },
   {
     "value": "Gain temporary hit points equal to your lowest ability score (not bonus) at the beginning of each combat. This mod can stack."
