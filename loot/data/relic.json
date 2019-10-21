@@ -736,24 +736,6 @@
     "enabled": true
   },
   {
-    "name": "Template",
-    "type": "weapon/armour",
-    "existing": [
-      {
-        "value": "effect",
-        "upgradeable": false
-      }
-    ],
-    "available": [
-      {
-        "value": "upgradeableEffect"
-      }
-    ],
-    "found": false,
-    "level": 1,
-    "enabled": false
-  },
-  {
     "name": "Indrai's Rescue",
     "type": "amulet",
     "existing": [
@@ -853,6 +835,78 @@
       {
         "value": "You learn the shape water cantrip",
         "upgradeable": false
+      }
+    ],
+    "found": false,
+    "level": 1,
+    "enabled": false
+  },
+  {
+    "name": "Sagdor's Awakening",
+    "type": "weapon",
+    "existing": [
+      {
+        "value": "Enemies you critically strike (nat 20 or with reduced crit req) with this weapon become unconscious until the end of their next turn. This condition ends if they take damage, or if you become incapacitated.",
+        "upgradeable": false
+      }
+    ],
+    "available": [
+      {
+        "value": "You may convert all damage from your ranged spell attacks to psychic damage",
+        "upgradeable": false
+      },
+      {
+        "value": "You learn the Vicious Mockery cantrip",
+        "upgradeable": false
+      },
+      {
+        "value": "+2 psychic damage",
+        "comment": "+1"
+      },
+      {
+        "value": "+1d4 psychic damage"
+      },
+      {
+        "value": "+1d10 psychic damage against unconscious enemies",
+        "upgradeable": false
+      },
+      {
+        "value": "Once per long rest, when you summon an undead creature, that creature gains Undead Fortitude (DC 5 + damage taken unless radiant or crit)",
+        "comment": "More uses"
+      },
+      {
+        "value": "You learn the Catnap spell and may cast it once per long rest",
+        "comment": "Upcast (3->4)"
+      },
+      {
+        "value": "While you remain motionless, you are indistinguishable from an ordinary humanoid corpse.",
+        "upgradeable": false
+      },
+      {
+        "value": "Ranged attacks that would deal psychic damage ignore disadvantage from being in melee range of a hostile creature.",
+        "upgradeable": false
+      },
+      {
+        "value": "-1 critical strike requirement with attacks that would deal psychic damage",
+        "upgradeable": false
+      }
+    ],
+    "found": false,
+    "level": 1,
+    "enabled": true
+  },
+  {
+    "name": "Template",
+    "type": "weapon/armour",
+    "existing": [
+      {
+        "value": "effect",
+        "upgradeable": false
+      }
+    ],
+    "available": [
+      {
+        "value": "upgradeableEffect"
       }
     ],
     "found": false,
