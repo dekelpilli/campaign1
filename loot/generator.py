@@ -340,7 +340,7 @@ def define_action_map(mapped_loot_controller):
         loot_types.LootType.triple_enchant_item.value: lambda: mapped_loot_controller.get_n_enchanted_item(3),
         loot_types.LootType.crafting_item.value: mapped_loot_controller.get_crafting_item,
         loot_types.LootType.prayer_stone.value: prayer_stone_function,
-        loot_types.LootType.prayer_stone_2.value: prayer_stone_function,
+        # loot_types.LootType.prayer_stone_2.value: prayer_stone_function,
         loot_types.LootType.relic.value: mapped_loot_controller.get_new_relic,
         13: mapped_loot_controller.get_weapon_enchant,
         14: mapped_loot_controller.get_armour_enchant,

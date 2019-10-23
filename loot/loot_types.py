@@ -6,16 +6,16 @@ class LootType(IntEnum):
     junk = 1
     mundane = 2
     consumable = 3
-    low_gold = 4
-    ring = 5
+    ring = 4
+    low_gold = 5
     single_enchant_item = 6
-    amulet = 7
-    triple_enchant_item = 8
-    crafting_item = 9
-    prayer_stone_2 = 10
+    double_enchant_item = 7
+    amulet = 8
+    triple_enchant_item = 9
+    crafting_item = 10
     prayer_stone = 11
     relic = 12  # plus reroll
-    double_enchant_item = -1  # disabled
+    prayer_stone_2 = -1  # disabled
 
 
 LOOT_TYPES = dict()
