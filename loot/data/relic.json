@@ -896,6 +896,54 @@
     "enabled": true
   },
   {
+    "name": "Ukt's Transformation",
+    "type": "armour",
+    "existing": [
+      {
+        "value": "You may cast Disguise Self once per long rest",
+        "comment": "Uses"
+      }
+    ],
+    "available": [
+      {
+        "value": "+1 damage against creatures that believe your disguise (with Disguise Self)"
+      },
+      {
+        "value": "+2 stealth",
+        "comment": "+1"
+      },
+      {
+        "value": "+1 damage per killing blow you have landed today, to a maximum of 3",
+        "comment": "Higher maximum"
+      },
+      {
+        "value": "+3 deception while disguised if the target believes your disguise"
+      },
+      {
+        "value": "+2 slashing damage with unarmed attacks",
+        "comment": "+1"
+      },
+      {
+        "value": "You cannot be charmed",
+        "upgradeable": false
+      },
+      {
+        "value": "+1 Dexterity",
+        "upgradeable": false
+      },
+      {
+        "value": "+2 to the DC of your Disguise Self spell when becoming disguised as a person you have spoken to before."
+      },
+      {
+        "value": "+1 to the DC of your illusion spells",
+        "upgradeable": false
+      }
+    ],
+    "found": false,
+    "level": 1,
+    "enabled": true
+  },
+  {
     "name": "Template",
     "type": "weapon/armour",
     "existing": [
