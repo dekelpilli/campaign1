@@ -944,6 +944,52 @@
     "enabled": true
   },
   {
+    "name": "Nukk's Leadership",
+    "type": "armour",
+    "existing": [
+      {
+        "value": "Once per short rest, you may teleport over a 5 foot distance as part of your movement action.",
+        "comment": "Extra uses"
+      }
+    ],
+    "available": [
+      {
+        "value": "+1 to the DCs of effects that would charm the target, or rely on the target to not be immune to charm"
+      },
+      {
+        "value": "You ignore charm immunity",
+        "upgradeable": false
+      },
+      {
+        "value": "+1 health regeneration per round of combat while above 0 hit points"
+      },
+      {
+        "value": "You may cast the darkness spell once per long rest",
+        "upgradeable": false
+      },
+      {
+        "value": "Creatures of your choice within 5 feet of you have +1 damage",
+        "comment": "+range, max 15feet"
+      },
+      {
+        "value": "+5 feet of Truesight",
+        "comment": "+range, max 15feet"
+      },
+      {
+        "value": "You may cast Disguise Self once per long rest, but you may also change 1 size in any direction."
+      },
+      {
+        "value": "+1 slashing damage"
+      },
+      {
+        "value": "Enemies that resist your damage also take 1 additional damage."
+      }
+    ],
+    "found": false,
+    "level": 1,
+    "enabled": false
+  },
+  {
     "name": "Template",
     "type": "weapon/armour",
     "existing": [
