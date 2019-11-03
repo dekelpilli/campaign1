@@ -4,9 +4,11 @@ from pprint import PrettyPrinter
 from input_completer import Completer
 import loot_types
 import readline
-from os import sep
+from os import sep, path
+import sys
 
-DATA_DIR = "data" + sep
+
+DATA_DIR = path.dirname(path.realpath(sys.argv[0])) + sep + "data" + sep
 
 
 class LootController:
