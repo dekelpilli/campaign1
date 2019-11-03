@@ -693,6 +693,9 @@
       {
         "value": "You have 1 luck point (see Lucky feat for explanation). You regain your expended luck points when you finish a long rest.",
         "upgradeable": false
+      },
+      {
+        "value": "You have an additional second level spell slot (only if you already had at least 1)"
       }
     ],
     "available": [
@@ -731,8 +734,8 @@
         "comment": "-> d12, max 1 upgrade"
       }
     ],
-    "found": false,
-    "level": 1,
+    "found": true,
+    "level": 2,
     "enabled": true
   },
   {
@@ -837,7 +840,7 @@
         "upgradeable": false
       }
     ],
-    "found": false,
+    "found": true,
     "level": 1,
     "enabled": false
   },
