@@ -315,9 +315,9 @@ def get_int_from_str(string, default_integer=None):
         return default_integer
 
 
-def do_continuously(f):
+def do_continuously(f, prompt):
     while True:
-        entered = input("\nInput: ")
+        entered = input("\n" + prompt + " ")
         if "-1" in entered:
             break
         print(f(entered))
@@ -359,10 +359,10 @@ def define_action_map(mapped_loot_controller):
         14: mapped_loot_controller.get_armour_enchant,
         15: mapped_loot_controller.get_enchant,
         # 16: reload_loot,
-        17: lambda: do_continuously(mapped_loot_controller.get_random_creature_of_cr),
+        17: lambda: do_continuously(mapped_loot_controller.get_random_creature_of_cr, "Monster CR:"),
         18: mapped_loot_controller.level_up_relic_by_choice,
         19: mapped_loot_controller.level_up_prayer_path,
-        20: lambda: do_continuously(mapped_loot_controller.get_min_random_cr)
+        20: lambda: do_continuously(mapped_loot_controller.get_min_random_cr, "How many tries?")
     }
 
 
