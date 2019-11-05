@@ -993,6 +993,52 @@
     "enabled": false
   },
   {
+    "name": "Zardar's Insanity",
+    "type": "armour",
+    "existing": [
+      {
+        "value": "You are immune to diseases.",
+        "upgradeable": false
+      }
+    ],
+    "available": [
+      {
+        "value": "+1 to your Constitution saving throws"
+      },
+      {
+        "value": "Your size becomes large",
+        "upgradeable": false
+      },
+      {
+        "value": "+1 to your Necrotic damage"
+      },
+      {
+        "value": "Your darkvision also allows you to see in pitch black darkness"
+      },
+      {
+        "value": "Your critical strikes also apply a -1 Constitution penalty for 1 minute"
+      },
+      {
+        "value": "You learn the Cloudkill spell",
+        "upgradeable": false
+      },
+      {
+        "value": "+1 intelligence"
+      },
+      {
+        "value": "Once per long rest, when you take poison damage or necrotic damage, you may choose to ignore it.",
+        "upgradeable": false
+      },
+      {
+        "value": "Creatures you score a critical strike against make a CON save against a DC of 8 + the attack's AB. On a failed save, +1d8 loot roll from that creature.",
+        "upgradeable": false
+      }
+    ],
+    "found": false,
+    "level": 1,
+    "enabled": false
+  },
+  {
     "name": "Template",
     "type": "weapon/armour",
     "existing": [
