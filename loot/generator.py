@@ -121,9 +121,19 @@ class LootController:
     def _get_found_relics(self):
         return list(self.found_relics.keys())
 
+    def get_min_random_cr(self, tries):
+        crs = list(self.challenge_rating.keys())
+        cr = max(crs)
+        for i in range(int(tries)):
+            cr = min(random.choice(crs), cr)
+        return cr
+
     def get_random_creature_of_cr(self, max_cr):
         cr = max_cr
         while True:
+            if cr == "":
+                max_cr = "unspecified"
+                cr = random.choice(list(self.challenge_rating.keys()))
             if cr not in self.challenge_rating:
                 return "'" + cr + "' is not a valid CR option"
             creature = self.challenge_rating[cr].get_random_creature()
@@ -305,12 +315,12 @@ def get_int_from_str(string, default_integer=None):
         return default_integer
 
 
-def get_creature_from_input_crs():
+def do_continuously(f):
     while True:
-        cr = input("\nMonster CR: ")
-        if "-1" in cr:
+        entered = input("\nInput: ")
+        if "-1" in entered:
             break
-        print(loot_controller.get_random_creature_of_cr(cr))
+        print(f(entered))
     return ""
 
 
@@ -325,6 +335,7 @@ def print_options():
     print("\t17: Creature of a given CR")
     print("\t18: Level a relic")
     print("\t19: Level a prayer path")
+    print("\t20: Get min random CR")
     print("\t>19: Show this")
 
 
@@ -348,9 +359,10 @@ def define_action_map(mapped_loot_controller):
         14: mapped_loot_controller.get_armour_enchant,
         15: mapped_loot_controller.get_enchant,
         # 16: reload_loot,
-        17: get_creature_from_input_crs,
+        17: lambda: do_continuously(mapped_loot_controller.get_random_creature_of_cr),
         18: mapped_loot_controller.level_up_relic_by_choice,
-        19: mapped_loot_controller.level_up_prayer_path
+        19: mapped_loot_controller.level_up_prayer_path,
+        20: lambda: do_continuously(mapped_loot_controller.get_min_random_cr)
     }
 
 
