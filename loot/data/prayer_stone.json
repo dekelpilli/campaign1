@@ -54,13 +54,13 @@
     "levels": [
       "You cannot have disadvantage when learning creature stats",
       "You have expertise in Investigation when doing research via reading",
-      "You gain proficiency in History. If you are already proficient, you gain Expertise instead.",
       "You may spend an action instead of a bonus action when learning creature stats to guarantee two additional questions",
+      "You may use your movement action to learn about creatures, instead of just your bonus action",
+      "You gain proficiency in History. If you are already proficient, you gain Expertise instead.",
       "When you get hit by a critical strike from a creature you've learned about, it instead misses you",
       "You have +1AB and deal an additional 1d4 true damage against creature you have learned about",
-      "When you are hit by a melee attack from a creature you've learned about, you may use a reaction to disengage and take a normal movement action",
       "You have +2AC if you're learned about a creature in the last 2 rounds",
-      "Gain the Linguist feat. If you already have this feat, you gain another feat.",
+      "When you are hit by a melee attack from a creature you've learned about, you may use a reaction to disengage and take a normal movement action",
       "Gain the Keen Mind feat. If you already have this feat, you gain another feat."
     ],
     "owner": "Sarashi"
