@@ -129,10 +129,10 @@ class LootController:
         return cr
 
     def get_random_creature_of_cr(self, max_cr):
-        cr = max_cr
+        cr, cr_message = max_cr, max_cr
         while True:
             if cr == "":
-                max_cr = "unspecified"
+                cr_message = "unspecified"
                 cr = random.choice(list(self.challenge_rating.keys()))
             if cr not in self.challenge_rating:
                 return "'" + cr + "' is not a valid CR option"
@@ -141,7 +141,7 @@ class LootController:
                 cr = str(int(cr) - 1)  # Not protecting against 0.125/0.25/0.5 because those have creatures
             else:
                 if cr != max_cr:
-                    print("Creature is of CR " + cr + " instead of " + max_cr)
+                    print("Creature is of CR " + cr + " instead of " + cr_message)
                 return creature
 
     def get_amulet(self):
