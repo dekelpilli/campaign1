@@ -16,6 +16,10 @@
     "weighting": 1
   },
   {
+    "value": "Reroll with 1d12, but ignore result and give an autobiography of a horse anyway.",
+    "weighting": 1
+  },
+  {
     "value": "Magic glasses. While wearing this, you perceive every creature as looking like you",
     "enabled": false
   },
@@ -54,7 +58,12 @@
     "enabled": false
   },
   {
-    "value": "Reroll with 1d12, but ignore result and give an autobiography of a horse anyway."
+    "value": "Boots that, while worn, make you think everyone's speed is 30ft.",
+    "enabled": false
+  },
+  {
+    "value": "A cloak that gives really bad advice while you wear it",
+    "enabled": false
   },
   {
     "value": "A piece of lead"
@@ -63,10 +72,6 @@
     "value": "A toaster"
   },
   {
-    "value": "Boots that, while worn, make you think everyone's speed is 30ft."
-  },
-  {
-    "value": "A cloak that gives really bad advice while you wear it",
-    "enabled": false
+    "value": "Magical blindfolds: you are blind while wearing these blindfolds"
   }
 ]
