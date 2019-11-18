@@ -103,14 +103,14 @@
     "levels": [
       "Enemies that damage you become marked for a minute. Marked enemies have -1 damage against you. DO NOT SKIP.",
       "Marked enemies cannot heal",
-      "Marked enemies now have -1 damage, not just against you.",
+      "Instead of having -1 damage against you, marked enemies now have -1 global damage.",
       "Your attacks and spells deal +1d4 radiant damage against marked enemies",
       "Enemies are now considered marked if they damage you or an ally, instead of just you",
       "You have -1 critical strike requirement against marked enemies",
       "Marked enemies have -1AB and -1AC",
       "Gain 20 temporary hit points when you kill or knock unconscious a marked enemy",
       "+5 radiant thorns",
-      "You have advantage against marked enemies"
+      "You have advantage on attacks against marked enemies"
     ]
   },
   {
@@ -136,7 +136,7 @@
       "+1 damage while you're within 30 feet of more than one hostile creature",
       "You have advantage on Deception checks when the lie is about deaths you've been involved in, and advantage in Persuasion checks that would allow you to engage in more battles",
       "You gain +10% XP in combat where you landed a Killing Blow. You are always the one to gain this XP (even if the other ~91% goes to another party member).",
-      "x",
+      "Once per long rest, as a bonus action, you may reduce the duration of conditions on willing creature within 30 feet of you by 1 minute.",
       "You gain temporary hit points equal to two times your level when you land a Killing Blow",
       "Enemies you land a Killing Blow against generate an additional loot roll of size 1d8",
       "Once per short rest, when you take damage that would bring you down to 0 hit points or below, you may transfer the damage to a random creature within 60 feet, potentially including allies.",
