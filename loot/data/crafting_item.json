@@ -4,7 +4,7 @@
     "metadata": ["disadvantage"]
   },
   {
-    "value": "Orb(s) of Destruction - Remove a random mod from a magic item or artifact",
+    "value": "Orb(s) of Destruction - Remove a random mod from a magic item or relic",
     "weighting": 7,
     "metadata": ["advantage"],
     "enabled": false
@@ -39,5 +39,10 @@
     "value": "Orb of Mulligan - completely level down a relic, then level it back up to its current level. Before levelling it back up, you can let go of your attunement to it.",
     "weighting": 4,
     "metadata": ["1"]
+  },
+  {
+    "value": "Orb of Purification - Apply to an amulet and roll 1d6. If you roll above its current CR capacity, you may increase its capacity by 1. Contained creature does not change.",
+    "weighting": 7,
+    "enabled": false
   }
 ]
