@@ -131,15 +131,16 @@
   },
   {
     "value": "Thetia",
-    "progress": 6,
+    "progress": 9,
     "levels": [
       "+1 damage while you're within 30 feet of more than one hostile creature",
       "You have advantage on Deception checks when the lie is about deaths you've been involved in, and advantage in Persuasion checks that would allow you to engage in more battles",
       "You gain +10% XP in combat where you landed a Killing Blow. You are always the one to gain this XP (even if the other ~91% goes to another party member).",
+      "x",
       "You gain temporary hit points equal to two times your level when you land a Killing Blow",
       "Enemies you land a Killing Blow against generate an additional loot roll of size 1d8",
       "Once per short rest, when you take damage that would bring you down to 0 hit points or below, you may transfer the damage to a random creature within 60 feet, potentially including allies.",
-      "The loot roll you gain from Killing Blows now becomes 1d12. If you skipped that step, you gain take it now instead.",
+      "The loot roll you gain from Killing Blows now becomes 1d12. If you skipped that step, you gain it now instead.",
       "+5 global damage",
       "Once per long rest, when you finish an encounter, you may immediately gain the benefits of a short rest."
     ],
@@ -179,7 +180,7 @@
   },
   {
     "value": "Thatar",
-    "progress": 9,
+    "progress": 0,
     "levels": [
       "Undead creatures have disadvantage when attacking you.",
       "Divine Sense (Paladin), but you can only sense undead, and you can use any mental attribute for uses.",
@@ -191,8 +192,7 @@
       "You may cast Abi-Dalzim's Horrid Wilting (mental attribute of choice) once. You regain uses on long rests, or short rest if you land a killing blow with it.",
       "You ignore resistances and immunities to Necrotic damage",
       "You may cast Create Undead as a 9th level spell once per Long rest. If you already have undead minions, its casting time becomes 1 action instead of 1 minute."
-    ],
-    "owner": "Surge"
+    ]
   },
   {
     "value": "Ketis",

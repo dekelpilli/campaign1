@@ -227,7 +227,8 @@
         "value": "+1d8 lightning damage to attacks and spells"
       },
       {
-        "value": "-1 critical strike requirement with attacks that would deal cold damage"
+        "value": "-2 critical strike requirement with attacks that would deal cold damage",
+        "upgradeable": false
       }
     ],
     "available": [
@@ -259,7 +260,7 @@
       }
     ],
     "found": true,
-    "level": 5
+    "level": 6
   },
   {
     "name": "Esher's Health",
