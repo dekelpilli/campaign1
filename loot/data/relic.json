@@ -1037,7 +1037,7 @@
     ],
     "found": false,
     "level": 1,
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "Template",
