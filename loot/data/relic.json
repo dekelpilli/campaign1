@@ -449,7 +449,7 @@
         "comment": "+1 uses"
       },
       {
-        "value": "+5 resistance to poison damage",
+        "value": "+3 resistance to poison damage",
         "comment": "+1"
       },
       {
@@ -460,7 +460,7 @@
         "value": "+1 piercing damage"
       },
       {
-        "value": "When you hit an enemy with an attack, they must make a save against a DC of 8 + that attack's AB. On a failed save, they gain one point of exhaustion. On a successful save, they become immune to future attempts at increasing their exhaustion in this way."
+        "value": "When you hit an enemy with an attack, they must make a Constitution save against a DC of that attack's AB. On a failed save, they gain one point of exhaustion. On a successful save, they become immune to future attempts at increasing their exhaustion in this way."
       }
     ],
     "found": false,
