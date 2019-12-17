@@ -696,6 +696,9 @@
         "upgradeable": false
       },
       {
+        "value": "Once per long rest, you may choose to gain advantage on a loot roll"
+      },
+      {
         "value": "You have an additional second level spell slot (only if you already had at least 1)"
       }
     ],
@@ -728,15 +731,12 @@
         "comment": "Can't chain on unnatural 12"
       },
       {
-        "value": "Once per long rest, you may choose to gain advantage on a loot roll"
-      },
-      {
         "value": "Enemies you critically strike provide an additional d10 loot roll (maximum 1 per creature)",
         "comment": "-> d12, max 1 upgrade"
       }
     ],
     "found": true,
-    "level": 2,
+    "level": 3,
     "enabled": true
   },
   {
@@ -852,6 +852,17 @@
       {
         "value": "Enemies you critically strike (nat 20 or with reduced crit req) with this weapon become unconscious until the end of their next turn. This condition ends if they take damage, or if you become incapacitated.",
         "upgradeable": false
+      },
+      {
+        "value": "-1 critical strike requirement with attacks that would deal psychic damage",
+        "upgradeable": false
+      },
+      {
+        "value": "+1d6 slashing damage with attacks with this weapon"
+      },
+      {
+        "value": "Ignore lightning resistance",
+        "upgradeable": false
       }
     ],
     "available": [
@@ -889,14 +900,10 @@
       {
         "value": "Ranged attacks that would deal psychic damage ignore disadvantage from being in melee range of a hostile creature.",
         "upgradeable": false
-      },
-      {
-        "value": "-1 critical strike requirement with attacks that would deal psychic damage",
-        "upgradeable": false
       }
     ],
-    "found": false,
-    "level": 1,
+    "found": true,
+    "level": 5,
     "enabled": true
   },
   {
@@ -1035,7 +1042,7 @@
         "upgradeable": false
       }
     ],
-    "found": false,
+    "found": true,
     "level": 1,
     "enabled": true
   },

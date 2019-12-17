@@ -164,10 +164,10 @@
   },
   {
     "value": "Qhanas",
-    "progress": 0,
+    "progress": 2,
     "levels": [
       "You cannot be silenced",
-      "When you score a critical strike with a spell attack or spell, you recover the spell slot used to cast it. This does not include guaranteed crits (paralysis, unconscious).",
+      "When you score a critical strike with a spell attack or spell, you recover the spell slot used to cast it. This does not include guaranteed crits (paralysis, unconscious) (for one target).",
       "You may cast the Identify spell at will",
       "You may cast cantrips as if you were one level tier higher (e.g. 2d6 acid splash at level 1, 5d6 at level 17)",
       "You may cast spells that require a verbal component silently",
@@ -176,7 +176,8 @@
       "As an action, you may sacrifice a spell slot to gain two spell slots of a lower level. You may do this INT Mod times per short rest, min 1.",
       "Once per long rest, when an enemy successfully saves against a spell you cast, you may instead choose to make them fail. This can still be nullified by legendary resistance, but can also nullify a use of legendary resistance.",
       "Magical items you find have an additional enchantment mod, including rings and relics (+1 level)."
-    ]
+    ],
+    "owner": "Bryce"
   },
   {
     "value": "Thatar",
