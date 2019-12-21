@@ -747,6 +747,9 @@
         "value": "You cannot transform into a creature contained in this amulet unless it is a dragon",
         "comment": "Can be annulled/orb of destructioned",
         "upgradeable": false
+      },
+      {
+        "value": "Starts at CR0. When used to combine XP, resulting amulet takes this one's mods."
       }
     ],
     "available": [
@@ -1043,6 +1046,52 @@
       }
     ],
     "found": true,
+    "level": 1,
+    "enabled": true
+  },
+  {
+    "name": "Crikath's Remains",
+    "type": "armour",
+    "existing": [
+      {
+        "value": "You cannot be blinded, but you may still be considered blind in darkness.",
+        "upgradeable": false
+      }
+    ],
+    "available": [
+      {
+        "value": "+1 damage with ranged attacks while not on full life",
+        "comment": "+1"
+      },
+      {
+        "value": "You take half damage from Ooze creatures.",
+        "upgradeable": false
+      },
+      {
+        "value": "Other creatures you buff have +2 damage for the duration of the buff.",
+        "upgradeable": false
+      },
+      {
+        "value": "+2 radiant damage",
+        "comment": "+1"
+      },
+      {
+        "value": "+2 damage with spells if you used the attack action in your previous turn in the combat",
+        "comment": "+1"
+      },
+      {
+        "value": "+1 AC",
+        "upgradeable": false
+      },
+      {
+        "value": "+1 damage with cantrips"
+      },
+      {
+        "value": "+1 AC while unarmoured",
+        "comment": "Max +2 AC"
+      }
+    ],
+    "found": false,
     "level": 1,
     "enabled": true
   },
