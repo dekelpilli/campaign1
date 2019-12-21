@@ -1089,6 +1089,10 @@
       {
         "value": "+1 AC while unarmoured",
         "comment": "Max +2 AC"
+      },
+      {
+        "value": "+AB while mounted",
+        "upgradeable": false
       }
     ],
     "found": false,
