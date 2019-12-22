@@ -425,6 +425,21 @@
       {
         "value": "Once per short rest, as an action, you may cast Find Familiar, but the familiar must be a rat",
         "upgradeable": false
+      },
+      {
+        "value": "You need four failed death save points to die, instead of 3",
+        "upgradeable": false
+      },
+      {
+        "value": "Your critical strikes add 1 additional damage die from the source's base damage",
+        "upgradeable": false
+      },
+      {
+        "value": "If your current amulet is at least CR3, in addition to your regular amulet, you are always considered to be wearing an amulet that contains a Rat King (ToB 318). Using this is independent of your other amulet's uses.",
+        "upgradeable": false
+      },
+      {
+        "value": "Once per short rest, while transformed into a Monstrosity, you may take two actions instead of one on your turn."
       }
     ],
     "available": [
@@ -434,10 +449,6 @@
       },
       {
         "value": "You have advantage on Wisdom (Perception) checks that rely on smell",
-        "upgradeable": false
-      },
-      {
-        "value": "If your current amulet is at least CR3, in addition to your regular amulet, you are always considered to be wearing an amulet that contains a Rat King (ToB 318). Using this is independent of your other amulet's uses.",
         "upgradeable": false
       },
       {
@@ -463,8 +474,8 @@
         "value": "When you hit an enemy with an attack, they must make a Constitution save against a DC of that attack's AB. On a failed save, they gain one point of exhaustion. On a successful save, they become immune to future attempts at increasing their exhaustion in this way."
       }
     ],
-    "found": false,
-    "level": 1,
+    "found": true,
+    "level": 5,
     "enabled": true
   },
   {

@@ -177,7 +177,7 @@
     "weighting": 4
   },
   {
-    "value": "Gain resistance to physical damage equal to half the CR total of all your active minions",
+    "value": "Gain resistance to physical damage equal to half the CR total of your highest CR active minion",
     "weighting": 4
   },
   {
@@ -361,7 +361,7 @@
     "metadata": ["armour"]
   },
   {
-    "value": "When you take damage from a melee or touch attack, the attacker takes true damage equal to your level",
+    "value": "Once per round, when you take damage from a melee or touch attack, the attacker takes true damage equal to your half level, rounded down",
     "weighting": 8,
     "metadata": ["armour"]
   },
