@@ -42,7 +42,6 @@
   },
   {
     "value": "Orb of Purification - Apply to an amulet and roll 1d6. If you roll above its current CR capacity, you may increase its capacity by 1. Contained creature does not change.",
-    "weighting": 7,
-    "enabled": false
+    "weighting": 7
   }
 ]
