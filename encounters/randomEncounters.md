@@ -1,4 +1,4 @@
-## Encounters
+## Random Encounters
 
 Difficulties:
 - Easy

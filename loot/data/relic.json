@@ -1165,7 +1165,7 @@
         "comment": "Also immunities"
       },
       {
-        "value": "You learn the shield spell and may cast it once per long rest",
+        "value": "You learn the Shield spell and may cast it once per long rest",
         "comment": "Short rest instead of long rest, max 1 upgrade"
       }
     ],
