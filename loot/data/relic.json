@@ -789,7 +789,7 @@
         "upgradeable": false
       },
       {
-        "value": "This amulet has an additional creature slot. When transforming, if both creatures are dragons, you can choose to transform into either of them.",
+        "value": "This amulet has an additional creature slot (independent CR scaling, starts at CR1). When transforming, if both creatures are dragons, you can choose to transform into either of them.",
         "upgradeable": false
       },
       {
@@ -1127,5 +1127,50 @@
     "found": false,
     "level": 1,
     "enabled": false
+  },
+  {
+    "name": "Aurifex' Craft",
+    "type": "weapon",
+    "existing": [
+      {
+        "value": "You may use a d8 instead of a d6 when using an Orb of Purification",
+        "upgradeable": false
+      }
+    ],
+    "available": [
+      {
+        "value": "-100 XP required to level up an amulet,",
+        "upgradeable": false
+      },
+      {
+        "value": "When you get a currency item from *your* loot roll, you also gain another d10 loot roll.",
+        "upgradeable": false
+      },
+      {
+        "value": "+1 damage to your attacks with this weapon for attack already made this turn (so +0, +1, +2, etc).",
+        "upgradeable": false
+      },
+      {
+        "value": "When you get this mod to level 2, it will grant +1 damage for each other relic you are wearing."
+      },
+      {
+        "value": "The CR capacity of amulets you find is at least 1. If you find one with a lower capacity, it is instead considered to be 1",
+        "upgradeable": false
+      },
+      {
+        "value": "+1d4 global true damage"
+      },
+      {
+        "value": "You ignore enemy resistances, but not immunities, while transformed.",
+        "comment": "Also immunities"
+      },
+      {
+        "value": "You learn the shield spell and may cast it once per long rest",
+        "comment": "Short rest instead of long rest, max 1 upgrade"
+      }
+    ],
+    "found": false,
+    "level": 1,
+    "enabled": true
   }
 ]
