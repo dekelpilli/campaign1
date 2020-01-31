@@ -1125,24 +1125,6 @@
     "enabled": true
   },
   {
-    "name": "Template",
-    "type": "weapon/armour",
-    "existing": [
-      {
-        "value": "effect",
-        "upgradeable": false
-      }
-    ],
-    "available": [
-      {
-        "value": "upgradeableEffect"
-      }
-    ],
-    "found": false,
-    "level": 1,
-    "enabled": false
-  },
-  {
     "name": "Aurifex' Craft",
     "type": "weapon",
     "existing": [
@@ -1186,5 +1168,70 @@
     "found": false,
     "level": 1,
     "enabled": true
+  },
+  {
+    "name": "Morah's Love",
+    "type": "armour",
+    "existing": [
+      {
+        "value": "+1 Charisma",
+        "upgradeable": false
+      }
+    ],
+    "available": [
+      {
+        "value": "+2 deception"
+      },
+      {
+        "value": "You may cast Ceremony once per long rest"
+      },
+      {
+        "value": "You may cast Calm Emotions once per long rest"
+      },
+      {
+        "value": "Once per long rest, you may choose a willing intelligent creature. For the next hour, you can communicate with this creature telepathically over any distance in the same plane.",
+        "upgradeable": false
+      },
+      {
+        "value": "You may cast Hallow once per long rest, but you may only use the Courage feature."
+      },
+      {
+        "value": "You may cast Sending once per long rest. The spell has no verbal or somatic components when cast in this way.",
+        "upgradeable": false
+      },
+      {
+        "value": "Once per long rest, the first time you are attacked by a creature, you may target them with the Charm Monster spell as a reaction.",
+        "upgradeable": false
+      },
+      {
+        "value": "Once per short rest, when an ally goes down in combat, you may use your reaction to take an action.",
+        "upgradeable": false
+      },
+      {
+        "value": "When this mod is empowered twice, you gain the Inspiring Leader feat.",
+        "comment": "Current: 0 (2 grants feat)"
+      }
+    ],
+    "found": false,
+    "level": 1,
+    "enabled": true
+  },
+  {
+    "name": "Template",
+    "type": "weapon/armour",
+    "existing": [
+      {
+        "value": "effect",
+        "upgradeable": false
+      }
+    ],
+    "available": [
+      {
+        "value": "upgradeableEffect"
+      }
+    ],
+    "found": false,
+    "level": 1,
+    "enabled": false
   }
 ]
