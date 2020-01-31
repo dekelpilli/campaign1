@@ -361,7 +361,7 @@
     "metadata": ["armour"]
   },
   {
-    "value": "Once per round, when you take damage from a melee or touch attack, the attacker takes true damage equal to your half level, rounded down",
+    "value": "Once per round, when you take damage from a melee or touch attack, the attacker takes true damage equal to half your level, rounded down",
     "weighting": 8,
     "metadata": ["armour"]
   },
@@ -392,7 +392,7 @@
     "weighting": 9
   },
   {
-    "value": "If you take damage exceeding 25% of your maximum hit points in one turn and do not reach 0 hit points by its end, move up one place in the initiative tracker, if possible.",
+    "value": "If you take damage exceeding 25% of your maximum hit points in one round and do not reach 0 hit points by its end, you may move up one place in the initiative tracker, if possible.",
     "weighting": 9
   },
   {
@@ -412,7 +412,7 @@
     "value": "After you received damage for the first time in a combat, you may choose to become resistant to that damage type for the rest of the combat.\n\tIf you choose to do so, you then become vulnerable to two other damage types (chosen randomly). \n\t\t(random, 1-13, [1 Acid, 2 Bludgeoning, 3 Cold, 4 Fire, 5 Force, 6 Lightning, 7 Necrotic, 8 Piercing, 9 Poison, 10 Psychic, 11  Radiant, 12 Slashing, 13 Thunder]"
   },
   {
-    "value": "Gain temporary hit points equal to your lowest ability score (not bonus) at the beginning of each combat. This mod can stack."
+    "value": "Gain temporary hit points equal to your lowest ability score (not bonus) at the beginning of each combat."
   },
   {
     "value": "+1 resistance to acid damage",

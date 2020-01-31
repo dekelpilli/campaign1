@@ -537,7 +537,7 @@
         "upgradeable": false
       },
       {
-        "value": "Twice per long rest, as a reaction to being hit by a creature within 60 feet from you, you may target them with the effects Lightning Lure (i.e. they are guaranteed to fail the save).",
+        "value": "Thrice per long rest, as a reaction to being hit by a creature within 60 feet from you, you may target them with the effects Lightning Lure (i.e. they are guaranteed to fail the save).",
         "comment": "+1 uses"
       },
       {
@@ -545,7 +545,7 @@
         "upgradeable": false
       },
       {
-        "value": "+1d10 lightning damage with attacks with this weapon",
+        "value": "+1d12 lightning damage with attacks with this weapon",
         "comment": "Die size"
       }
     ],
@@ -579,7 +579,7 @@
       }
     ],
     "found": true,
-    "level": 6,
+    "level": 9,
     "enabled": true
   },
   {
@@ -658,6 +658,9 @@
       },
       {
         "value": "+1 insight"
+      },
+      {
+        "value": "If you take damage exceeding 25% of your maximum hit points in one round and do not reach 0 hit points by its end, you may move up one place in the initiative tracker, if possible."
       }
     ],
     "available": [
@@ -760,7 +763,8 @@
         "upgradeable": false
       },
       {
-        "value": "Starts at CR0. When used to combine XP, resulting amulet takes this one's mods."
+        "value": "Starts at CR0. When used to combine XP, resulting amulet takes this one's mods.",
+        "upgradeable": false
       }
     ],
     "available": [
@@ -807,9 +811,9 @@
         "upgradeable": false
       }
     ],
-    "found": false,
+    "found": true,
     "level": 1,
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "Dilnis' Retribution",
@@ -872,7 +876,7 @@
         "upgradeable": false
       },
       {
-        "value": "+1d6 slashing damage with attacks with this weapon"
+        "value": "+1d8 slashing damage with attacks with this weapon"
       },
       {
         "value": "Ignore lightning resistance",
@@ -917,7 +921,7 @@
       }
     ],
     "found": true,
-    "level": 5,
+    "level": 6,
     "enabled": true
   },
   {
@@ -964,9 +968,9 @@
         "upgradeable": false
       }
     ],
-    "found": false,
+    "found": true,
     "level": 1,
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "Nukk's Leadership",
@@ -1012,7 +1016,7 @@
     ],
     "found": false,
     "level": 1,
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "Zardar's Insanity",
@@ -1021,6 +1025,16 @@
       {
         "value": "You are immune to diseases.",
         "upgradeable": false
+      },
+      {
+        "value": "+1 AB with unarmed attacks"
+      },
+      {
+        "value": "Gain temporary hit points equal to your lowest ability score (not bonus) at the beginning of each combat.",
+        "upgradeable": false
+      },
+      {
+        "value": "Once per round, when you take damage from a melee or touch attack, the attacker takes true damage equal to half your level, rounded down"
       }
     ],
     "available": [
@@ -1057,7 +1071,7 @@
       }
     ],
     "found": true,
-    "level": 1,
+    "level": 3,
     "enabled": true
   },
   {
