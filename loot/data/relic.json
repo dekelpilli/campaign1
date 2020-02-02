@@ -107,7 +107,7 @@
         "upgradeable": false
       },
       {
-        "value": "+3 damage to melee and touch attacks",
+        "value": "+4 damage to melee and touch attacks",
         "comment": "+1"
       },
       {
@@ -153,8 +153,8 @@
       }
     ],
     "found": true,
-    "level": 9,
-    "enabled": true
+    "level": 10,
+    "enabled": false
   },
   {
     "name": "Cerasil's Protection",
@@ -710,7 +710,7 @@
         "upgradeable": false
       },
       {
-        "value": "Once per long rest, you may choose to gain advantage on a loot roll"
+        "value": "Twice per long rest, you may choose to gain advantage on a loot roll"
       },
       {
         "value": "You have an additional second level spell slot (only if you already had at least 1)"
@@ -750,7 +750,7 @@
       }
     ],
     "found": true,
-    "level": 3,
+    "level": 4,
     "enabled": true
   },
   {
@@ -1081,6 +1081,10 @@
       {
         "value": "You cannot be blinded, but you may still be considered blind in darkness.",
         "upgradeable": false
+      },
+      {
+        "value": "+1 AC",
+        "upgradeable": false
       }
     ],
     "available": [
@@ -1105,10 +1109,6 @@
         "comment": "+1"
       },
       {
-        "value": "+1 AC",
-        "upgradeable": false
-      },
-      {
         "value": "+1 damage with cantrips"
       },
       {
@@ -1120,8 +1120,8 @@
         "upgradeable": false
       }
     ],
-    "found": false,
-    "level": 1,
+    "found": true,
+    "level": 2,
     "enabled": true
   },
   {
@@ -1130,6 +1130,14 @@
     "existing": [
       {
         "value": "You may use a d8 instead of a d6 when using an Orb of Purification",
+        "upgradeable": false
+      },
+      {
+        "value": "+1d6 global true damage",
+        "upgradeable": false
+      },
+      {
+        "value": "The CR capacity of amulets you find is at least 1. If you find one with a lower capacity, it is instead considered to be 1",
         "upgradeable": false
       }
     ],
@@ -1150,13 +1158,6 @@
         "value": "When you get this mod to level 2, it will grant +1 damage for each other relic you are wearing."
       },
       {
-        "value": "The CR capacity of amulets you find is at least 1. If you find one with a lower capacity, it is instead considered to be 1",
-        "upgradeable": false
-      },
-      {
-        "value": "+1d4 global true damage"
-      },
-      {
         "value": "You ignore enemy resistances, but not immunities, while transformed.",
         "comment": "Also immunities"
       },
@@ -1165,8 +1166,8 @@
         "comment": "Short rest instead of long rest, max 1 upgrade"
       }
     ],
-    "found": false,
-    "level": 1,
+    "found": true,
+    "level": 4,
     "enabled": true
   },
   {
