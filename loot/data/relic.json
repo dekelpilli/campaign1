@@ -1269,6 +1269,56 @@
     "enabled": true
   },
   {
+    "name": "Falynn's Trust",
+    "type": "armour",
+    "existing": [
+      {
+        "value": "+1 Charisma",
+        "upgradeable": false
+      }
+    ],
+    "available": [
+      {
+        "value": "+1 Charisma"
+      },
+      {
+        "value": "You become proficient in two skills of your choice",
+        "upgradeable": false
+      },
+      {
+        "value": "Once per long rest, when you fail a Charisma, Intelligence, or Wisdom saving throw, you may choose to try again.",
+        "comment": "+1"
+      },
+      {
+        "value": "CHA mod times per long rest, when making a persuasion check, you can guarantee that a target will not think you are lying, although they may still think you're wrong.",
+        "upgradeable": false
+      },
+      {
+        "value": "Once per short rest, you may take the help action as a bonus action.",
+        "comment": "+1 uses"
+      },
+      {
+        "value": "+1 to all social checks (Insight + Charisma checks)",
+        "upgradeable": false
+      },
+      {
+        "value": "Allied creatures within 5 feet of have +1 resistance to damage",
+        "upgradeable": false
+      },
+      {
+        "value": "You may use Bardic Inspiration, with level-appropriate die size, once per long rest.",
+        "upgradeable": false
+      },
+      {
+        "value": "Your allies have +1 initiative.",
+        "upgradeable": false
+      }
+    ],
+    "found": false,
+    "level": 1,
+    "enabled": true
+  },
+  {
     "name": "Template",
     "type": "weapon/armour",
     "existing": [
