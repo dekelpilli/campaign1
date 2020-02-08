@@ -1218,6 +1218,57 @@
     "enabled": true
   },
   {
+    "name": "Culad's Freedom",
+    "type": "armour",
+    "existing": [
+      {
+        "value": "You have telepathy with a range of 60 feet. You must be able to speak a language the target understands.",
+        "comment": "+30 feet, max 120"
+      }
+    ],
+    "available": [
+      {
+        "value": "+2 to recharge rolls while transformed into a Celestial",
+        "comment": "+1"
+      },
+      {
+        "value": "+15 feet speed while flying (does not increase 0 to 15)",
+        "comment": "+5"
+      },
+      {
+        "value": "You have Flyby",
+        "upgradeable": false
+      },
+      {
+        "value": "+5 feet flying speed",
+        "comment": "+5"
+      },
+      {
+        "value": "Once per short rest, when you hit an enemy with an attack, yuo can also force them to make a Strength save (DC 8 + AB). On a fail, the creature is pushed back 5 feet and knocked prone.",
+        "comment": "+5 feet push distance distance"
+      },
+      {
+        "value": "While wearing this item, you are proficient in all languages.",
+        "upgradeable": false
+      },
+      {
+        "value": "You learn the Cure Wounds spell. You may cast it an additional 2 times per long rest.",
+        "comment": "+1 uses"
+      },
+      {
+        "value": "You have advantage on Wisdom (Perception) checks that rely on sight. (Keen Sight)",
+        "upgradeable": false
+      },
+      {
+        "value": "You become resistant to radiant damage",
+        "upgradeable": false
+      }
+    ],
+    "found": false,
+    "level": 1,
+    "enabled": true
+  },
+  {
     "name": "Template",
     "type": "weapon/armour",
     "existing": [
