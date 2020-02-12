@@ -1120,7 +1120,7 @@
         "comment": "Max +2 AC"
       },
       {
-        "value": "+AB while mounted",
+        "value": "+1AB while mounted",
         "upgradeable": false
       }
     ],
