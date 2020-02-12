@@ -979,6 +979,10 @@
       {
         "value": "Once per short rest, you may teleport over a 5 foot distance as part of your movement action.",
         "comment": "Extra uses"
+      },
+      {
+        "value": "-1 critical strike requirement with attacks (including spell attacks)",
+        "upgradeable": false
       }
     ],
     "available": [
@@ -1014,7 +1018,7 @@
         "value": "Enemies that resist your damage also take 1 additional damage."
       }
     ],
-    "found": false,
+    "found": true,
     "level": 1,
     "enabled": true
   },
