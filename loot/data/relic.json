@@ -1323,6 +1323,56 @@
     "enabled": true
   },
   {
+    "name": "Vuneta's Peace",
+    "type": "armour",
+    "existing": [
+      {
+        "value": "+1 resistance to damage dealt by creatures you have not damaged",
+        "upgradeable": false
+      }
+    ],
+    "available": [
+      {
+        "value": "Condition you inflict required +1 DC to escape. The DC returns to normal if the creature is damaged.",
+        "comment": "max +2"
+      },
+      {
+        "value": "Creatures you choose within 30 feet of you that have reduced a creature to 0HP recently have -1AB.",
+        "comment": "max +2"
+      },
+      {
+        "value": "You may cast the Calm Emotions spell once per short rest."
+      },
+      {
+        "value": "You may cast Beacon of Hope once per long rest. When cast in this way, the spell does not require concentration, but still ends if you become incapacitated.",
+        "upgradeable": false
+      },
+      {
+        "value": "+2 AC if you have not acted in combat yet.",
+        "upgradeable": false
+      },
+      {
+        "value": "Once per short rest, target a creature you have damaged, you may cast Cure Wounds as a bonus action.",
+        "comment": "Spell level"
+      },
+      {
+        "value": "Feeding others potions requires a bonus action instead of an action.",
+        "upgradeable": false
+      },
+      {
+        "value": "You may cast Wall of Sand once per long rest. When cast in this way, it lasts for 24 hours instead of 10 minutes.",
+        "upgradeable": false
+      },
+      {
+        "value": "Creatures you have healed in the last hour have disadvantage against your charms",
+        "upgradeable": false
+      }
+    ],
+    "found": false,
+    "level": 1,
+    "enabled": true
+  },
+  {
     "name": "Template",
     "type": "weapon/armour",
     "existing": [
