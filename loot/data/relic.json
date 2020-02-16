@@ -8,7 +8,7 @@
         "upgradeable": false
       },
       {
-        "value": "+1 AB with unarmed attacks",
+        "value": "You have advantage on checks to learn creature stats",
         "upgradeable": false
       }
     ],
@@ -18,10 +18,6 @@
       },
       {
         "value": "You can spend an action making an investigation or perception check. If you earn at least one question with this check, your next two attacks in this encounter are guaranteed to be critical hits.",
-        "upgradeable": false
-      },
-      {
-        "value": "You have advantage on checks to learn creature stats",
         "upgradeable": false
       },
       {
@@ -45,7 +41,8 @@
       }
     ],
     "found": true,
-    "level": 3
+    "level": 1,
+    "enabled": false
   },
   {
     "name": "Thatar's Soulthirst",
@@ -1228,6 +1225,14 @@
       {
         "value": "You have telepathy with a range of 60 feet. You must be able to speak a language the target understands.",
         "comment": "+30 feet, max 120"
+      },
+      {
+        "value": "-1 critical strike requirement with attacks (including spell attacks)",
+        "upgradeable": false
+      },
+      {
+        "value": "If you take damage exceeding 25% of your maximum hit points in one round and do not reach 0 hit points by its end, you may move up one place in the initiative tracker, if possible.",
+        "upgradeable": false
       }
     ],
     "available": [
@@ -1268,8 +1273,8 @@
         "upgradeable": false
       }
     ],
-    "found": false,
-    "level": 1,
+    "found": true,
+    "level": 3,
     "enabled": true
   },
   {
@@ -1279,6 +1284,10 @@
       {
         "value": "+1 Charisma",
         "upgradeable": false
+      },
+      {
+        "value": "Once per short rest, you may take the help action as a bonus action.",
+        "comment": "+1 uses"
       }
     ],
     "available": [
@@ -1298,10 +1307,6 @@
         "upgradeable": false
       },
       {
-        "value": "Once per short rest, you may take the help action as a bonus action.",
-        "comment": "+1 uses"
-      },
-      {
         "value": "+1 to all social checks (Insight + Charisma checks)",
         "upgradeable": false
       },
@@ -1318,8 +1323,8 @@
         "upgradeable": false
       }
     ],
-    "found": false,
-    "level": 1,
+    "found": true,
+    "level": 2,
     "enabled": true
   },
   {
