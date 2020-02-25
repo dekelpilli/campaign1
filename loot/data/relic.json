@@ -1378,6 +1378,45 @@
     "enabled": true
   },
   {
+    "name": "Redacted's Control",
+    "type": "armour",
+    "existing": [
+      {
+        "value": "+1 performance and +1 intimidation"
+      }
+    ],
+    "available": [
+      {
+        "value": "Once per long rest, when you make a Sleight of Hand check, you can replace the number roll with a 10.",
+        "upgradeable": false
+      },
+      {
+        "value": "You may cast the Glibness spell once per long rest",
+        "upgradeable": false
+      },
+      {
+        "value": "+1 AB with attacks of opportunity",
+        "comment": "Max +2AB"
+      },
+      {
+        "value": "You may cast the Scrying spell once per long rest"
+      },
+      {
+        "value": "You are considered to be proficient in all Charisma checks while under the effect of a Divination spell you have cast (does not work with cantrips)",
+        "upgradeable": false
+      },
+      {
+        "value": "+1 to your rolls when rolling for downtime activities"
+      },
+      {
+        "value": "10% reduced cost of downtime activities"
+      }
+    ],
+    "found": false,
+    "level": 1,
+    "enabled": true
+  },
+  {
     "name": "Template",
     "type": "weapon/armour",
     "existing": [
