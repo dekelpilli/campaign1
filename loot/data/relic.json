@@ -1417,6 +1417,57 @@
     "enabled": true
   },
   {
+    "name": "Tremor Gang's Cooperation",
+    "type": "weapon",
+    "existing": [
+      {
+        "value": "+1 global damage while within 10 feet of at least 2 conscious allies",
+        "comment": "+5ft radius"
+      }
+    ],
+    "available": [
+      {
+        "value": "Once per long rest, when casting a spell, you may upcast it to 5th level while still only consuming the original spell slot. The spell must be of at least 3rd level.",
+        "comment": "-1 spell minimum"
+      },
+      {
+        "value": "You learn thief's cant",
+        "upgraded": false
+      },
+      {
+        "value": "+1d4 damage with this weapon while flanking",
+        "comment": "Die size"
+      },
+      {
+        "value": "Once per long rest, as a touch spell on a willing creature, you may grant that creature the ability to cast Find Steed until your next long rest.",
+        "upgraded": false
+      },
+      {
+        "value": "+10 feet to the range of your spells that already have a range of at least 10 feet",
+        "comment": "+5ft"
+      },
+      {
+        "value": "Once per short rest, when dealing damage with this weapon, you may instead heal an ally within 15 feet of you half that amount",
+        "comment": "+5ft radius"
+      },
+      {
+        "value": "Once per short rest, when you land a critical hit with this weapon, you may choose to instead land a regular hit, but guarantee the next attack of an ally you can see is a critical hit.",
+        "comment": "-1 critical strike chance with this weapon, but your criticals must be transferred."
+      },
+      {
+        "value": "Creatures you hit with this weapon take +1 damage from all sources of damage for the next minute (does not stack)",
+        "upgraded": false
+      },
+      {
+        "value": "You may cast Branding Smite once per long rest. When cast in this way, the effect can only come from attacks with this weapon, and the spell does not require concentration until after the effect is applied",
+        "upgraded": false
+      }
+    ],
+    "found": false,
+    "level": 1,
+    "enabled": true
+  },
+  {
     "name": "Template",
     "type": "weapon/armour",
     "existing": [
