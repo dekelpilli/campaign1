@@ -18,7 +18,7 @@
   },
   {
     "value": "Esher",
-    "progress": 0,
+    "progress": 2,
     "levels": [
       "The minimum amount you healing you receive from using a hit die becomes twice your Constitution modifier",
       "You become immune to all forms of madness",
@@ -30,7 +30,8 @@
       "You take no additional damage from critical strikes",
       "Once per short rest, when you fail a save, you can choose to succeed instead",
       "You gain the Healer feat. When you use the healer feat to heal someone, you may also feed them a potion with the same action. If you already have this feat, gain another one instead."
-    ]
+    ],
+    "owner": "Bryce"
   },
   {
     "value": "Ateus",
@@ -50,14 +51,14 @@
   },
   {
     "value": "Vimis",
-    "progress": 5,
+    "progress": 6,
     "levels": [
       "You cannot have disadvantage when learning creature stats",
       "You have expertise in Investigation when doing research via reading",
       "You may spend an action instead of a bonus action when learning creature stats to guarantee two additional questions",
       "You may use your movement action to learn about creatures, instead of just your bonus action",
       "You gain proficiency in History. If you are already proficient, you gain Expertise instead.",
-      "When you get hit by a critical strike from a creature you've learned about, it instead misses you",
+      "When you get hit by a natural critical strike from a creature you've learned about, it instead misses you",
       "You have +1AB and deal an additional 1d4 true damage against creature you have learned about",
       "You have +2AC if you're learned about a creature in the last 2 rounds",
       "When you are hit by a melee attack from a creature you've learned about, you may use a reaction to disengage and take a normal movement action",

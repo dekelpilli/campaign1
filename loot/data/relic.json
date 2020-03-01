@@ -873,11 +873,14 @@
         "upgradeable": false
       },
       {
-        "value": "+1d8 slashing damage with attacks with this weapon"
+        "value": "+1d10 slashing damage with attacks with this weapon"
       },
       {
         "value": "Ignore lightning resistance",
         "upgradeable": false
+      },
+      {
+        "value": "+2 to deception in languages other than Common"
       }
     ],
     "available": [
@@ -918,7 +921,7 @@
       }
     ],
     "found": true,
-    "level": 6,
+    "level": 7,
     "enabled": true
   },
   {
@@ -1383,6 +1386,9 @@
     "existing": [
       {
         "value": "+1 performance and +1 intimidation"
+      },
+      {
+        "value": "You may cast the Scrying spell twice per long rest"
       }
     ],
     "available": [
@@ -1399,9 +1405,6 @@
         "comment": "Max +2AB"
       },
       {
-        "value": "You may cast the Scrying spell once per long rest"
-      },
-      {
         "value": "You are considered to be proficient in all Charisma checks while under the effect of a Divination spell you have cast (does not work with cantrips)",
         "upgradeable": false
       },
@@ -1412,9 +1415,9 @@
         "value": "10% reduced cost of downtime activities"
       }
     ],
-    "found": false,
-    "level": 1,
-    "enabled": true
+    "found": true,
+    "level": 3,
+    "enabled": false
   },
   {
     "name": "Tremor Gang's Cooperation",
