@@ -1471,6 +1471,53 @@
     "enabled": true
   },
   {
+    "name": "Fext's Force",
+    "type": "weapon",
+    "existing": [
+      {
+        "value": "+1 AB with attacks that would deal force damage",
+        "comment": "Max +2"
+      }
+    ],
+    "available": [
+      {
+        "value": "You may cast the Hex spell once per short rest",
+        "comment": "Once per initiative roll -> at will"
+      },
+      {
+        "value": "Your ranged attacks that would deal force damage do not suffer from disadvantage as a result of being in melee range",
+        "upgradeable": false
+      },
+      {
+        "value": "Once per combat, until the end of the combat when you deal a Killing Blow, you gain the ability to cast Fear as a free action once",
+        "upgradeable": false
+      },
+      {
+        "value": "Once per short rest, you may cast Counterspell against a creature you have damaged in the last minute.",
+        "upgradeable": false
+      },
+      {
+        "value": "Once per round, you may convert all physical damage from an attack or spell to force damage",
+        "comment": "At will"
+      },
+      {
+        "value": "+1d4 force damage with attacks with this weapon. Applies to all attacks when upgraded.",
+        "comment": "All attacks -> die size"
+      },
+      {
+        "value": "Your Charisma modifier is added to your AC, to a minimum of 0 and a maximum of 1",
+        "comment": "Max +1"
+      },
+      {
+        "value": "You are immune to paralysis",
+        "upgradeable": false
+      }
+    ],
+    "found": false,
+    "level": 1,
+    "enabled": true
+  },
+  {
     "name": "Template",
     "type": "weapon/armour",
     "existing": [
