@@ -650,7 +650,7 @@
         "comment": "Expertise"
       },
       {
-        "value": "Once per long rest, when you cast a spell that requires concentration, you may choose to not require concentration for its first minute.",
+        "value": "Once per long rest, when you cast a spell that requires concentration, you may choose to not require concentration for its first minute. If you go unconscious, it would be as if you broke concentration.",
         "upgradeable": false
       },
       {
@@ -695,7 +695,7 @@
       }
     ],
     "found": true,
-    "level": 2,
+    "level": 4,
     "enabled": true
   },
   {
@@ -1424,8 +1424,12 @@
     "type": "weapon",
     "existing": [
       {
-        "value": "+1 global damage while within 10 feet of at least 2 conscious allies",
+        "value": "+1 global damage while within 15 feet of at least 2 conscious allies",
         "comment": "+5ft radius"
+      },
+      {
+        "value": "Once per short rest, when you land a critical hit with this weapon, you may choose to instead land a regular hit, but guarantee the next attack of an ally you can see is a critical hit.",
+        "comment": "-1 critical strike chance with this weapon, but your criticals must be transferred."
       }
     ],
     "available": [
@@ -1454,10 +1458,6 @@
         "comment": "+5ft radius"
       },
       {
-        "value": "Once per short rest, when you land a critical hit with this weapon, you may choose to instead land a regular hit, but guarantee the next attack of an ally you can see is a critical hit.",
-        "comment": "-1 critical strike chance with this weapon, but your criticals must be transferred."
-      },
-      {
         "value": "Creatures you hit with this weapon take +1 damage from all sources of damage for the next minute (does not stack)",
         "upgraded": false
       },
@@ -1466,8 +1466,8 @@
         "upgraded": false
       }
     ],
-    "found": false,
-    "level": 1,
+    "found": true,
+    "level": 3,
     "enabled": true
   },
   {
