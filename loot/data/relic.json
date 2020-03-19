@@ -1518,6 +1518,52 @@
     "enabled": true
   },
   {
+    "name": "Laekces' Infection",
+    "type": "weapon",
+    "existing": [
+      {
+        "value": "This weapon can shoot out acid, allowing you to use it at range (10/20ft), converting all of its base damage to acid",
+        "comment": "10ft range each"
+      }
+    ],
+    "available": [
+      {
+        "value": "Critical strikes that deal poison damage with this weapon also apply a poison that last's until the end of the target's next turn",
+        "upgradeable": false
+      },
+      {
+        "value": "You become immune to the poisoned condition",
+        "upgradeable": false
+      },
+      {
+        "value": "+1d6 poison damage with this weapon"
+      },
+      {
+        "value": "Enemies within 10 feet of you take 1 poison damage at the start of their turn",
+        "comment": "+1, max 2"
+      },
+      {
+        "value": "Once per short rest, when you deal acid damage, you may forgo dealing that damage. Instead, the target takes that damage at the end of its next two turns.",
+        "comment": "+1 turn, max 3"
+      },
+      {
+        "value": "Once per turn, if you have taken poison damage in the last round, you may gain advantage on an attack.",
+        "upgradeable": false
+      },
+      {
+        "value": "You learn the Bestow Curse spell and may cast it once per short rest (metal att of choice).",
+        "upgradeable": false
+      },
+      {
+        "value": "When using a bonus action to learn a creature's stats, you always learn its res/vuln/imm to acid and poison, even if you earned no questions.",
+        "upgradeable": false
+      }
+    ],
+    "found": false,
+    "level": 1,
+    "enabled": true
+  },
+  {
     "name": "Template",
     "type": "weapon/armour",
     "existing": [
