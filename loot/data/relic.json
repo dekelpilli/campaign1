@@ -373,8 +373,9 @@
         "comment": "Original"
       },
       {
-        "value": "Once per short rest, you may disengage as a bonus action",
-        "comment": "free action instead of bonus"
+        "value": "Once per short rest, you may disengage as a free action",
+        "comment": "free action instead of bonus",
+        "upgradeable": false
       },
       {
         "value": "+1 to damage with light weapons"
@@ -412,7 +413,7 @@
       }
     ],
     "found": true,
-    "level": 2,
+    "level": 4,
     "enabled": true
   },
   {
@@ -1143,6 +1144,8 @@
       {
         "value": "The CR capacity of amulets you find is at least 1. If you find one with a lower capacity, it is instead considered to be 1",
         "upgradeable": false
+      },      {
+        "value": "When you get this mod to level 2, it will grant +1 damage for each other relic you are wearing."
       }
     ],
     "available": [
@@ -1159,9 +1162,6 @@
         "upgradeable": false
       },
       {
-        "value": "When you get this mod to level 2, it will grant +1 damage for each other relic you are wearing."
-      },
-      {
         "value": "You ignore enemy resistances, but not immunities, while transformed.",
         "comment": "Also immunities"
       },
@@ -1171,7 +1171,7 @@
       }
     ],
     "found": true,
-    "level": 4,
+    "level": 5,
     "enabled": true
   },
   {
@@ -1232,6 +1232,9 @@
       {
         "value": "-1 critical strike requirement with attacks (including spell attacks)",
         "upgradeable": false
+      },      {
+        "value": "While wearing this item, you are proficient in all languages.",
+        "upgradeable": false
       },
       {
         "value": "If you take damage exceeding 25% of your maximum hit points in one round and do not reach 0 hit points by its end, you may move up one place in the initiative tracker, if possible.",
@@ -1260,10 +1263,6 @@
         "comment": "+5 feet push distance distance"
       },
       {
-        "value": "While wearing this item, you are proficient in all languages.",
-        "upgradeable": false
-      },
-      {
         "value": "You learn the Cure Wounds spell. You may cast it an additional 2 times per long rest.",
         "comment": "+1 uses"
       },
@@ -1277,7 +1276,7 @@
       }
     ],
     "found": true,
-    "level": 3,
+    "level": 4,
     "enabled": true
   },
   {
