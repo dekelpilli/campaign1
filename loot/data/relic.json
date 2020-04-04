@@ -1144,7 +1144,8 @@
       {
         "value": "The CR capacity of amulets you find is at least 1. If you find one with a lower capacity, it is instead considered to be 1",
         "upgradeable": false
-      },      {
+      },
+      {
         "value": "When you get this mod to level 2, it will grant +1 damage for each other relic you are wearing."
       }
     ],
@@ -1232,7 +1233,8 @@
       {
         "value": "-1 critical strike requirement with attacks (including spell attacks)",
         "upgradeable": false
-      },      {
+      },
+      {
         "value": "While wearing this item, you are proficient in all languages.",
         "upgradeable": false
       },
@@ -1427,8 +1429,13 @@
         "comment": "+5ft radius"
       },
       {
-        "value": "Once per short rest, when you land a critical hit with this weapon, you may choose to instead land a regular hit, but guarantee the next attack of an ally you can see is a critical hit.",
-        "comment": "-1 critical strike chance with this weapon, but your criticals must be transferred."
+        "value": "+1 Dexterity",
+        "comment": "upgradeable once"
+      },
+      {
+        "value": "Once per short rest, when you land a critical hit with this weapon, you may choose to instead land a regular hit, but guarantee the next attack of an ally you can see is a critical hit (upgraded).",
+        "comment": "-1 critical strike chance with this weapon, but your criticals must be transferred.",
+        "upgradeable": false
       }
     ],
     "available": [
@@ -1466,7 +1473,7 @@
       }
     ],
     "found": true,
-    "level": 3,
+    "level": 5,
     "enabled": true
   },
   {
